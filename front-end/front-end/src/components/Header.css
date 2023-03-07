@@ -1,0 +1,22 @@
+body{
+  background-color: #fff !important;
+}
+.header {
+  display: flex;
+  justify-content: flex-end;
+  background-color: #C5E2FF;
+}
+.menu ul {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu li {
+  margin-right: 10px;
+}
+
+.menu .btn {
+  margin: 0;
+}
