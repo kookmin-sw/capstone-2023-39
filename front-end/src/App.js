@@ -1,9 +1,9 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import Header from './components/Header';
-import Statistics from './components/Statistics';
-import Analysis from './components/Analysis';
-import Badip from './components/Badip';
+import Header from './components/Header/Header';
+import Statistics from './pages/Statistics';
+import Analysis from './pages/Analysis';
+import Badip from './pages/Badip';
 
 function App() {
   return (
