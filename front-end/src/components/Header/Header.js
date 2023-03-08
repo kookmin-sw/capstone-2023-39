@@ -1,27 +1,28 @@
 import React from 'react';
-import './Header.css';
 import {NavLink} from 'react-router-dom';
+import {HeaderContainer,Menu,MenuButton} from './style'
 function Header() {
   return (
-    <div className="header">
+    <HeaderContainer>
       <div className="menu">
-        <ul>
-        <button type="button" className="btn btn-outline-info" data-bs-toggle="button" color="black">
-          <NavLink to="/" className="no-underline nav-link">Home</NavLink>
-        </button>
-        <button type="button" className="btn btn-outline-info" data-bs-toggle="button">
-          <NavLink to="/statistics" className="no-underline nav-link"> 통계</NavLink>
-        </button>
-        <button className="btn btn-outline-info" data-bs-toggle="button">
-          <NavLink to="/analysis" className="no-underline nav-link">분석</NavLink>
-        </button>
-        <button className="btn btn-outline-info" data-bs-toggle="button">
-          <NavLink to="/badip" className="no-underline nav-link">악성ip</NavLink>
-        </button>
-        </ul>
+        <Menu>
+          <MenuButton type="button" className="btn btn-outline-info" data-bs-toggle="button" color="black">
+            <NavLink to="/" className="no-underline nav-link">Home</NavLink>
+          </MenuButton>
+          <MenuButton type="button" className="btn btn-outline-info" data-bs-toggle="button">
+            <NavLink to="/statistics" className="no-underline nav-link"> 통계</NavLink>
+          </MenuButton>
+          <MenuButton className="btn btn-outline-info" data-bs-toggle="button">
+            <NavLink to="/analysis" className="no-underline nav-link">분석</NavLink>
+          </MenuButton>
+          <MenuButton className="btn btn-outline-info" data-bs-toggle="button">
+            <NavLink to="/badip" className="no-underline nav-link">악성ip</NavLink>
+          </MenuButton>
+        </Menu>
       </div>
-    </div>
+    </HeaderContainer>
   );
 }
+
 
 export default Header;
