@@ -1,29 +1,24 @@
-import React from 'react';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import Header from './components/Header/Header';
-import Map from './components/Map/Map';
-import Statistics from './pages/Statistics';
-import Analysis from './pages/Analysis';
-import Badip from './pages/Badip';
+import React from "react";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Admin from "./pages/Admin/admin";
+import Visualization from "./pages/Visualization/visualization";
+import Join from "./pages/Join/join";
+import Login from "./pages/Login/login";
+import Main from "./pages/Main/main";
+import NewflowAnalysis from "./pages/NetflowAnalysis/netflowAnalysis";
 
 function App() {
   return (
-    
-    <Router>
-      <div className="App">
-        <div>
-          <Header/>
-        </div>
-        <div>
-          <Map/>
-        </div>
-        <Switch>
-          <Route path="/statistics" component={Statistics} />
-          <Route path="/analysis" component={Analysis} />
-          <Route path="/badip" component={Badip} />
-        </Switch>
-      </div>
-    </Router>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Main />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/join" element={<Join />} />
+        <Route path="/admin" element={<Admin />} />
+        <Route path="/visualization" element={<Visualization />} />
+        <Route path="/newflowAnalysis" element={<NewflowAnalysis />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 

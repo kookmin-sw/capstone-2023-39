@@ -5,7 +5,7 @@ import mapboxgl from "mapbox-gl";
 mapboxgl.accessToken =
   "pk.eyJ1IjoiY2hhbmppbiIsImEiOiJjbGV0cXFhb2UxaW5wM3lwNGZ0NWEwNnQzIn0.07IpRbMqUnGLvvcM1vMHmQ";
 
-function Mapbox() {
+function Map() {
   useEffect(() => {
     const map = new mapboxgl.Map({
       container: "map", // container ID
@@ -49,4 +49,4 @@ function Mapbox() {
   );
 }
 
-export default Mapbox;
+export default Map;
