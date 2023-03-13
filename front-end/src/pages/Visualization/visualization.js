@@ -1,5 +1,5 @@
 import React from "react";
-import Map from "../../components/Map/map";
+import Map from "../../components/Map/Map";
 
 function Visualization() {
   return (
