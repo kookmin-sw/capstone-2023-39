@@ -1,13 +1,20 @@
 import React, { useEffect } from "react";
 import mapboxgl from "mapbox-gl";
 // npm install --save react-map-gl mapbox-gl
-import {MapContainer} from './style';
-
+import { MapContainer } from "./style";
 
 mapboxgl.accessToken =
   "pk.eyJ1IjoiY2hhbmppbiIsImEiOiJjbGV0cXFhb2UxaW5wM3lwNGZ0NWEwNnQzIn0.07IpRbMqUnGLvvcM1vMHmQ";
 
 function Map() {
+  const data = [
+    [-151.5129, 63.1016],
+    [-150.4048, 63.1224],
+    [-151.3597, 63.0781],
+    [-118.497, 34.299667],
+    [-87.6901, 12.0623],
+  ];
+
   useEffect(() => {
     const map = new mapboxgl.Map({
       container: "map", // container ID
@@ -20,40 +27,29 @@ function Map() {
 
     map.on("style.load", () => {
       map.setFog({
-        'high-color':'white', //제일 바깥쪽 색
-        'color':'white', //안쪽 색
-        'range' : [0.8,8], //-20~20
+        "high-color": "white", //제일 바깥쪽 색
+        color: "white", //안쪽 색
+        range: [0.8, 8], //-20~20
         "star-intensity": 0, //별들의 밀집도
-        'space-color':'white'
+        "space-color": "white",
       }); // Set the default atmosphere style
     });
 
-    map.on("load", () => {
-      map.addSource("earthquakes", {
-        type: "geojson",
-        // Use a URL for the value for the `data` property.
-        data: "https://docs.mapbox.com/mapbox-gl-js/assets/earthquakes.geojson",
-      });
-
-      map.addLayer({
-        id: "earthquakes-layer",
-        type: "circle",
-        source: "earthquakes",
-        paint: {
-          "circle-radius": 4,
-          "circle-stroke-width": 2,
-          "circle-color": "red",
-          "circle-stroke-color": "white",
-        },
-      });
+    data.map((coordinates, idx) => {
+      console.log(coordinates);
+      const marker = new mapboxgl.Marker({
+        color: "#5756b3",
+        draggable: false,
+      })
+        .setLngLat(coordinates)
+        .addTo(map);
     });
   }, []);
 
   return (
     <div>
-      <MapContainer id='map'/>
+      <MapContainer id="map" />
     </div>
-    
-  )
+  );
 }
 export default Map;
