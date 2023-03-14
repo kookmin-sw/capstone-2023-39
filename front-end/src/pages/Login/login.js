@@ -1,7 +1,8 @@
 import React from "react";
+import Header from "../../components/Header/header";
 
 function Login() {
-  return <div>login</div>;
+  return <Header title={"Login"}></Header>;
 }
 
 export default Login;
