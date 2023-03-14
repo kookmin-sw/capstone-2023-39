@@ -38,7 +38,7 @@ function Header(props) {
           </Wrap>
         ) : (
           <MenuItem onClick={() => navigator("/newflowAnalysis")}>
-            Newflow
+            Netflow
           </MenuItem>
         )}
         {props.title === "Visualization" ? (
