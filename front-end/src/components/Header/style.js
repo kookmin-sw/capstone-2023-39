@@ -9,6 +9,7 @@ export const HeaderContainer = styled.div`
   z-index: 99;
   display: flex;
   justify-content: flex-end;
+  background-color: white;
 `;
 
 export const Menu = styled.div`
