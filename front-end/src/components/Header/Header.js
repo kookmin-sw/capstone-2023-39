@@ -1,28 +1,38 @@
-import React from 'react';
-import {NavLink} from 'react-router-dom';
-import {HeaderContainer,Menu,MenuButton} from './style'
-function Header() {
+import React from "react";
+import { HeaderContainer, Menu, MenuItem } from "./style";
+
+function Header(props) {
   return (
     <HeaderContainer>
-      <div className="menu">
-        <Menu>
-          <MenuButton type="button" className="btn btn-outline-info" data-bs-toggle="button" color="black">
-            <NavLink to="/" className="no-underline nav-link">Home</NavLink>
-          </MenuButton>
-          <MenuButton type="button" className="btn btn-outline-info" data-bs-toggle="button">
-            <NavLink to="/statistics" className="no-underline nav-link"> 통계</NavLink>
-          </MenuButton>
-          <MenuButton className="btn btn-outline-info" data-bs-toggle="button">
-            <NavLink to="/analysis" className="no-underline nav-link">분석</NavLink>
-          </MenuButton>
-          <MenuButton className="btn btn-outline-info" data-bs-toggle="button">
-            <NavLink to="/badip" className="no-underline nav-link">악성ip</NavLink>
-          </MenuButton>
-        </Menu>
-      </div>
+      <Menu>
+        {props.title === "Login" ? (
+          <MenuItem style={{ color: "#000000" }}>Login</MenuItem>
+        ) : (
+          <MenuItem>Login</MenuItem>
+        )}
+        {props.title === "Join" ? (
+          <MenuItem style={{ color: "#000000" }}>Join</MenuItem>
+        ) : (
+          <MenuItem>Join</MenuItem>
+        )}
+        {props.title === "Admin" ? (
+          <MenuItem style={{ color: "#000000" }}>Admin</MenuItem>
+        ) : (
+          <MenuItem>Admin</MenuItem>
+        )}
+        {props.title === "Netflow" ? (
+          <MenuItem style={{ color: "#000000" }}>Netflow</MenuItem>
+        ) : (
+          <MenuItem>Newflow</MenuItem>
+        )}
+        {props.title === "Visualization" ? (
+          <MenuItem style={{ color: "#000000" }}>Visualization</MenuItem>
+        ) : (
+          <MenuItem>Visualization</MenuItem>
+        )}
+      </Menu>
     </HeaderContainer>
   );
 }
-
 
 export default Header;

@@ -1,22 +1,30 @@
 import styled from "styled-components";
 
 export const HeaderContainer = styled.div`
+  width: 100vw;
+  height: 45px;
+  top: 0;
+  left: 0;
+  //background-color: #eef1fa;
+  position: fixed;
+  z-index: 99s;
   display: flex;
   justify-content: flex-end;
-  background-color: #C5E2FF;
 `;
 
-export const Menu = styled.ul`
+export const Menu = styled.div`
   display: flex;
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
+  width: fit-content;
+  height: 45px;
+  gap: 60px;
+  align-items: center;
+  margin-right: 80px;
 `;
 
-export const MenuItem = styled.li`
-  margin-right: 10px;
-`;
-
-export const MenuButton = styled.button`
-  margin: 0;
+export const MenuItem = styled.div`
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 18px;
+  color: #8484a0;
 `;

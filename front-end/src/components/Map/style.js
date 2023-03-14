@@ -1,8 +1,8 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const MapContainer = styled.div`
   position: absolute;
-  top: 50px;
+  top: 45px;
   bottom: 0;
   left: 600px;
   width: 100%;
