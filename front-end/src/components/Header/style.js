@@ -5,9 +5,8 @@ export const HeaderContainer = styled.div`
   height: 45px;
   top: 0;
   left: 0;
-  //background-color: #eef1fa;
   position: fixed;
-  z-index: 99s;
+  z-index: 99;
   display: flex;
   justify-content: flex-end;
 `;
@@ -28,4 +27,20 @@ export const MenuItem = styled.div`
   font-size: 18px;
   color: #8484a0;
   cursor: pointer;
+`;
+
+export const Wrap = styled.div`
+  width: fit-content;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
+
+export const StatusBar = styled.div`
+  background-color: #5756b3;
+  width: 110px;
+  height: 3px;
+  position: absolute;
+  bottom: 0;
 `;

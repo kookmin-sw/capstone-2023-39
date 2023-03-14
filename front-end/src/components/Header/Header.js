@@ -1,5 +1,5 @@
 import React from "react";
-import { HeaderContainer, Menu, MenuItem } from "./style";
+import { HeaderContainer, Menu, MenuItem, StatusBar, Wrap } from "./style";
 import { useNavigate } from "react-router-dom";
 
 function Header(props) {
@@ -8,29 +8,44 @@ function Header(props) {
     <HeaderContainer>
       <Menu>
         {props.title === "Login" ? (
-          <MenuItem style={{ color: "#000000" }}>Login</MenuItem>
+          <Wrap>
+            <MenuItem style={{ color: "#000000" }}>Login</MenuItem>
+            <StatusBar />
+          </Wrap>
         ) : (
           <MenuItem onClick={() => navigator("/login")}>Login</MenuItem>
         )}
         {props.title === "Join" ? (
-          <MenuItem style={{ color: "#000000" }}>Join</MenuItem>
+          <Wrap>
+            <MenuItem style={{ color: "#000000" }}>Join</MenuItem>
+            <StatusBar />
+          </Wrap>
         ) : (
           <MenuItem onClick={() => navigator("/join")}>Join</MenuItem>
         )}
         {props.title === "Admin" ? (
-          <MenuItem style={{ color: "#000000" }}>Admin</MenuItem>
+          <Wrap>
+            <MenuItem style={{ color: "#000000" }}>Admin</MenuItem>
+            <StatusBar />
+          </Wrap>
         ) : (
           <MenuItem onClick={() => navigator("/admin")}>Admin</MenuItem>
         )}
         {props.title === "Netflow" ? (
-          <MenuItem style={{ color: "#000000" }}>Netflow</MenuItem>
+          <Wrap>
+            <MenuItem style={{ color: "#000000" }}>Netflow</MenuItem>
+            <StatusBar />
+          </Wrap>
         ) : (
           <MenuItem onClick={() => navigator("/newflowAnalysis")}>
             Newflow
           </MenuItem>
         )}
         {props.title === "Visualization" ? (
-          <MenuItem style={{ color: "#000000" }}>Visualization</MenuItem>
+          <Wrap>
+            <MenuItem style={{ color: "#000000" }}>Visualization</MenuItem>
+            <StatusBar />
+          </Wrap>
         ) : (
           <MenuItem onClick={() => navigator("/visualization")}>
             Visualization
