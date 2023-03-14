@@ -27,4 +27,5 @@ export const MenuItem = styled.div`
   font-weight: 300;
   font-size: 18px;
   color: #8484a0;
+  cursor: pointer;
 `;
