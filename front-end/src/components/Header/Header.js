@@ -1,28 +1,59 @@
-import React from 'react';
-import {NavLink} from 'react-router-dom';
-import {HeaderContainer,Menu,MenuButton} from './style'
-function Header() {
+import React from "react";
+import { HeaderContainer, Menu, MenuItem, StatusBar, Wrap } from "./style";
+import { useNavigate } from "react-router-dom";
+
+function Header(props) {
+  const navigator = useNavigate();
   return (
     <HeaderContainer>
-      <div className="menu">
-        <Menu>
-          <MenuButton type="button" className="btn btn-outline-info" data-bs-toggle="button" color="black">
-            <NavLink to="/" className="no-underline nav-link">Home</NavLink>
-          </MenuButton>
-          <MenuButton type="button" className="btn btn-outline-info" data-bs-toggle="button">
-            <NavLink to="/statistics" className="no-underline nav-link"> 통계</NavLink>
-          </MenuButton>
-          <MenuButton className="btn btn-outline-info" data-bs-toggle="button">
-            <NavLink to="/analysis" className="no-underline nav-link">분석</NavLink>
-          </MenuButton>
-          <MenuButton className="btn btn-outline-info" data-bs-toggle="button">
-            <NavLink to="/badip" className="no-underline nav-link">악성ip</NavLink>
-          </MenuButton>
-        </Menu>
-      </div>
+      <Menu>
+        {props.title === "Login" ? (
+          <Wrap>
+            <MenuItem style={{ color: "#000000" }}>Login</MenuItem>
+            <StatusBar />
+          </Wrap>
+        ) : (
+          <MenuItem onClick={() => navigator("/login")}>Login</MenuItem>
+        )}
+        {props.title === "Join" ? (
+          <Wrap>
+            <MenuItem style={{ color: "#000000" }}>Join</MenuItem>
+            <StatusBar />
+          </Wrap>
+        ) : (
+          <MenuItem onClick={() => navigator("/join")}>Join</MenuItem>
+        )}
+        {props.title === "Admin" ? (
+          <Wrap>
+            <MenuItem style={{ color: "#000000" }}>Admin</MenuItem>
+            <StatusBar />
+          </Wrap>
+        ) : (
+          <MenuItem onClick={() => navigator("/admin")}>Admin</MenuItem>
+        )}
+        {props.title === "Netflow" ? (
+          <Wrap>
+            <MenuItem style={{ color: "#000000" }}>Netflow</MenuItem>
+            <StatusBar />
+          </Wrap>
+        ) : (
+          <MenuItem onClick={() => navigator("/newflowAnalysis")}>
+            Netflow
+          </MenuItem>
+        )}
+        {props.title === "Visualization" ? (
+          <Wrap>
+            <MenuItem style={{ color: "#000000" }}>Visualization</MenuItem>
+            <StatusBar />
+          </Wrap>
+        ) : (
+          <MenuItem onClick={() => navigator("/visualization")}>
+            Visualization
+          </MenuItem>
+        )}
+      </Menu>
     </HeaderContainer>
   );
 }
-
 
 export default Header;
