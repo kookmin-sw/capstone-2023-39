@@ -1,12 +1,15 @@
-import React, { useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import mapboxgl from "mapbox-gl";
 // npm install --save react-map-gl mapbox-gl
-import { MapContainer } from "./style";
+import { MapContainer,ModalContent,ModalOverlay } from "./style";
 
 mapboxgl.accessToken =
   "pk.eyJ1IjoiY2hhbmppbiIsImEiOiJjbGV0cXFhb2UxaW5wM3lwNGZ0NWEwNnQzIn0.07IpRbMqUnGLvvcM1vMHmQ";
 
 function Map() {
+  const [showModal, setShowModal] = useState(false);
+  const [selectedMarker, setSelectedMarker] = useState(null);
+
   const data = [
     [-151.5129, 63.1016],
     [-150.4048, 63.1224],
@@ -43,12 +46,29 @@ function Map() {
       })
         .setLngLat(coordinates)
         .addTo(map);
+
+        marker.getElement().addEventListener("click", () => {
+          setShowModal(true);
+          setSelectedMarker({ lng: coordinates[0], lat: coordinates[1] });
+        });
     });
   }, []);
-
+  const closeModal = () => {
+    setShowModal(false);
+    setSelectedMarker(null);
+  }
   return (
     <div>
       <MapContainer id="map" />
+    {showModal && (
+      <ModalOverlay>
+        <ModalContent>
+          <div>longtitude :{selectedMarker.lng}</div>
+          <div>latitude :{selectedMarker.lat}</div>
+        </ModalContent>
+      <button onClick={closeModal}>X</button>
+      </ModalOverlay>
+    )}
     </div>
   );
 }
