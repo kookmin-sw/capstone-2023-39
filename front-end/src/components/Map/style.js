@@ -1,8 +1,8 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const MapContainer = styled.div`
+  height: 100%;
   position: absolute;
-  top: 50px;
   bottom: 0;
   left: 600px;
   width: 100%;
@@ -34,4 +34,3 @@ export const ModalContent = styled.div`
   height: 300px;
   overflow: auto;
 `;
-
