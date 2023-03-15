@@ -1,8 +1,14 @@
 import React from "react";
 import Header from "../../components/Header/header";
+import { Wrap, Contents } from "./styles";
 
 function Join() {
-  return <Header title={"Join"}></Header>;
+  return (
+    <Wrap>
+      <Header title={"Join"}></Header>
+      <Contents />
+    </Wrap>
+  );
 }
 
 export default Join;
