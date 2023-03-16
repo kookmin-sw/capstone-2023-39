@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import mapboxgl from "mapbox-gl";
 // npm install --save react-map-gl mapbox-gl
-import { MapContainer,ModalContent,ModalOverlay } from "./style";
+import { MapContainer, ModalContent, ModalOverlay } from "./style";
 
 mapboxgl.accessToken =
   "pk.eyJ1IjoiY2hhbmppbiIsImEiOiJjbGV0cXFhb2UxaW5wM3lwNGZ0NWEwNnQzIn0.07IpRbMqUnGLvvcM1vMHmQ";
@@ -34,11 +34,11 @@ function Map() {
 
     map.on("style.load", () => {
       map.setFog({
-        "high-color": "white", //제일 바깥쪽 색
-        color: "white", //안쪽 색
+        "high-color": "#EEF1FA", //제일 바깥쪽 색
+        color: "#EEF1FA", //안쪽 색
         range: [0.8, 8], //-20~20
         "star-intensity": 0, //별들의 밀집도
-        "space-color": "white",
+        "space-color": "#EEF1FA",
       }); // Set the default atmosphere style
     });
 
@@ -51,28 +51,28 @@ function Map() {
         .setLngLat(coordinates)
         .addTo(map);
 
-        marker.getElement().addEventListener("click", () => {
-          setShowModal(true);
-          setSelectedMarker({ lng: coordinates[0], lat: coordinates[1] });
-        });
+      marker.getElement().addEventListener("click", () => {
+        setShowModal(true);
+        setSelectedMarker({ lng: coordinates[0], lat: coordinates[1] });
+      });
     });
   }, []);
   const closeModal = () => {
     setShowModal(false);
     setSelectedMarker(null);
-  }
+  };
   return (
     <div>
       <MapContainer id="map" />
-    {showModal && (
-      <ModalOverlay>
-        <ModalContent>
-          <div>longtitude :{selectedMarker.lng}</div>
-          <div>latitude :{selectedMarker.lat}</div>
-        </ModalContent>
-      <button onClick={closeModal}>X</button>
-      </ModalOverlay>
-    )}
+      {showModal && (
+        <ModalOverlay>
+          <ModalContent>
+            <div>longtitude :{selectedMarker.lng}</div>
+            <div>latitude :{selectedMarker.lat}</div>
+          </ModalContent>
+          <button onClick={closeModal}>X</button>
+        </ModalOverlay>
+      )}
     </div>
   );
 }
