@@ -1,7 +1,9 @@
 import { Injectable } from '@nestjs/common';
 import { RequestGeoDto } from './dto/request/request-geo.dto';
+import { RequestShortGeoDto } from './dto/request/request-shortgeo.dto';
 import { RequestIdDto } from './dto/request/request-id.dto';
 import { ResponseGeoDto } from './dto/response/response-geo.dto';
+import { ResponseShortGeoDto } from './dto/response/response-shortgeo.dto';
 import { ResponseIdDto } from './dto/response/response-id.dto';
 
 @Injectable()
@@ -16,6 +18,18 @@ export class GeoService {
       country: 'SouthKorea',
       city: 'Seoul',
       domain: 'test.com',
+    };
+
+    return response;
+  }
+
+  getShortGeoInfo(requestGeoDto: RequestGeoDto) {
+    // 지도의 범위 안에 있는 ip들의 정보 리턴
+    const response: ResponseShortGeoDto = {
+      lat: '37.012345678910',
+      long: '127.012345678910',
+      country: 'SouthKorea',
+      count: '352',
     };
 
     return response;
