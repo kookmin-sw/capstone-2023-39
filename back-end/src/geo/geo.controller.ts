@@ -1,6 +1,7 @@
 import { Body, Controller, Post } from '@nestjs/common';
 import { ApiOperation, ApiTags } from '@nestjs/swagger';
 import { RequestGeoDto } from './dto/request/request-geo.dto';
+import { RequestShortGeoDto } from './dto/request/request-shortgeo.dto';
 import { RequestIdDto } from './dto/request/request-id.dto';
 import { GeoService } from './geo.service';
 
@@ -16,6 +17,15 @@ export class GeoController {
   })
   getGeoInfo(@Body() requestGeoDto: RequestGeoDto) {
     return this.geoService.getGeoInfo(requestGeoDto);
+  }
+
+  @Post('/map_short')
+  @ApiOperation({
+    summary: '입력된 범위 내의 접근 내역 요약 출력',
+    description: '입력: 위도, 경도 범위 \n출력: 범위 안의 id들의 detail info',
+  })
+  getShortGeoInfo(@Body() requestGeoDto: RequestShortGeoDto) {
+    return this.geoService.getShortGeoInfo(requestGeoDto);
   }
 
   @Post('/detail')
