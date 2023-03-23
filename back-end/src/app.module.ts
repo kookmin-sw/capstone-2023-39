@@ -4,10 +4,13 @@ import { AppService } from './app.service';
 import { GeoController } from './geo/geo.controller';
 import { GeoModule } from './geo/geo.module';
 import { GeoService } from './geo/geo.service';
+import { CoinController } from './coin/coin.controller';
+import { CoinService } from './coin/coin.service';
+import { CoinModule } from './coin/coin.module';
 
 @Module({
-  imports: [GeoModule],
-  controllers: [AppController, GeoController],
-  providers: [AppService, GeoService],
+  imports: [GeoModule, CoinModule],
+  controllers: [AppController, GeoController, CoinController],
+  providers: [AppService, GeoService, CoinService],
 })
 export class AppModule {}
