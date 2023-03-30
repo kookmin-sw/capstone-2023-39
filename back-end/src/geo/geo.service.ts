@@ -16,7 +16,12 @@ export class GeoService {
     const time = requestGeoDto.time;
     // 지도의 범위 안에 있는 ip들의 정보 리턴
 
-    let search_result = await this.searchService.search_range(range[3][0],range[1][0],range[3][1],range[1][1]);
+    const search_result = await this.searchService.search_range(
+      range[3][0],
+      range[1][0],
+      range[3][1],
+      range[1][1],
+    );
 
     return search_result.results;
   }
@@ -25,21 +30,20 @@ export class GeoService {
     // 지도의 범위 안에 있는 ip들의 정보 리턴
 
     //var search_result = await this.searchService.search_range("1","2","3","4");
-
     const response: ResponseShortGeoDto[] = [
       {
-      lat: '37.012345678910',
-      long: '127.012345678910',
-      country: 'SouthKorea',
-      count: '352',
-    },
-    {
-      lat: '38.012345678910',
-      long: '127.012345678910',
-      country: 'SouthKorea',
-      count: '111',
-    }
-  ];
+        lat: '37.012345678910',
+        long: '127.012345678910',
+        country: 'SouthKorea',
+        count: '352',
+      },
+      {
+        lat: '38.012345678910',
+        long: '127.012345678910',
+        country: 'SouthKorea',
+        count: '111',
+      },
+    ];
 
     return response;
   }
