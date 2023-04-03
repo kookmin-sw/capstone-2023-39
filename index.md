@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 # Capstone Design Team 39
 
 ## Team Introduce
