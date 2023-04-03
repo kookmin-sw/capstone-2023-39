@@ -126,3 +126,24 @@ Student ID: ****2175
 E-mail: alswn0558@gmail.com
 Role: Backend
 ```
+<br>
+
+## 기술 스택 
+### Frontend
+<img alt="RED" src ="https://img.shields.io/badge/REACT-61DAFB.svg?&style=for-the-badge&logo=React&logoColor=white"/>  <img alt="RED" src ="https://img.shields.io/badge/JAVASCRIPT-F7DF1E.svg?&style=for-the-badge&logo=JavaScript&logoColor=white"/>  <img alt="RED" src ="https://img.shields.io/badge/KIBANA-005571.svg?&style=for-the-badge&logo=Kibana&logoColor=white"/>  <img alt="RED" src ="https://img.shields.io/badge/ELASTICSEARCH-005571.svg?&style=for-the-badge&logo=Elasticsearch&logoColor=white"/>
+
+### Backend
+<img alt="RED" src ="https://img.shields.io/badge/ELASTICSEARCH-005571.svg?&style=for-the-badge&logo=Elasticsearch&logoColor=white"/>  <img alt="RED" src ="https://img.shields.io/badge/DOCKER-2496ED.svg?&style=for-the-badge&logo=Docker&logoColor=white"/>  <img alt="RED" src ="https://img.shields.io/badge/NESTJS-E0234E.svg?&style=for-the-badge&logo=NestJS&logoColor=white"/>  <img alt="RED" src ="https://img.shields.io/badge/NGINX-009639.svg?&style=for-the-badge&logo=NGINX&logoColor=white"/>
+
+### AI Modeling
+<img alt="RED" src ="https://img.shields.io/badge/C++-00599C.svg?&style=for-the-badge&logo=C++&logoColor=white"/>  <img alt="RED" src ="https://img.shields.io/badge/Python-3776AB.svg?&style=for-the-badge&logo=Python&logoColor=white"/>  <img alt="RED" src ="https://img.shields.io/badge/PYTORCH-EE4C2C.svg?&style=for-the-badge&logo=Pytorch&logoColor=white"/>  <img alt="RED" src ="https://img.shields.io/badge/SCIKIT-LEARN-F7931E.svg?&style=for-the-badge&logo=scikit-learn&logoColor=white"/>
+
+### Data Processing & Analysis
+<br>
+
+## common
+|역할|종류|
+|-|-|
+|Idea Memo|<img alt="RED" src ="https://img.shields.io/badge/Notion-000000.svg?&style=for-the-badge&logo=Notion&logoColor=white"/> |
+|Frontend Design|<img alt="RED" src ="https://img.shields.io/badge/Figma-F24E1E.svg?&style=for-the-badge&logo=Figma&logoColor=white"/>|
+|Version Control|![Git](https://img.shields.io/badge/git-E6484F.svg?style=for-the-badge&logo=git&logoColor=white) ![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white) |
