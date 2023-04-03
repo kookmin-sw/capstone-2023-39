@@ -15,6 +15,8 @@
 <img width="1409" alt="스크린샷 2023-04-03 오후 2 06 22" src="https://user-images.githubusercontent.com/70675133/229416383-e9e8b817-110c-4950-99c8-01cc9e04b7a7.png">
 <img width="1422" alt="스크린샷 2023-04-03 오후 2 06 33" src="https://user-images.githubusercontent.com/70675133/229416390-1c61e33d-b7d1-4cf2-8b71-a8638cdd3e82.png">
 
+## 팀 페이지 주소 : https://kookmin-sw.github.io/
+
 # 팀 소개
 
 ### 한윤석 (팀장)
