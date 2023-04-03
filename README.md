@@ -51,7 +51,7 @@
 
 ### 박보서
 - student ID: ****5286
-- E-mail: boseo@gmail.com
+- E-mail: boseo@kookmin.ac.kr
 - Role: Data Processing & Analysis
 
 ### 정찬진
@@ -65,12 +65,12 @@
 - Role: Frontend
 
 ### 이주원
-- student ID: ****2175
+- student ID: ****1334
 - E-mail: jwlee51@kookmin.ac.kr
 - Role: Backend
 
 ### 양민주
-- student ID: ****1334
+- student ID: ****2175
 - E-mail: alswn0558@gmail.com
 - Role: Backend
 
