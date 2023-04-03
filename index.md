@@ -1,37 +1,64 @@
-## Welcome to GitHub Pages
+# Capstone Design Team 39
 
-You can use the [editor on GitHub](https://github.com/kookmin-sw/cap-template/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
+## Team Introduce
+한윤석 (팀장)
+student ID: ****3159
+E-mail: gtavexir@kookmin.ac.kr
+Role: AI Modeling
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+이상민
+student ID: ****2797
+E-mail: sangminlee@kookmin.ac.kr
+Role: AI Modeling
 
-### Markdown
+이종식
+student ID: ****1673
+E-mail: identity230c@kookmin.ac.kr
+Role: AI Modeling
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+신재혁
+student ID: ****1636
+E-mail: wogur6767@kookmin.ac.kr
+Role: AI Modeling
 
-```markdown
-Syntax highlighted code block
+이윤호
+student ID: ****1645
+E-mail: yhya0904@kookmin.ac.kr
+Role: Data Processing & Analysis
 
-# Header 1
-## Header 2
-### Header 3
+최유나
+student ID: ****2831
+E-mail: xcv904@kookmin.ac.kr
+Role: Data Processing & Analysis
 
-- Bulleted
-- List
+박보서
+student ID: ****5286
+E-mail: boseo@gmail.com
+Role: Data Processing & Analysis
 
-1. Numbered
-2. List
+정찬진
+student ID: ****1692
+E-mail: chanjin@kookmin.ac.kr
+Role: Frontend
 
-**Bold** and _Italic_ and `Code` text
+이다은
+student ID: ****3112
+E-mail: ekdms7273@kookmin.ac.kr
+Role: Frontend
 
-[Link](url) and ![Image](src)
-```
+이주원
+student ID: ****2175
+E-mail: jwlee51@kookmin.ac.kr
+Role: Backend
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+양민주
+student ID: ****1334
+E-mail: alswn0558@gmail.com
+Role: Backend
 
-### Jekyll Themes
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/kookmin-sw/cap-template/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+# Project Description
+Our project is a mobile app that helps people track their daily water intake and reminds them to stay hydrated.
 
-### Support or Contact
+[![App Screenshot](/images/app-screenshot.png)](https://example.com/app)
 
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
