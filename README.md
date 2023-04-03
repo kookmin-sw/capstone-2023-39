@@ -1,7 +1,8 @@
-# 네트워크 트래픽 분석을 통한 사이버 공격 탐지 (2023 다학제간캡스톤디자인 39팀)
+# 국민대학교를 위한 네트워크 이상탐지 기술 개발 및 서비스화 (2023 다학제간캡스톤디자인 39팀)
 
-
-# :team: 팀 소개
+# 프로젝트 소개
+국민대학교 내부 IP를 클라이언트로 
+# 팀 소개
 ### 한윤석 (팀장)
 - student ID: ****3159
 - E-mail: gtavexir@kookmin.ac.kr
@@ -57,7 +58,7 @@
 - E-mail: alswn0558@gmail.com
 - Role: Backend
 
-# :list: 사용법
+# 사용법
                                    
 <br />
 
@@ -68,6 +69,3 @@
 |Frontend Design|<img alt="RED" src ="https://img.shields.io/badge/Figma-F24E1E.svg?&style=for-the-badge&logo=Figma&logoColor=white"/>|
 |Version Control|![Git](https://img.shields.io/badge/git-E6484F.svg?style=for-the-badge&logo=git&logoColor=white) ![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white) |
 <br />
-
-
-
