@@ -1,11 +1,13 @@
 # Capstone Design Team 39
 
 # Table of Contents
-<a href="#tag1">Project Introduce</a>
-<a href="#tag2">Service</a>
-<a href="#tag3">Project Structure</a>
-<a href="#tag4">Team Introduce</a>
-<a href="#tag5">Technology Stack</a>
+<or>
+  <li><a href="#tag1">Project Introduce</a></li>
+  <li><a href="#tag2">Service</a></li>
+  <li><a href="#tag3">Project Structure</a></li>
+  <li><a href="#tag4">Team Introduce</a></li>
+  <li><a href="#tag5">Technology Stack</a></li>
+</or>
 
 <a name="tag1"></a>
 # Project Introduce
