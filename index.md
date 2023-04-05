@@ -1,5 +1,13 @@
 # Capstone Design Team 39
 
+# Table of Contents
+<a href="#tag1">Project Introduce</a>
+<a href="#tag2">Service</a>
+<a href="#tag3">Project Structure</a>
+<a href="#tag4">Team Introduce</a>
+<a href="#tag5">Technology Stack</a>
+
+<a name="tag1"></a>
 # Project Introduce
 국민대학교 내부 IP를 클라이언트로 설정하여 **외부로부터 들어오는 공격을 탐지하는 기술**을 개발하려한다.
 
@@ -8,19 +16,18 @@
 더불어 해당 서비스 외에도 다양한 기능들을 추가하여 국민대학교 관계자에게 **보안에 대한 관심을 높이고 중요성을 부각**시키려고 한다.
 <br/>
 
-We are trying to develop **a technology to detect attacks coming from outside by setting Kookmin University's internal IP as a client.
+We are trying to develop a technology to detect attacks coming from outside by setting Kookmin University's internal IP as a client.
 
-<br/>
 
 The technology does not end in the development stage, but aims to service the technology so that actual Kookmin University officials can easily access and use it.
 
-<br/>
 
 In addition to the service, various functions are added to increase interest in security and highlight the importance of Kookmin University officials.
 
 <br/>
+<a name="tag2"></a>
 
-## 목표 서비스
+## Service
 ### 1. netflow기반 이상 탐지
 ```
 국민대를 대상으로 하는 사이버 공격이나 이상행위 탐지
@@ -43,14 +50,18 @@ In addition to the service, various functions are added to increase interest in 
 * CTI 정보는 새로운 위협이 나타났을 때 실시간으로 업데이트 된 정보를 제공하기 때문에 이를 이용하여 이상탐지에 활용함  
 * CTI를 제공해주는 서비스는 주로 해외 서비스가 많기 때문에, 국민대학교를 타겟으로 하는 위협정보를 확장하여 네트워크 보안을 강화함
 <br>
-## 프로젝트 구조도 
+<a name="tag3"></a>
+
+## Project Structure
 <img width="600" alt="image" src="https://user-images.githubusercontent.com/65989401/229453048-b368770e-4253-4cb2-bb30-83a469aacaee.png">
 <br>
 
-## 메인 페이지 
+## Main Page
 <img width="1000" alt="스크린샷 2023-04-03 오후 2 06 22" src="https://user-images.githubusercontent.com/70675133/229416383-e9e8b817-110c-4950-99c8-01cc9e04b7a7.png">
 <img width="1000" alt="스크린샷 2023-04-03 오후 2 06 33" src="https://user-images.githubusercontent.com/70675133/229416390-1c61e33d-b7d1-4cf2-8b71-a8638cdd3e82.png">
 <br>
+
+<a name="tag4"></a>
 
 ## Team Introduce
 **🪐 한윤석 (팀장)**
@@ -129,7 +140,9 @@ Student ID: ****2175
 E-mail: alswn0558@gmail.com
 Role: Backend
 ```  
-## 기술 스택 
+<a name="tag5"></a>
+
+## Technology Stack
 ### Frontend
 <img alt="RED" src ="https://img.shields.io/badge/REACT-61DAFB.svg?&style=for-the-badge&logo=React&logoColor=white"/>  <img alt="RED" src ="https://img.shields.io/badge/JAVASCRIPT-F7DF1E.svg?&style=for-the-badge&logo=JavaScript&logoColor=white"/>  <img alt="RED" src ="https://img.shields.io/badge/KIBANA-005571.svg?&style=for-the-badge&logo=Kibana&logoColor=white"/>  <img alt="RED" src ="https://img.shields.io/badge/ELASTICSEARCH-005571.svg?&style=for-the-badge&logo=Elasticsearch&logoColor=white"/>
 
