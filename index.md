@@ -8,19 +8,19 @@
 더불어 해당 서비스 외에도 다양한 기능들을 추가하여 국민대학교 관계자에게 **보안에 대한 관심을 높이고 중요성을 부각**시키려고 한다.
 <br/>
 <br/>
-```
+
 We are trying to develop **a technology to detect attacks coming from outside by setting Kookmin University's internal IP as a client.
-```
+
 <br/>
 <br/>
-```
+
 The technology does not end in the development stage, but aims to service the technology so that actual Kookmin University officials can easily access and use it.
-```
+
 <br/>
 <br/>
-```
+
 In addition to the service, various functions are added to increase interest in security and highlight the importance of Kookmin University officials.
-```
+
 <br/>
 <br/>
 
@@ -133,9 +133,9 @@ Student ID: ****2175
 E-mail: alswn0558@gmail.com
 Role: Backend
 ```  
-
-# Project Description
-Our project is a mobile app that helps people track their daily water intake and reminds them to stay hydrated.
-
-[![App Screenshot](/images/app-screenshot.png)](https://example.com/app)
-
+## common
+|역할|종류|
+|-|-|
+|Idea Memo|<img alt="RED" src ="https://img.shields.io/badge/Notion-000000.svg?&style=for-the-badge&logo=Notion&logoColor=white"/> |
+|Frontend Design|<img alt="RED" src ="https://img.shields.io/badge/Figma-F24E1E.svg?&style=for-the-badge&logo=Figma&logoColor=white"/>|
+|Version Control|![Git](https://img.shields.io/badge/git-E6484F.svg?style=for-the-badge&logo=git&logoColor=white) ![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white) |
