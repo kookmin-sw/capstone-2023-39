@@ -7,21 +7,17 @@
 
 더불어 해당 서비스 외에도 다양한 기능들을 추가하여 국민대학교 관계자에게 **보안에 대한 관심을 높이고 중요성을 부각**시키려고 한다.
 <br/>
-<br/>
 
 We are trying to develop **a technology to detect attacks coming from outside by setting Kookmin University's internal IP as a client.
 
-<br/>
 <br/>
 
 The technology does not end in the development stage, but aims to service the technology so that actual Kookmin University officials can easily access and use it.
 
 <br/>
-<br/>
 
 In addition to the service, various functions are added to increase interest in security and highlight the importance of Kookmin University officials.
 
-<br/>
 <br/>
 
 ## 목표 서비스
@@ -133,6 +129,21 @@ Student ID: ****2175
 E-mail: alswn0558@gmail.com
 Role: Backend
 ```  
+## 기술 스택 
+### Frontend
+<img alt="RED" src ="https://img.shields.io/badge/REACT-61DAFB.svg?&style=for-the-badge&logo=React&logoColor=white"/>  <img alt="RED" src ="https://img.shields.io/badge/JAVASCRIPT-F7DF1E.svg?&style=for-the-badge&logo=JavaScript&logoColor=white"/>  <img alt="RED" src ="https://img.shields.io/badge/KIBANA-005571.svg?&style=for-the-badge&logo=Kibana&logoColor=white"/>  <img alt="RED" src ="https://img.shields.io/badge/ELASTICSEARCH-005571.svg?&style=for-the-badge&logo=Elasticsearch&logoColor=white"/>
+
+### Backend
+<img alt="RED" src ="https://img.shields.io/badge/ELASTICSEARCH-005571.svg?&style=for-the-badge&logo=Elasticsearch&logoColor=white"/>  <img alt="RED" src ="https://img.shields.io/badge/DOCKER-2496ED.svg?&style=for-the-badge&logo=Docker&logoColor=white"/>  <img alt="RED" src ="https://img.shields.io/badge/NESTJS-E0234E.svg?&style=for-the-badge&logo=NestJS&logoColor=white"/>  <img alt="RED" src ="https://img.shields.io/badge/NGINX-009639.svg?&style=for-the-badge&logo=NGINX&logoColor=white"/>
+<br>
+<img alt="RED" src ="https://img.shields.io/badge/TYPESCRIPT-3178C6.svg?&style=for-the-badge&logo=TypeScript&logoColor=white"/>  <img alt="RED" src ="https://img.shields.io/badge/SWAGGER-85EA2D.svg?&style=for-the-badge&logo=Swagger&logoColor=white"/>
+
+### AI Modeling
+<img alt="RED" src ="https://img.shields.io/badge/C++-00599C.svg?&style=for-the-badge&logo=C++&logoColor=white"/>  <img alt="RED" src ="https://img.shields.io/badge/Python-3776AB.svg?&style=for-the-badge&logo=Python&logoColor=white"/>  <img alt="RED" src ="https://img.shields.io/badge/PYTORCH-EE4C2C.svg?&style=for-the-badge&logo=Pytorch&logoColor=white"/>  <img alt="RED" src ="https://img.shields.io/badge/SCIKIT-LEARN-F7931E.svg?&style=for-the-badge&logo=scikit-learn&logoColor=white"/>
+
+### Data Processing & Analysis
+<br>
+
 ## common
 |역할|종류|
 |-|-|
