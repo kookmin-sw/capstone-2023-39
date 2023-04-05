@@ -7,11 +7,20 @@
 
 더불어 해당 서비스 외에도 다양한 기능들을 추가하여 국민대학교 관계자에게 **보안에 대한 관심을 높이고 중요성을 부각**시키려고 한다.
 <br/>
-We are trying to develop a technology to detect attacks coming from outside by setting Kookmin University's internal IP as a client.
 <br/>
+```
+We are trying to develop **a technology to detect attacks coming from outside by setting Kookmin University's internal IP as a client.
+```
+<br/>
+<br/>
+```
 The technology does not end in the development stage, but aims to service the technology so that actual Kookmin University officials can easily access and use it.
+```
 <br/>
+<br/>
+```
 In addition to the service, various functions are added to increase interest in security and highlight the importance of Kookmin University officials.
+```
 <br/>
 <br/>
 
