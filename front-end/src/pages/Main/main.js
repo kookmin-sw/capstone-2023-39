@@ -1,7 +1,8 @@
 import React from "react";
+import KibanaDashboard from "../Dashboard/KibanaDashboard";
 
 function Main() {
-  return <div>main page</div>;
+  return <KibanaDashboard />;
 }
 
 export default Main;
