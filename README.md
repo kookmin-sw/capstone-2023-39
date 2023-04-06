@@ -49,6 +49,9 @@
 * 외부 접근 IP 위치 시각화 
 <br>
 
+## 깃허브 페이지
+https://kookmin-sw.github.io/capstone-2023-39/
+
 ## 팀원 소개
 **🪐 한윤석 (팀장)**
 ```

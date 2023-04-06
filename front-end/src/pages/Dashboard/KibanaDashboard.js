@@ -1,14 +1,13 @@
-import React from 'react';
-import Iframe from 'react-iframe';
+import React from "react";
+import Iframe from "react-iframe";
 
 const Dashboard = () => {
   return (
     <Iframe
-      url="http://localhost:5601/app/dashboards#/view/797fcd80-d085-11ed-af68-61d805810905?embed=true&_g=(refreshInterval:(pause:!t,value:0),time:(from:now-15m,to:now))&_a=(viewMode:view)&hide-filter-bar=true"
+      url="http://15.165.95.126:5601/app/dashboards#/view/b2fad010-d38b-11ed-b48d-bdaa492e3482?embed=true&_a=(viewMode:view)&_g=(filters%3A!()%2Cquery%3A(language%3Akuery%2Cquery%3A'')%2CrefreshInterval%3A(pause%3A!t%2Cvalue%3A0)%2Ctime%3A(from%3A'2023-02-01T07%3A58%3A32.121Z'%2Cto%3Anow))&show-time-filter=true&hide-filter-bar=true"
+      height="1000"
       width="100%"
-      height="1000px"
       id="myId"
-
       className="myClassname"
       display="Full screen"
       position="relative"
