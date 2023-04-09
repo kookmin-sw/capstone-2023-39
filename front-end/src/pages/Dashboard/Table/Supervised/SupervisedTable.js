@@ -8,6 +8,7 @@ const SupervisedTable = () => {
       height="354rem"
       width="35%"
       id="myId"
+      frameBorder={0}
       className="supervisedTable"
       position="relative"
     />
