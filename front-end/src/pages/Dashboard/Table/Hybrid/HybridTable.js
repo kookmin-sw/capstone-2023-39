@@ -8,6 +8,7 @@ const HybridTable = () => {
       height="354rem"
       width="28%"
       id="myId"
+      frameBorder={0}
       className="hybridTable"
       position="relative"
     />

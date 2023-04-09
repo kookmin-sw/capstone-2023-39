@@ -9,18 +9,16 @@ import { BodyContainer, ColumnContainer } from "./styles";
 
 function Main() {
   return (
-    
-      <BodyContainer>
-        <Map />;
-        <ColumnContainer>
-          <Chart />;
-          <Value />;
-        </ColumnContainer>
-        <SupervisedTable/>
-        <UnSupervisedTable/>
-        <HybridTable/>
-      </BodyContainer>
-  
+    <BodyContainer>
+      <Map />
+      <ColumnContainer>
+        <Chart />
+        <Value />
+      </ColumnContainer>
+      <SupervisedTable />
+      <UnSupervisedTable />
+      <HybridTable />
+    </BodyContainer>
   );
 }
 

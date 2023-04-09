@@ -11,6 +11,7 @@ const Dashboard = () => {
       className="myClassname"
       display="Full screen"
       position="relative"
+      onClick={() => console.log("test")}
     />
   );
 };

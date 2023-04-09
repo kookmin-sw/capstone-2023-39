@@ -1,5 +1,5 @@
-import React from 'react';
-import Iframe from 'react-iframe';
+import React from "react";
+import Iframe from "react-iframe";
 
 const Chart = () => {
   return (
@@ -8,6 +8,7 @@ const Chart = () => {
       height="324rem"
       width="100%"
       id="myId"
+      frameBorder={0}
       className="donutChart"
       position="relative"
     />

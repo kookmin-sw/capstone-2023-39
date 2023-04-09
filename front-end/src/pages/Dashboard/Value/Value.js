@@ -1,5 +1,5 @@
-import React from 'react';
-import Iframe from 'react-iframe';
+import React from "react";
+import Iframe from "react-iframe";
 
 const Value = () => {
   return (
@@ -8,6 +8,7 @@ const Value = () => {
       height="160rem"
       width="100%"
       id="myId"
+      frameBorder={0}
       className="Value"
       position="relative"
     />
