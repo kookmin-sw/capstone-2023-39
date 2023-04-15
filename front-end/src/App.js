@@ -6,7 +6,11 @@ import Main from "./pages/Main/main";
 
 function App() {
   return (
-    <div>
+    <div
+      style={{
+        margin: "0 auto",
+      }}
+    >
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Main />} />
