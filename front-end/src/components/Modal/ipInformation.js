@@ -1,8 +1,8 @@
 import React from "react";
 import * as S from "./styles";
 
-function SearchModal(props) {
-  const { close } = props;
+function IpInformation(props) {
+  const { close, ip } = props;
   return (
     <S.Wrap>
       <S.ModalContainer>
@@ -13,9 +13,10 @@ function SearchModal(props) {
             alt="close"
           />
         </S.ButtonContainer>
+        {ip}
       </S.ModalContainer>
     </S.Wrap>
   );
 }
 
-export default SearchModal;
+export default IpInformation;

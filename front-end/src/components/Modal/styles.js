@@ -5,11 +5,12 @@ export const Wrap = styled.div`
   height: 100%;
   margin: 0 auto;
   position: absolute;
+  z-index: 2;
 `;
 
 export const ModalContainer = styled.div`
-  width: 80%;
-  height: 90%;
+  width: 70%;
+  height: 100%;
   margin: 0 auto;
   background: #ffffff;
   box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
