@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import DashboardTop from "../../components/DashboardTop";
-import DashboardBottom from "../../components/DashboardBottom";
-import DashboardTopGoodIp from "../../components/DashboardTopGoodIp";
+import DashboardBottom from "../../components/Dashboard/Bottom";
+import DashboardGoodIp from "../../components/Dashboard/Top/GoodIP";
+import DashboardBadIP from "../../components/Dashboard/Top/BadIP";
 import { BodyContainer, MapButtonContainer, MapButton } from "./styles";
 
 function Main() {
@@ -9,8 +9,8 @@ function Main() {
 
   return (
     <BodyContainer>
-      {dashboardValue === true && <DashboardTop />}
-      {dashboardValue === false && <DashboardTopGoodIp />}
+      {dashboardValue === true && <DashboardBadIP />}
+      {dashboardValue === false && <DashboardGoodIp />}
       <MapButtonContainer>
         <MapButton onClick={() => setDashboardValue(false)}>Good Ip</MapButton>
         <MapButton onClick={() => setDashboardValue(true)}>Bad Ip</MapButton>
