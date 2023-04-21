@@ -10,10 +10,10 @@ export const Wrap = styled.div`
 
 export const ModalContainer = styled.div`
   width: 70%;
-  height: 100%;
+  height: 110%;
   margin: 0 auto;
   background: #ffffff;
-  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
   border-radius: 30px;
 `;
 
