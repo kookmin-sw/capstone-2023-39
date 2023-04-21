@@ -24,7 +24,6 @@ export const columns = [
 export const testdata = [];
 for (let i = 0; i < 50; i++) {
   testdata.push({
-    key: i,
     ip: (Math.random() * i).toFixed(9),
     nation: `nation ${i}`,
     score: Math.random().toFixed(5),
