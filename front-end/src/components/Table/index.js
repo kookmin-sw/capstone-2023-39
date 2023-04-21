@@ -10,11 +10,17 @@ function TableChart() {
   const handleClick = (ip) => {
     setOpen(true);
     setIP(ip);
+    document.body.style.overflow = "hidden";
+  };
+
+  const modalClose = () => {
+    setOpen(false);
+    document.body.style.overflow = "unset";
   };
 
   return (
     <div style={{ position: "relative" }}>
-      {open ? <IpInformation close={() => setOpen(false)} ip={ip} /> : null}
+      {open ? <IpInformation close={modalClose} ip={ip} /> : null}
       <S.TableContainer
         columns={columns}
         dataSource={testdata}

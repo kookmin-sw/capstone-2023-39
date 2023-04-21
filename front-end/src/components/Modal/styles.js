@@ -5,7 +5,7 @@ export const Wrap = styled.div`
   height: 100%;
   margin: 0 auto;
   position: absolute;
-  z-index: 2;
+  z-index: 999;
 `;
 
 export const ModalContainer = styled.div`
