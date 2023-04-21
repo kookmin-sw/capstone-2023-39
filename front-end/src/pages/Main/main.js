@@ -3,7 +3,7 @@ import DashboardBottom from "../../components/Dashboard/Bottom";
 import DashboardGoodIp from "../../components/Dashboard/Top/GoodIP";
 import DashboardBadIP from "../../components/Dashboard/Top/BadIP";
 import { BodyContainer, MapButtonContainer, MapButton } from "./styles";
-
+import TableChart from "../../components/Table";
 function Main() {
   const [dashboardValue, setDashboardValue] = useState(true);
 
@@ -15,6 +15,7 @@ function Main() {
         <MapButton onClick={() => setDashboardValue(false)}>Good Ip</MapButton>
         <MapButton onClick={() => setDashboardValue(true)}>Bad Ip</MapButton>
       </MapButtonContainer>
+      <TableChart />
       <DashboardBottom />
     </BodyContainer>
   );
