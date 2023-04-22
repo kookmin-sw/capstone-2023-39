@@ -12,16 +12,18 @@ import HybridTable from "../../components/HybridTable";
 import CountTable from "../../components/CountTable";
 
 function Main() {
-  const [dashboardValue, setDashboardValue] = useState(true);
+  const [dashboardValue, setDashboardValue] = useState(2);
 
   return (
     <BodyContainer>
-      {dashboardValue === true && <DashboardBadIP />}
-      {dashboardValue === false && <DashboardGoodIp />}
-      {/*<MapButtonContainer>
-        <MapButton onClick={() => setDashboardValue(false)}>Good Ip</MapButton>
-        <MapButton onClick={() => setDashboardValue(true)}>Bad Ip</MapButton>
-  </MapButtonContainer>*/}
+      {dashboardValue === 0 && <DashboardBadIP />}
+      {dashboardValue === 1 && <DashboardGoodIp />}
+      {dashboardValue === 2 && <DashboardBadIP/>}
+      <MapButtonContainer>
+        <MapButton onClick={() => setDashboardValue(0)}>Good Ip</MapButton>
+        <MapButton onClick={() => setDashboardValue(1)}>Bad Ip</MapButton>
+        <MapButton onClick={() => setDashboardValue(2)}>Both</MapButton>
+      </MapButtonContainer>
       <TableContainer>
         <HybridTable />
         <CountTable />
