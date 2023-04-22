@@ -2,9 +2,10 @@ import styled from "styled-components";
 
 export const Wrap = styled.div`
   width: 80vw;
-  height: 60vh;
-  margin-left: 20%;
+  height: 70vh;
+  margin: 0 20%;
   position: absolute;
+  display: flex;
   z-index: 999;
 `;
 
