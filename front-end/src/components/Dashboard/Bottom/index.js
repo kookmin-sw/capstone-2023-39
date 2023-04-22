@@ -8,6 +8,7 @@ function DashboardBottom() {
       height="900"
       width="100%"
       frameBorder={0}
+      styles={{ background: "#f8fafd" }}
     ></Iframe>
   );
 }

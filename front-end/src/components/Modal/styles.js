@@ -1,15 +1,15 @@
 import styled from "styled-components";
 
 export const Wrap = styled.div`
-  width: 100%;
-  height: 100%;
-  margin: 0 auto;
+  width: 80vw;
+  height: 60vh;
+  margin-left: 20%;
   position: absolute;
   z-index: 999;
 `;
 
 export const ModalContainer = styled.div`
-  width: 70%;
+  width: 100%;
   height: 110%;
   margin: 0 auto;
   background: #ffffff;

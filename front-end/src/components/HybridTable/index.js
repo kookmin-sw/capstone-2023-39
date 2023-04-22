@@ -3,7 +3,7 @@ import * as S from "./styles";
 import { testdata, columns } from "./testdata";
 import IpInformation from "../Modal/ipInformation";
 
-function TableChart() {
+function HybridTable() {
   const [open, setOpen] = useState(false);
   const [ip, setIP] = useState("");
 
@@ -19,7 +19,13 @@ function TableChart() {
   };
 
   return (
-    <div style={{ position: "relative" }}>
+    <div
+      style={{
+        position: "relative",
+        width: "100%",
+        height: "100%",
+      }}
+    >
       {open ? <IpInformation close={modalClose} ip={ip} /> : null}
       <S.TableContainer
         columns={columns}
@@ -39,4 +45,4 @@ function TableChart() {
   );
 }
 
-export default TableChart;
+export default HybridTable;
