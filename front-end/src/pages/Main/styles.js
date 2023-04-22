@@ -7,15 +7,16 @@ export const BodyContainer = styled.div`
 `;
 
 export const MapButtonContainer = styled.div`
-  margin: 0 auto;
+  display: flex;
+  justify-content: flex-end;
+  margin: 0 30px 0 0;
 `;
 
 export const MapButton = styled.button`
   width: 70px;
   height: 40px;
-  border: none;
   background: rgba(11, 190, 143, 0.5);
-  margin: 0 0 0 10px;
+  margin: 0 0 0 20px;
   border-radius: 10px;
   cursor: pointer;
 `;
