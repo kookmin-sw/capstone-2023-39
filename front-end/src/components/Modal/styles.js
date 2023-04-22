@@ -13,7 +13,7 @@ export const ModalContainer = styled.div`
   height: 110%;
   margin: 0 auto;
   background: #ffffff;
-  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
   border-radius: 30px;
 `;
 
