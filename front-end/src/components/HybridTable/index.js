@@ -32,7 +32,11 @@ function HybridTable() {
         dataSource={testdata}
         size={"middle"}
         pagination={{ position: ["bottomCenter"] }}
-        style={{ cursor: "pointer", position: "relative" }}
+        style={{
+          cursor: "pointer",
+          position: "relative",
+          background: "#ffffff",
+        }}
         onRow={(record, rowIndex) => {
           return {
             onClick: () => {
