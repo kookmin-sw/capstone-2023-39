@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
 export const BodyContainer = styled.div`
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   background: #f6f7fa;
 `;
 
@@ -10,9 +10,8 @@ export const MapButtonContainer = styled.div`
   display: flex;
   justify-content: flex-end;
   position: relative;
-  gap:10px;
+  gap: 10px;
   margin: 0 30px 0 0;
-  
 `;
 
 export const MapNormalButton = styled.button`

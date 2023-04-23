@@ -9,6 +9,9 @@ function App() {
     <div
       style={{
         margin: "0 auto",
+        width: "100%",
+        height: "100%",
+        position: "relative",
       }}
     >
       <BrowserRouter>
