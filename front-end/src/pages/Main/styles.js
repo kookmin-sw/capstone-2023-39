@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const BodyContainer = styled.div`
   width: 100%;
   height: 100%;
-  background: #f6f7fa;
+  margin-top: 20px;
 `;
 
 export const MapButtonContainer = styled.div`
@@ -56,5 +56,7 @@ export const TableContainer = styled.div`
   width: 100%;
   height: 70%;
   align-items: center;
+  justify-content: center;
+  margin: 35px 0;
   background: #f8fafd;
 `;

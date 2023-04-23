@@ -8,10 +8,10 @@ function App() {
   return (
     <div
       style={{
-        margin: "0 auto",
         width: "100%",
         height: "100%",
         position: "relative",
+        background: "#f8fafd",
       }}
     >
       <BrowserRouter>
