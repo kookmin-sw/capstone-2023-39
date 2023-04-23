@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const BodyContainer = styled.div`
   width: 100%;
   height: 100%;
-  margin-top: 20px;
+  margin-top: 30px;
 `;
 
 export const MapButtonContainer = styled.div`
@@ -26,6 +26,7 @@ export const MapNormalButton = styled.button`
   z-index: 999;
   cursor: pointer;
 `;
+
 export const MapAbnormalButton = styled.button`
   width: 70px;
   height: 40px;
@@ -38,6 +39,7 @@ export const MapAbnormalButton = styled.button`
   z-index: 999;
   cursor: pointer;
 `;
+
 export const MapBothButton = styled.button`
   width: 70px;
   height: 40px;
@@ -57,6 +59,6 @@ export const TableContainer = styled.div`
   height: 70%;
   align-items: center;
   justify-content: center;
-  margin: 35px 0;
+  margin-bottom: 35px;
   background: #f8fafd;
 `;

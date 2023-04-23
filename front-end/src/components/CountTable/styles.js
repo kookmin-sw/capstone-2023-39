@@ -11,9 +11,9 @@ export const Wrap = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
-  border-radius: 20px;
-  margin-right: 15px;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  margin-right: 10px;
 `;
 
 export const TitleWrap = styled(Text)`
