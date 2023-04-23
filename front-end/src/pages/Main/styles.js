@@ -9,15 +9,46 @@ export const BodyContainer = styled.div`
 export const MapButtonContainer = styled.div`
   display: flex;
   justify-content: flex-end;
+  position: relative;
+  gap:10px;
   margin: 0 30px 0 0;
+  
 `;
 
-export const MapButton = styled.button`
+export const MapNormalButton = styled.button`
   width: 70px;
   height: 40px;
-  background: rgba(11, 190, 143, 0.5);
+  background: rgba(11, 190, 143);
   margin: 0 0 0 20px;
   border-radius: 10px;
+  position: absolute;
+  bottom: 430px;
+  right: 180px;
+  z-index: 999;
+  cursor: pointer;
+`;
+export const MapAbnormalButton = styled.button`
+  width: 70px;
+  height: 40px;
+  background: rgba(11, 190, 143);
+  margin: 0 0 0 20px;
+  border-radius: 10px;
+  position: absolute;
+  bottom: 430px;
+  right: 90px;
+  z-index: 999;
+  cursor: pointer;
+`;
+export const MapBothButton = styled.button`
+  width: 70px;
+  height: 40px;
+  background: rgba(11, 190, 143);
+  margin: 0 0 0 20px;
+  border-radius: 10px;
+  position: absolute;
+  bottom: 430px;
+  right: 0;
+  z-index: 999;
   cursor: pointer;
 `;
 

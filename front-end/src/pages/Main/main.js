@@ -5,7 +5,9 @@ import DashboardBadIP from "../../components/Dashboard/Top/BadIP";
 import {
   BodyContainer,
   MapButtonContainer,
-  MapButton,
+  MapNormalButton,
+  MapAbnormalButton,
+  MapBothButton,
   TableContainer,
 } from "./styles";
 import HybridTable from "../../components/HybridTable";
@@ -20,9 +22,9 @@ function Main() {
       {dashboardValue === 1 && <DashboardGoodIp />}
       {dashboardValue === 2 && <DashboardBadIP/>}
       <MapButtonContainer>
-        <MapButton onClick={() => setDashboardValue(0)}>Good Ip</MapButton>
-        <MapButton onClick={() => setDashboardValue(1)}>Bad Ip</MapButton>
-        <MapButton onClick={() => setDashboardValue(2)}>Both</MapButton>
+        <MapNormalButton onClick={() => setDashboardValue(0)}>Good Ip</MapNormalButton>
+        <MapAbnormalButton onClick={() => setDashboardValue(1)}>Bad Ip</MapAbnormalButton>
+        <MapBothButton onClick={() => setDashboardValue(2)}>Both</MapBothButton>
       </MapButtonContainer>
       <TableContainer>
         <HybridTable />
