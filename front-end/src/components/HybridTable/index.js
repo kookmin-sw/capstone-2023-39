@@ -10,12 +10,6 @@ function HybridTable() {
   const handleClick = (ip) => {
     setOpen(true);
     setIP(ip);
-    document.body.style.overflow = "hidden";
-  };
-
-  const modalClose = () => {
-    setOpen(false);
-    document.body.style.overflow = "unset";
   };
 
   return (
@@ -26,7 +20,6 @@ function HybridTable() {
         height: "100%",
       }}
     >
-      {open ? <IpInformation close={modalClose} ip={ip} /> : null}
       <S.TableContainer
         columns={columns}
         dataSource={testdata}
@@ -45,6 +38,7 @@ function HybridTable() {
           };
         }}
       />
+      <IpInformation open={open} close={() => setOpen(false)} ip={ip} />
     </div>
   );
 }

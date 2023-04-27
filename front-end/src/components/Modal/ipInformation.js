@@ -2,20 +2,20 @@ import React from "react";
 import * as S from "./styles";
 
 function IpInformation(props) {
-  const { close, ip } = props;
+  const { open, close, ip } = props;
   return (
-    <S.Wrap>
-      <S.ModalContainer>
-        <S.ButtonContainer>
-          <img
-            onClick={close}
-            src={process.env.PUBLIC_URL + "/images/close.png"}
-            alt="close"
-          />
-        </S.ButtonContainer>
-        {ip}
-      </S.ModalContainer>
-    </S.Wrap>
+    <S.CustomModal
+      title={""}
+      visible={open}
+      onCancel={close}
+      closable={true}
+      centered
+      footer={null}
+      width={900}
+      bodyStyle={{ height: 430 }}
+    >
+      <S.ModalContent>{ip}</S.ModalContent>
+    </S.CustomModal>
   );
 }
 
