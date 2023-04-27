@@ -20,7 +20,7 @@ export class SearchService {
   async search_ip(ip: string) {
     let results = new Set();
     let response = await this.esService.search({
-      index: 'netflow',
+      index: '2023_capstone_39_data',
       body: {
         query: {
           match: {
@@ -40,7 +40,7 @@ export class SearchService {
   async search_label_over(label_over: string) {
     const results = new Set();
     const response = await this.esService.search({
-      index: 'netflow',
+      index: '2023_capstone_39_data',
       body: {
         query: {
           range: {
@@ -67,7 +67,7 @@ export class SearchService {
   ) {
     const results = new Set();
     const response = await this.esService.search({
-      index: 'netflow',
+      index: '2023_capstone_39_data',
       size: 100,
       body: {
         query: {
