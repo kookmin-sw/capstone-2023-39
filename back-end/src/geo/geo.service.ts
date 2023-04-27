@@ -1,7 +1,7 @@
 import { Injectable } from '@nestjs/common';
 import { RequestGeoDto } from './dto/request/request-geo.dto';
 import { RequestShortGeoDto } from './dto/request/request-shortgeo.dto';
-import { RequestIdDto } from './dto/request/request-id.dto';
+import { RequestIpDto } from './dto/request/request-ip.dto';
 import { ResponseGeoDto } from './dto/response/response-geo.dto';
 import { ResponseShortGeoDto } from './dto/response/response-shortgeo.dto';
 import { ResponseIdDto } from './dto/response/response-id.dto';
@@ -48,9 +48,9 @@ export class GeoService {
     return response;
   }
 
-  getDetailIdInfo(requestIdDto: RequestIdDto) {
+  getDetailIpInfo(requestIpDto: RequestIpDto) {
     // 지도의 범위 안에 있는 ip들의 정보 리턴
-    const id = requestIdDto.id;
+    const id = requestIpDto.ip;
     const response: ResponseIdDto = {
       id: id,
       ip: '192.168.0.1',
