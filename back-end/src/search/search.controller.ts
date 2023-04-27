@@ -7,7 +7,7 @@ import { SearchService } from './search.service';
 export class SearchController {
   constructor(private readonly searchService: SearchService) {}
 
-  @Get('/test_ip')
+  @Get('/ip')
   async search_ip(@Query('ip') ip: string) {
     return await this.searchService.search_ip(ip);
   }
