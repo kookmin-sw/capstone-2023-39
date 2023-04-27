@@ -24,7 +24,7 @@ export class SearchService {
       body: {
         query: {
           match: {
-            source: ip,
+            target_ip: ip,
           },
         },
       },
