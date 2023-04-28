@@ -1,6 +1,7 @@
 import { long } from '@elastic/elasticsearch/lib/api/types';
 import { Injectable } from '@nestjs/common';
 import { ElasticsearchService } from '@nestjs/elasticsearch';
+import { ShodanService } from 'src/shodan/shodan.service';
 
 interface dataResponse {
   //출력구조
@@ -15,12 +16,12 @@ interface dataResponse {
 
 @Injectable()
 export class SearchService {
-  constructor(private readonly esService: ElasticsearchService) {}
+  constructor(private readonly esService: ElasticsearchService,private readonly shodanService: ShodanService) {}
 
   async search_ip(ip: string) {
     let results = new Set();
     let response = await this.esService.search({
-      index: '2023_capstone_39_data',
+      index: process.env.ELASTICSEARCH_INDEX_DATA,
       body: {
         query: {
           match: {
@@ -34,13 +35,17 @@ export class SearchService {
       results.add(item._source as dataResponse);
     });
 
-    return { results: Array.from(results), total: response.hits.total };
+    return { 
+      results: Array.from(results), 
+      total: response.hits.total,
+      shodan: await this.shodanService.ip(ip),
+    };
   }
 
   async search_label_over(label_over: string) {
     const results = new Set();
     const response = await this.esService.search({
-      index: '2023_capstone_39_data',
+      index: process.env.ELASTICSEARCH_INDEX_DATA,
       body: {
         query: {
           range: {
@@ -67,7 +72,7 @@ export class SearchService {
   ) {
     const results = new Set();
     const response = await this.esService.search({
-      index: '2023_capstone_39_data',
+      index: process.env.ELASTICSEARCH_INDEX_DATA,
       size: 100,
       body: {
         query: {
