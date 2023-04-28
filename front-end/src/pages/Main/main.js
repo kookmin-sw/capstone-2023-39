@@ -11,7 +11,7 @@ import {
   TableContainer,
 } from "./styles";
 import HybridTable from "../../components/HybridTable";
-import CountTable from "../../components/CountTable";
+import BitcoinTable from "../../components/BitcoinTable";
 
 function Main() {
   const [dashboardValue, setDashboardValue] = useState(2);
@@ -32,7 +32,7 @@ function Main() {
       </MapButtonContainer>
       <TableContainer>
         <HybridTable />
-        <CountTable />
+        <BitcoinTable />
       </TableContainer>
       <DashboardBottom />
     </BodyContainer>
