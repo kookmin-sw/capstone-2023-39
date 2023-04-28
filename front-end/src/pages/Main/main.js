@@ -20,10 +20,14 @@ function Main() {
     <BodyContainer>
       {dashboardValue === 0 && <DashboardBadIP />}
       {dashboardValue === 1 && <DashboardGoodIp />}
-      {dashboardValue === 2 && <DashboardBadIP/>}
+      {dashboardValue === 2 && <DashboardBadIP />}
       <MapButtonContainer>
-        <MapNormalButton onClick={() => setDashboardValue(0)}>Good Ip</MapNormalButton>
-        <MapAbnormalButton onClick={() => setDashboardValue(1)}>Bad Ip</MapAbnormalButton>
+        <MapNormalButton onClick={() => setDashboardValue(0)}>
+          Good Ip
+        </MapNormalButton>
+        <MapAbnormalButton onClick={() => setDashboardValue(1)}>
+          Bad Ip
+        </MapAbnormalButton>
         <MapBothButton onClick={() => setDashboardValue(2)}>Both</MapBothButton>
       </MapButtonContainer>
       <TableContainer>
