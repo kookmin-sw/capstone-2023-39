@@ -5,7 +5,7 @@ function IpInformation(props) {
   const { open, close, ip } = props;
   return (
     <S.CustomModal
-      title={""}
+      title={"Information"}
       visible={open}
       onCancel={close}
       closable={true}
