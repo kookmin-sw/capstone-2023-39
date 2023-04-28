@@ -1,6 +1,7 @@
 import { useState } from "react";
 import * as S from "./styles";
 import { testdata, columns } from "./testdata";
+import OuterIpInformation from "../Modal/OuterIpInformation";
 
 function BitcoinTable() {
   const [open, setOpen] = useState(false);
@@ -36,6 +37,11 @@ function BitcoinTable() {
             }, // click row
           };
         }}
+      />
+      <OuterIpInformation
+        open={open}
+        close={() => setOpen(false)}
+        ip={outerIp}
       />
     </div>
   );

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import * as S from "./styles";
 import { testdata, columns } from "./testdata";
-import IpInformation from "../Modal/ipInformation";
+import IpInformation from "../Modal/IpInformation";
 
 function HybridTable() {
   const [open, setOpen] = useState(false);
