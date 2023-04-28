@@ -11,7 +11,7 @@ import {
   TableContainer,
 } from "./styles";
 import HybridTable from "../../components/HybridTable";
-import CountTable from "../../components/CountTable";
+import BitcoinTable from "../../components/BitcoinTable";
 
 function Main() {
   const [dashboardValue, setDashboardValue] = useState(2);
@@ -20,15 +20,19 @@ function Main() {
     <BodyContainer>
       {dashboardValue === 0 && <DashboardBadIP />}
       {dashboardValue === 1 && <DashboardGoodIp />}
-      {dashboardValue === 2 && <DashboardBadIP/>}
+      {dashboardValue === 2 && <DashboardBadIP />}
       <MapButtonContainer>
-        <MapNormalButton onClick={() => setDashboardValue(0)}>Good Ip</MapNormalButton>
-        <MapAbnormalButton onClick={() => setDashboardValue(1)}>Bad Ip</MapAbnormalButton>
+        <MapNormalButton onClick={() => setDashboardValue(0)}>
+          Good Ip
+        </MapNormalButton>
+        <MapAbnormalButton onClick={() => setDashboardValue(1)}>
+          Bad Ip
+        </MapAbnormalButton>
         <MapBothButton onClick={() => setDashboardValue(2)}>Both</MapBothButton>
       </MapButtonContainer>
       <TableContainer>
         <HybridTable />
-        <CountTable />
+        <BitcoinTable />
       </TableContainer>
       <DashboardBottom />
     </BodyContainer>

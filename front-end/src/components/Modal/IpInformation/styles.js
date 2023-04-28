@@ -5,8 +5,8 @@ export const CustomModal = styled(Modal)`
   .ant-modal-header {
   }
   .ant-modal-title {
-    color: #2f7edf;
-    font-size: 19px;
+    color: #85b4a8;
+    font-size: 23px;
     padding: 7px 0;
   }
 `;

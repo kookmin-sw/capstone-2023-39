@@ -1,15 +1,15 @@
 import { useState } from "react";
 import * as S from "./styles";
 import { testdata, columns } from "./testdata";
-import IpInformation from "../Modal/IpInformation";
+import OuterIpInformation from "../Modal/OuterIpInformation";
 
-function HybridTable() {
+function BitcoinTable() {
   const [open, setOpen] = useState(false);
-  const [ip, setIP] = useState("");
+  const [outerIp, setOuterIP] = useState("");
 
   const handleClick = (ip) => {
     setOpen(true);
-    setIP(ip);
+    setOuterIP(ip);
   };
 
   return (
@@ -38,9 +38,13 @@ function HybridTable() {
           };
         }}
       />
-      <IpInformation open={open} close={() => setOpen(false)} ip={ip} />
+      <OuterIpInformation
+        open={open}
+        close={() => setOpen(false)}
+        ip={outerIp}
+      />
     </div>
   );
 }
 
-export default HybridTable;
+export default BitcoinTable;

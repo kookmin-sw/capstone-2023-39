@@ -59,6 +59,7 @@ export const TableContainer = styled.div`
   height: 70%;
   align-items: center;
   justify-content: center;
-  margin-bottom: 35px;
+  //margin: 25px 0px;
+  padding: 10px;
   background: #f8fafd;
 `;

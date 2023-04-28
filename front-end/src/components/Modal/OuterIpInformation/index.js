@@ -1,11 +1,11 @@
 import React from "react";
 import * as S from "./styles";
 
-function IpInformation(props) {
+function OuterIpInformation(props) {
   const { open, close, ip } = props;
   return (
     <S.CustomModal
-      title={""}
+      title={"Information"}
       visible={open}
       onCancel={close}
       closable={true}
@@ -19,4 +19,4 @@ function IpInformation(props) {
   );
 }
 
-export default IpInformation;
+export default OuterIpInformation;
