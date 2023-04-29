@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import DashboardBottom from "../../components/Dashboard/Bottom";
 import DashboardGoodIp from "../../components/Dashboard/Top/GoodIP";
-import DashboardBadIP from "../../components/Dashboard/Top/BadIP";
+import DashboardBadIp from "../../components/Dashboard/Top/BadIP";
+import DashboardBothIp from "../../components/Dashboard/Top/BothIP"
 import {
   BodyContainer,
   MapButtonContainer,
@@ -18,11 +19,11 @@ function Main() {
 
   return (
     <BodyContainer>
-      {dashboardValue === 0 && <DashboardBadIP />}
-      {dashboardValue === 1 && <DashboardGoodIp />}
-      {dashboardValue === 2 && <DashboardBadIP />}
+      {dashboardValue === 0 && <DashboardGoodIp />}
+      {dashboardValue === 1 && <DashboardBadIp />}
+      {dashboardValue === 2 && <DashboardBothIp />}
       <MapButtonContainer>
-        <MapNormalButton onClick={() => setDashboardValue(0)}>
+        <MapNormalButton type="link" onClick={() => setDashboardValue(0)}>
           Good Ip
         </MapNormalButton>
         <MapAbnormalButton onClick={() => setDashboardValue(1)}>
