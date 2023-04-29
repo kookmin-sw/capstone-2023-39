@@ -17,40 +17,58 @@ export const MapButtonContainer = styled.div`
 export const MapNormalButton = styled.button`
   width: 70px;
   height: 40px;
-  background: rgba(11, 190, 143);
+  background: #fff;
+  color: #897EDB;
+  border: 1px solid #897EDB;
   margin: 0 0 0 20px;
   border-radius: 10px;
   position: absolute;
-  bottom: 430px;
+  bottom: 460px;
   right: 180px;
   z-index: 999;
   cursor: pointer;
+  transition: 0.3s all;
+   &:hover{
+     transform:translateY(-3px);
+   }
 `;
 
 export const MapAbnormalButton = styled.button`
   width: 70px;
   height: 40px;
-  background: rgba(11, 190, 143);
+  background: #fff;
+  color: #897EDB;
+  border: 1px solid #897EDB;
   margin: 0 0 0 20px;
   border-radius: 10px;
   position: absolute;
-  bottom: 430px;
+  bottom: 460px;
   right: 90px;
   z-index: 999;
   cursor: pointer;
+  transition: 0.3s all;
+   &:hover{
+     transform:translateY(-3px);
+   }
 `;
 
 export const MapBothButton = styled.button`
   width: 70px;
   height: 40px;
-  background: rgba(11, 190, 143);
+  background: #fff;
+  color: #897EDB;
+  border: 1px solid #897EDB;
   margin: 0 0 0 20px;
   border-radius: 10px;
   position: absolute;
-  bottom: 430px;
+  bottom: 460px;
   right: 0;
   z-index: 999;
   cursor: pointer;
+  transition: 0.3s all;
+   &:hover{
+     transform:translateY(-3px);
+   }
 `;
 
 export const TableContainer = styled.div`
