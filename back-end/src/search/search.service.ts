@@ -20,11 +20,31 @@ export class SearchService {
   async search_ip(ip: string) {
     let results = new Set();
     let response = await this.esService.search({
-      index: 'netflow',
+      index: '2023_capstone_39_data',
       body: {
         query: {
           match: {
             source: ip,
+          },
+        },
+      },
+    });
+    const hits = response.hits.hits;
+    hits.map((item) => {
+      results.add(item._source as dataResponse);
+    });
+
+    return { results: Array.from(results), total: response.hits.total };
+  }
+
+  async search_coin_ip(outer_ip: string) {
+    let results = new Set();
+    let response = await this.esService.search({
+      index: '2023_capstone_data_coin',
+      body: {
+        query: {
+          match: {
+            source: outer_ip,
           },
         },
       },

@@ -21,4 +21,7 @@ export class ResponseCoinDto {
 
   @ApiProperty({ description: '{0:inbound, 1:outbound)' })
   direction: string;
+
+  @ApiProperty({ description: 'time' })
+  time: string;
 }

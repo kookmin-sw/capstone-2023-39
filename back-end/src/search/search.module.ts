@@ -7,7 +7,7 @@ import { SearchController } from './search.controller';
   imports: [
     ElasticsearchModule.registerAsync({
       useFactory: async () => ({
-        node: 'http://localhost:9200',
+        node: 'http://203.246.112.139:9200',
         maxRetries: 10,
         requestTimeout: 60000,
       }),
