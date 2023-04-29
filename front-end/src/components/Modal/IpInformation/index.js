@@ -11,7 +11,7 @@ function IpInformation(props) {
   useEffect(() => {
     setComplete(false);
     const response = axios
-      .get(`/search/ip?ip=${ip}`)
+      /*.get(`/search/ip?ip=${ip}`)*/
       .get(`/search/ip?ip=91.236.51.44`)
       .then(function (response) {
         setInfo(response.data?.shodan);
