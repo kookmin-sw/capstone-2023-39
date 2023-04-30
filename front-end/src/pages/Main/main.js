@@ -23,7 +23,7 @@ function Main() {
       {dashboardValue === 1 && <DashboardBadIp />}
       {dashboardValue === 2 && <DashboardBothIp />}
       <MapButtonContainer>
-        <MapNormalButton type="link" onClick={() => setDashboardValue(0)}>
+        <MapNormalButton onClick={() => setDashboardValue(0)}>
           Good Ip
         </MapNormalButton>
         <MapAbnormalButton onClick={() => setDashboardValue(1)}>
