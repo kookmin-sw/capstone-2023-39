@@ -12,11 +12,11 @@ export const CustomModal = styled(Modal)`
 `;
 
 export const ModalContent = styled.div`
-  margin-top: 20px;
+  margin-top: 25px;
 `;
 
 export const InfoItem = styled.span`
-  background: linear-gradient(to top, #e1dff6 50%, transparent 50%);
-  font-size: 17px;
-  margin-right: 20px;
+  background: linear-gradient(to top, #c4bfed 50%, transparent 50%);
+  font-size: 18px;
+  margin-right: 25px;
 `;

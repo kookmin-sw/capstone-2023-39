@@ -5,10 +5,11 @@ export const CustomModal = styled(Modal)`
   .ant-modal-header {
   }
   .ant-modal-title {
-    color: #85b4a8;
-    font-size: 23px;
-    padding: 7px 0;
+    color: #000000;
+    font-size: 28px;
   }
 `;
 
-export const ModalContent = styled.div``;
+export const ModalContent = styled.div`
+  margin-top: 20px;
+`;

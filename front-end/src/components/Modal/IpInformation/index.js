@@ -59,7 +59,7 @@ function IpInformation(props) {
       centered
       footer={null}
       width={950}
-      bodyStyle={{ height: 580 }}
+      bodyStyle={{ height: 590 }}
     >
       <S.ModalContent>
         {complete ? (
