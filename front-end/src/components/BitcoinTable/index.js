@@ -39,11 +39,11 @@ function BitcoinTable() {
           };
         }}
       />
-      <OuterIpInformation
+      {/*<OuterIpInformation
         open={open}
         close={() => setOpen(false)}
         ip={outerIp}
-      />
+      />*/}
     </div>
   );
 }
