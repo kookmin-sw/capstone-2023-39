@@ -29,7 +29,7 @@ function Main() {
         <MapAbnormalButton onClick={() => setDashboardValue(1)}>
           Bad Ip
         </MapAbnormalButton>
-        <MapBothButton onClick={() => setDashboardValue(2)}>Both</MapBothButton>
+        <MapBothButton onClick={() => setDashboardValue(2)}>Both IP</MapBothButton>
       </MapButtonContainer>
       <TableContainer>
         <HybridTable />
