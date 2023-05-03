@@ -1,15 +1,15 @@
 import { useState } from "react";
 import * as S from "./styles";
 import { testdata, columns } from "./testdata";
-import OuterIpInformation from "../Modal/OuterIpInformation";
+import PoolIpInformation from "../Modal/PoolIpInformation";
 
 function BitcoinTable() {
   const [open, setOpen] = useState(false);
-  const [outerIp, setOuterIP] = useState("");
+  const [poolIp, setPoolIP] = useState("");
 
   const handleClick = (ip) => {
     setOpen(true);
-    setOuterIP(ip);
+    setPoolIP(ip);
   };
 
   return (
@@ -35,15 +35,11 @@ function BitcoinTable() {
           return {
             onClick: () => {
               handleClick(record.ip);
-            }, // click row
+            }, // pool ip 전달
           };
         }}
       />
-      {/*<OuterIpInformation
-        open={open}
-        close={() => setOpen(false)}
-        ip={outerIp}
-      />*/}
+      <PoolIpInformation open={open} close={() => setOpen(false)} ip={poolIp} />
     </div>
   );
 }
