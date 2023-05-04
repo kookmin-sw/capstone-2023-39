@@ -14,7 +14,7 @@ function Table() {
 
   const dateFormat = "YYYY-MM-DD";
   return (
-    <div>
+    <S.Wrap>
       <RangePicker
         allowClear={false}
         //disabledDate={(date) => isBefore(new Date(), date)}
@@ -24,7 +24,7 @@ function Table() {
           dayjs(date.startDate, dateFormat),
         ]}
         size="large"
-        style={{ width: "50%" }}
+        style={{ width: "49%" }}
         onCalendarChange={(_, date) => {
           const [startDate, endDate] = date;
           setDate({
@@ -37,7 +37,7 @@ function Table() {
         <HybridTable />
         <BitcoinTable />
       </S.TableContainer>
-    </div>
+    </S.Wrap>
   );
 }
 
