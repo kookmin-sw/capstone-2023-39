@@ -1,33 +1,22 @@
 import React, { useEffect, useState } from "react";
 import * as S from "./styles";
 import axios from "axios";
-import { Card, List, Typography } from "antd";
-
-const column = [
-  "ip",
-  "country_code",
-  "country_name",
-  "region_code",
-  "city",
-  "longitude",
-  "latitude",
-  "hostname",
-  "domains",
-  "os",
-  "isp",
-];
+import { Card, List } from "antd";
 
 const parseTableData = (data) => {
-  let temp = new Array();
-  column.map((col) => {
-    temp.push(data[col]);
+  let columns = Object.keys(data);
+  let result = new Array();
+  columns.map((col) => {
+    if (data[col] !== null) result.push(data[col]);
+    else result.push("null");
   });
-  return temp;
+  return [columns, result];
 };
 
 function IpInformation(props) {
   const { open, close, ip } = props;
-  const [info, setInfo] = useState("");
+  const [tableData, setTableData] = useState("");
+  const [tableColumn, setTableColumn] = useState("");
   const [complete, setComplete] = useState(false);
 
   useEffect(() => {
@@ -36,7 +25,9 @@ function IpInformation(props) {
       /*.get(`/search/ip?ip=${ip}`)*/
       .get(`/search/ip?ip=91.236.51.44`)
       .then(function (response) {
-        setInfo(response.data?.shodan);
+        const [columns, result] = parseTableData(response.data?.shodan);
+        setTableColumn(columns);
+        setTableData(result);
         setComplete(true);
       })
       .catch(function (error) {
@@ -60,10 +51,10 @@ function IpInformation(props) {
           <List
             bordered
             pagination
-            dataSource={data}
+            dataSource={tableData}
             renderItem={(item, index) => (
               <List.Item>
-                <S.InfoItem> {column[index]}</S.InfoItem> {item}
+                <S.InfoItem> {tableColumn[index]}</S.InfoItem> {item}
               </List.Item>
             )}
           />
