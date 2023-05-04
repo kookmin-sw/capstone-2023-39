@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import DashboardBottom from "../../components/Dashboard/Bottom";
 import DashboardGoodIp from "../../components/Dashboard/Top/GoodIP";
 import DashboardBadIp from "../../components/Dashboard/Top/BadIP";
-import DashboardBothIp from "../../components/Dashboard/Top/BothIP"
+import DashboardBothIp from "../../components/Dashboard/Top/BothIP";
 import {
   BodyContainer,
   MapButtonContainer,
@@ -11,8 +11,7 @@ import {
   MapBothButton,
   TableContainer,
 } from "./styles";
-import HybridTable from "../../components/HybridTable";
-import BitcoinTable from "../../components/BitcoinTable";
+import Table from "../../components/Table";
 
 function Main() {
   const [dashboardValue, setDashboardValue] = useState(2);
@@ -29,12 +28,11 @@ function Main() {
         <MapAbnormalButton onClick={() => setDashboardValue(1)}>
           Bad Ip
         </MapAbnormalButton>
-        <MapBothButton onClick={() => setDashboardValue(2)}>Both IP</MapBothButton>
+        <MapBothButton onClick={() => setDashboardValue(2)}>
+          Both IP
+        </MapBothButton>
       </MapButtonContainer>
-      <TableContainer>
-        <HybridTable />
-        <BitcoinTable />
-      </TableContainer>
+      <Table />
       <DashboardBottom />
     </BodyContainer>
   );

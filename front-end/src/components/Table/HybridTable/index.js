@@ -1,15 +1,15 @@
 import { useState } from "react";
 import * as S from "./styles";
 import { testdata, columns } from "./testdata";
-import PoolIpInformation from "../Modal/PoolIpInformation";
+import IpInformation from "../../Modal/IpInformation";
 
-function BitcoinTable() {
+function HybridTable() {
   const [open, setOpen] = useState(false);
-  const [poolIp, setPoolIP] = useState("");
+  const [ip, setIP] = useState("");
 
   const handleClick = (ip) => {
     setOpen(true);
-    setPoolIP(ip);
+    setIP(ip);
   };
 
   return (
@@ -18,7 +18,6 @@ function BitcoinTable() {
         position: "relative",
         width: "100%",
         height: "100%",
-        minHeight: "100%",
       }}
     >
       <S.TableContainer
@@ -35,13 +34,13 @@ function BitcoinTable() {
           return {
             onClick: () => {
               handleClick(record.ip);
-            }, // pool ip 전달
+            }, // click row
           };
         }}
       />
-      <PoolIpInformation open={open} close={() => setOpen(false)} ip={poolIp} />
+      <IpInformation open={open} close={() => setOpen(false)} ip={ip} />
     </div>
   );
 }
 
-export default BitcoinTable;
+export default HybridTable;
