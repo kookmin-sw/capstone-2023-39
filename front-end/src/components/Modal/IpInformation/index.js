@@ -3,6 +3,28 @@ import * as S from "./styles";
 import axios from "axios";
 import { Card, List, Typography } from "antd";
 
+const column = [
+  "ip",
+  "country_code",
+  "country_name",
+  "region_code",
+  "city",
+  "longitude",
+  "latitude",
+  "hostname",
+  "domains",
+  "os",
+  "isp",
+];
+
+const parseTableData = (data) => {
+  let temp = new Array();
+  column.map((col) => {
+    temp.push(data[col]);
+  });
+  return temp;
+};
+
 function IpInformation(props) {
   const { open, close, ip } = props;
   const [info, setInfo] = useState("");
@@ -21,34 +43,6 @@ function IpInformation(props) {
         console.log(error);
       });
   }, [ip]);
-
-  const column = [
-    "ip",
-    "country_code",
-    "country_name",
-    "region_code",
-    "city",
-    "longitude",
-    "latitude",
-    "hostname",
-    "domains",
-    "os",
-    "isp",
-  ];
-
-  const data = [
-    "91.236.51.44",
-    "US",
-    "United States",
-    "CA",
-    "Mountain View",
-    -122.0775,
-    37.4056,
-    "dns.google",
-    "dns.google",
-    "null",
-    "Google LLC",
-  ];
 
   return (
     <S.CustomModal
