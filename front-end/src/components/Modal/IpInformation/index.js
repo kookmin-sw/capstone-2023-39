@@ -22,8 +22,7 @@ function IpInformation(props) {
   useEffect(() => {
     setComplete(false);
     const response = axios
-      /*.get(`/search/ip?ip=${ip}`)*/
-      .get(`/search/ip?ip=91.236.51.44`)
+      .get(`/search/ip?ip=${ip}`)
       .then(function (response) {
         const [columns, result] = parseTableData(response.data?.shodan);
         setTableColumn(columns);
