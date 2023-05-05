@@ -11,5 +11,4 @@ export class ShodanController {
   async ip(@Query('ip') ip: string) {
     return await this.shodanService.ip(ip);
   }
-
 }

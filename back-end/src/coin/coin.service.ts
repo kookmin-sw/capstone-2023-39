@@ -1,30 +1,31 @@
 import { Injectable } from '@nestjs/common';
-import { response } from 'express';
 import { SearchService } from 'src/search/search.service';
-import { RequestCoinDto } from './dto/request/request-coin.dto';
 import { ResponseCoinDto } from './dto/response/response-coin.dto';
+
+interface dataResponse_coin {
+  //출력구조
+  buckets;
+}
 
 @Injectable()
 export class CoinService {
   constructor(private readonly searchService: SearchService) {}
 
-  async getMinerInfo(requestCoinDto: RequestCoinDto) {
-    let ip: any;
-    let port: any;
+  async get_pool_accessed_ip(pool_ip: string) {
+    const result = (await this.searchService.search_pool_accessed_ip(
+      pool_ip,
+    )) as dataResponse_coin;
 
-    const miner_ip_data = await this.searchService.search_ip(requestCoinDto.ip);
-    miner_ip_data.results.map((item) => {
-      ip = item['destination'];
-      port = item['dst_port'];
-    });
+    const inner_ips = result.buckets.map((buckets) => buckets.key);
+    const doc_count = result.buckets.map((buckets) => buckets.doc_count);
+    const timestamps = result.buckets.map((bucket) =>
+      bucket.timestamps.hits.hits.map((hit) => hit._source.timestamp),
+    );
 
     const response: ResponseCoinDto = {
-      Kind_coin: '1',
-      price: '192.168.0.1',
-      score: '37.012345678910',
-      outer_ip: ip,
-      outer_port: port,
-      direction: 'Seoul',
+      inner_ips: inner_ips,
+      doc_count: doc_count,
+      timestamps: timestamps,
     };
     return response;
   }

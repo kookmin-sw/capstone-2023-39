@@ -1,19 +1,18 @@
-import { Body, Controller, Post } from '@nestjs/common';
+import { Body, Controller, Post, Query } from '@nestjs/common';
 import { ApiOperation, ApiTags } from '@nestjs/swagger';
 import { CoinService } from './coin.service';
-import { RequestCoinDto } from './dto/request/request-coin.dto';
+import { RequestPoolDto } from './dto/request/request-pool.dto';
 
 @ApiTags('Coin')
 @Controller('coin')
 export class CoinController {
   constructor(private readonly coinService: CoinService) {}
 
-  @Post('/MinerInfo')
+  @Post('/get_pool_accessed_ip')
   @ApiOperation({
-    summary: '이상탐지 된 마이너 정보',
-    description: '입력: 마이너 정보 \n출력: 범위 안의 마이너들의 detail info',
+    summary: '특정 Pool에 접속한 IP 정보',
   })
-  getMinerInfo(@Body() requestCoinDto: RequestCoinDto) {
-    return this.coinService.getMinerInfo(requestCoinDto);
+  get_pool_accessed_ip(@Query('pool_ip') pool_ip: string) {
+    return this.coinService.get_pool_accessed_ip(pool_ip);
   }
 }

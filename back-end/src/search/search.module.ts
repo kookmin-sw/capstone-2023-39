@@ -14,10 +14,10 @@ import { ShodanService } from 'src/shodan/shodan.service';
         requestTimeout: 60000,
       }),
     }),
-    HttpModule
+    HttpModule,
   ],
   controllers: [SearchController],
-  providers: [SearchService,ShodanService],
+  providers: [SearchService, ShodanService],
   exports: [SearchService],
 })
 export class SearchModule {}

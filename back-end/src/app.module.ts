@@ -11,7 +11,7 @@ import { SearchModule } from './search/search.module';
 import { ShodanModule } from './shodan/shodan.module';
 
 @Module({
-  imports: [CoinModule, SearchModule, ShodanModule, ConfigModule.forRoot(),],
+  imports: [CoinModule, SearchModule, ShodanModule, ConfigModule.forRoot()],
   controllers: [AppController, GeoController, CoinController],
   providers: [AppService, GeoService, CoinService],
 })
