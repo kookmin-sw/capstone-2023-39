@@ -87,6 +87,35 @@ export class SearchService {
     return response.aggregations.inner_ips;
   }
 
+  async search_date(date: string) {
+    let results = new Set();
+    let response = await this.esService.search({
+      index: process.env.ELASTICSEARCH_INDEX_DATA,
+      body: {
+        query: {
+          range: {
+            start_time: {
+              gte: date + " 00:00:00",
+              lte: date + " 23:59:59"
+            },
+          },
+        },
+        sort: [
+          {start_time: "asc"}
+        ],
+      },
+    });
+    const hits = response.hits.hits;
+    hits.map((item) => {
+      results.add(item._source as dataResponse);
+    });
+
+    return { 
+      results: Array.from(results), 
+      total: response.hits.total,
+    };
+  }
+
   async search_label_over(label_over: string) {
     const results = new Set();
     const response = await this.esService.search({

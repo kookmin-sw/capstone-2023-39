@@ -12,6 +12,11 @@ export class SearchController {
     return await this.searchService.search_ip(ip);
   }
 
+  @Get('/date')
+  async search_date(@Query('date') date: string) {
+    return await this.searchService.search_date(date);
+  }
+
   @Get('/test_label')
   async search_label(@Query('label_over') label_over: string) {
     return await this.searchService.search_label_over(label_over);
