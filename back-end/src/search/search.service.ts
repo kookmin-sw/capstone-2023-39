@@ -1,6 +1,7 @@
 import { long } from '@elastic/elasticsearch/lib/api/types';
 import { Injectable } from '@nestjs/common';
 import { ElasticsearchService } from '@nestjs/elasticsearch';
+import { ShodanService } from 'src/shodan/shodan.service';
 
 interface dataResponse {
   //출력구조
@@ -15,16 +16,19 @@ interface dataResponse {
 
 @Injectable()
 export class SearchService {
-  constructor(private readonly esService: ElasticsearchService) {}
+  constructor(
+    private readonly esService: ElasticsearchService,
+    private readonly shodanService: ShodanService,
+  ) {}
 
   async search_ip(ip: string) {
-    let results = new Set();
-    let response = await this.esService.search({
-      index: '2023_capstone_39_data',
+    const results = new Set();
+    const response = await this.esService.search({
+      index: process.env.ELASTICSEARCH_INDEX_DATA,
       body: {
         query: {
           match: {
-            source: ip,
+            target_ip: ip,
           },
         },
       },
@@ -34,33 +38,59 @@ export class SearchService {
       results.add(item._source as dataResponse);
     });
 
-    return { results: Array.from(results), total: response.hits.total };
+    return {
+      results: Array.from(results),
+      total: response.hits.total,
+      shodan: await this.shodanService.ip(ip),
+    };
   }
 
-  async search_coin_ip(outer_ip: string) {
-    let results = new Set();
-    let response = await this.esService.search({
-      index: '2023_capstone_data_coin',
+  async search_pool_accessed_ip(pool_ip: string) {
+    const response = await this.esService.search({
+      index: process.env.ELASTICSEARCH_COIN_DATA_INDEX,
       body: {
         query: {
-          match: {
-            source: outer_ip,
+          bool: {
+            filter: {
+              term: {
+                pool_ip: pool_ip,
+              },
+            },
+          },
+        },
+        aggs: {
+          inner_ips: {
+            terms: {
+              field: 'inner_ip',
+            },
+            aggs: {
+              timestamps: {
+                top_hits: {
+                  size: 100, // 100이 최대
+                  sort: [
+                    {
+                      timestamp: {
+                        order: 'desc',
+                      },
+                    },
+                  ],
+                  _source: {
+                    includes: ['timestamp'],
+                  },
+                },
+              },
+            },
           },
         },
       },
     });
-    const hits = response.hits.hits;
-    hits.map((item) => {
-      results.add(item._source as dataResponse);
-    });
-
-    return { results: Array.from(results), total: response.hits.total };
+    return response.aggregations.inner_ips;
   }
 
   async search_label_over(label_over: string) {
     const results = new Set();
     const response = await this.esService.search({
-      index: 'netflow',
+      index: process.env.ELASTICSEARCH_INDEX_DATA,
       body: {
         query: {
           range: {
@@ -87,7 +117,7 @@ export class SearchService {
   ) {
     const results = new Set();
     const response = await this.esService.search({
-      index: 'netflow',
+      index: process.env.ELASTICSEARCH_INDEX_DATA,
       size: 100,
       body: {
         query: {
