@@ -3,7 +3,8 @@ import * as S from "./styles";
 import { testdata, columns } from "./testdata";
 import IpInformation from "../../Modal/IpInformation";
 
-function HybridTable() {
+function HybridTable(props) {
+  const { startDate, endDate } = props.date;
   const [open, setOpen] = useState(false);
   const [ip, setIP] = useState("");
 
