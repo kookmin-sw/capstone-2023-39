@@ -5,11 +5,11 @@ import * as S from "./styles";
 const parseNModalData = (data) => {
   let result = new Array([]);
   data.inner_ips?.forEach((element, index) => {
-    data.timestamps[index].map((time) =>
+    data.timestamps[index]?.map((time) =>
       result.push({ ip: element, time: time })
     );
   });
-  return result;
+  return result.slice(1);
 };
 
 function PoolIpInformation(props) {
@@ -48,7 +48,7 @@ function PoolIpInformation(props) {
       centered
       footer={null}
       width={900}
-      bodyStyle={{ height: 400 }}
+      bodyStyle={{ height: "fit-content" }}
     >
       <S.TableContainer
         columns={column}
