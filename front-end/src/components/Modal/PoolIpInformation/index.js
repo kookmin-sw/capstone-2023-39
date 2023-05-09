@@ -1,27 +1,43 @@
-import React from "react";
+import axios from "axios";
+import React, { useEffect, useState } from "react";
 import * as S from "./styles";
-import { Card, List } from "antd";
+
+const parseNModalData = (data) => {
+  let result = new Array([]);
+  data.inner_ips?.forEach((element, index) => {
+    data.timestamps[index]?.map((time) =>
+      result.push({ ip: element, time: time })
+    );
+  });
+  return result.slice(1);
+};
 
 function PoolIpInformation(props) {
   const { open, close, ip } = props;
+  const [data, setData] = useState("");
   const column = [
-    {
-      title: "Connection Time",
-      dataIndex: "time",
-      align: "center",
-    },
     {
       title: "Inner Ip",
       dataIndex: "ip",
       align: "center",
     },
+    {
+      title: "Connection Time",
+      dataIndex: "time",
+      align: "center",
+    },
   ];
-  const data = [
-    { time: "2023-04-25 00:05:01", ip: "55.246.143.122_" },
-    { time: "2023-04-24 23:56:47", ip: "55.246.143.122_" },
-    { time: "2023-04-24 22:56:23", ip: "55.246.143.122_" },
-    { time: "2023-04-24 22:57:46", ip: "55.246.143.122_" },
-  ];
+
+  useEffect(() => {
+    const response = axios
+      .get(`/coin/get_pool_accessed_ip?pool_ip=3.64.163.50`)
+      .then(function (response) {
+        setData(parseNModalData(response.data));
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
+  }, []);
 
   return (
     <S.CustomModal
@@ -32,7 +48,7 @@ function PoolIpInformation(props) {
       centered
       footer={null}
       width={900}
-      bodyStyle={{ height: 400 }}
+      bodyStyle={{ height: "fit-content" }}
     >
       <S.TableContainer
         columns={column}
