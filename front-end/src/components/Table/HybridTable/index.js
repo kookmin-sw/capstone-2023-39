@@ -1,17 +1,68 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import * as S from "./styles";
-import { testdata, columns } from "./testdata";
 import IpInformation from "../../Modal/IpInformation";
+import axios from "axios";
+import _ from "lodash";
+
+const columns = [
+  {
+    title: "IP",
+    dataIndex: "target_ip",
+    align: "center",
+  },
+  {
+    title: "국가",
+    dataIndex: "country_name",
+    align: "center",
+  },
+  {
+    title: "score",
+    dataIndex: "undefined",
+    align: "center",
+  },
+  {
+    title: "접근 시간",
+    dataIndex: "start_time",
+    align: "center",
+  },
+];
+
+const parseTableData = (data) => {
+  const result = _.map(
+    data,
+    ({ target_ip, geoip: { country_name }, start_time }) => ({
+      target_ip,
+      country_name,
+      undefined,
+      start_time,
+    })
+  );
+  return result;
+};
 
 function HybridTable(props) {
   const { startDate, endDate } = props.date;
   const [open, setOpen] = useState(false);
   const [ip, setIP] = useState("");
+  const [tableData, setTableData] = useState("");
 
   const handleClick = (ip) => {
     setOpen(true);
     setIP(ip);
   };
+
+  useEffect(() => {
+    //const response = axios.get(`/search/date?date=${startDate}`);
+    const response = axios
+      .get(`/search/date?date=2023-05-01`)
+      .then(function (response) {
+        setTableData(parseTableData(response.data?.results));
+        //console.log(parseTableData(response.data?.results));
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
+  }, [startDate]);
 
   return (
     <div
@@ -23,7 +74,7 @@ function HybridTable(props) {
     >
       <S.TableContainer
         columns={columns}
-        dataSource={testdata}
+        dataSource={tableData}
         size={"middle"}
         pagination={{ position: ["bottomCenter"] }}
         style={{
