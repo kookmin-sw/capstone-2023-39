@@ -85,7 +85,7 @@ function HybridTable(props) {
         onRow={(record, rowIndex) => {
           return {
             onClick: () => {
-              handleClick(record.ip);
+              handleClick(record.target_ip);
             }, // click row
           };
         }}
