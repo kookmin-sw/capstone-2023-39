@@ -1,9 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
 import DashboardBottom from "../../components/Dashboard/Bottom";
 import NaviBar from "../../components/NaviBar";
 import { BodyContainer,TableContainer } from "./styles";
 import Table from "../../components/Table";
-function Tables() {
+function Statistics() {
   return (
     <BodyContainer>
       <NaviBar/>
@@ -16,4 +16,4 @@ function Tables() {
   );
 }
 
-export default Tables;
+export default Statistics;

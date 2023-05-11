@@ -1,7 +1,8 @@
 import React, { useEffect } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Main from "./pages/Main/main";
-import Tables from "./pages/Tables/tables";
+import Statistics from "./pages/Statistics/statistics";
+import Detect from "./pages/Detect/detect";
 function App() {
   useEffect(() => {
     document.body.style.backgroundColor = "#f8fafd";
@@ -19,7 +20,8 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Main />} />
-          <Route path="/tables" element={<Tables />} />
+          <Route path="/statistics" element={<Statistics />} />
+          <Route path="/detect" element={<Detect />} />
         </Routes>
       </BrowserRouter>
     </div>
