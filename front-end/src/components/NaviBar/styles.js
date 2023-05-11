@@ -14,6 +14,7 @@ export const LogoButton = styled.button`
   width: 100%;
   height: 70px;
   color: #fff;
+  font-size:12px;
   background-color: #897EDB;
   border: none;
   border-bottom: 0.5px solid #fff;
@@ -23,6 +24,7 @@ export const RouteButton = styled.button`
   width: 100%;
   height: 70px;
   color: #fff;
+  font-size:12px;
   background-color: #897EDB;
   border: none;
   border-bottom: 0.5px solid #fff;
