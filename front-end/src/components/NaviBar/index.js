@@ -25,7 +25,7 @@ function NaviBar() {
       <RouteButton>
         <Link to="/detect" style={{ textDecoration: "none", color: "white" }}>
         <box-icon name='error' color='#ffffff' ></box-icon> <br />
-          보안탐지 대시보드
+          보안탐지<br/>대시보드
         </Link>
       </RouteButton>
     </NaviContainer>
