@@ -1,9 +1,7 @@
 import React, { useEffect } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Join from "./pages/Join/join";
-import Login from "./pages/Login/login";
 import Main from "./pages/Main/main";
-
+import Tables from "./pages/Tables/tables";
 function App() {
   useEffect(() => {
     document.body.style.backgroundColor = "#f8fafd";
@@ -21,8 +19,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Main />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/join" element={<Join />} />
+          <Route path="/tables" element={<Tables />} />
         </Routes>
       </BrowserRouter>
     </div>
