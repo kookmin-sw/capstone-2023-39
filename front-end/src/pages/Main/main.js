@@ -1,23 +1,22 @@
 import React, { useState } from "react";
-import DashboardBottom from "../../components/Dashboard/Bottom";
 import DashboardGoodIp from "../../components/Dashboard/Top/GoodIP";
 import DashboardBadIp from "../../components/Dashboard/Top/BadIP";
 import DashboardBothIp from "../../components/Dashboard/Top/BothIP";
+import NaviBar from "../../components/NaviBar";
 import {
   BodyContainer,
   MapButtonContainer,
   MapNormalButton,
   MapAbnormalButton,
   MapBothButton,
-  TableContainer,
 } from "./styles";
-import Table from "../../components/Table";
 
 function Main() {
   const [dashboardValue, setDashboardValue] = useState(2);
 
   return (
     <BodyContainer>
+      <NaviBar></NaviBar>
       {dashboardValue === 0 && <DashboardGoodIp />}
       {dashboardValue === 1 && <DashboardBadIp />}
       {dashboardValue === 2 && <DashboardBothIp />}
@@ -32,8 +31,6 @@ function Main() {
           Both IP
         </MapBothButton>
       </MapButtonContainer>
-      <Table />
-      <DashboardBottom />
     </BodyContainer>
   );
 }
