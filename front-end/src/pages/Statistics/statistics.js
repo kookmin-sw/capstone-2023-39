@@ -7,8 +7,10 @@ function Statistics() {
   return (
     <BodyContainer>
       <NaviBar />
-      <Table />
-      <DashboardBottom />
+      <TableContainer>
+        <Table />
+        <DashboardBottom />
+      </TableContainer>
     </BodyContainer>
   );
 }

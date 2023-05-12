@@ -7,11 +7,7 @@ function Detect() {
     <BodyContainer>
       <NaviBar />
       <DetectContainer>
-<<<<<<< Updated upstream
-        <DetectDashboard/>
-=======
         <DetectDashboard />
->>>>>>> Stashed changes
       </DetectContainer>
     </BodyContainer>
   );

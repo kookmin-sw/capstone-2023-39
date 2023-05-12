@@ -5,17 +5,16 @@ export const BodyContainer = styled.div`
   height: 100%;
   flex-direction: row;
   display: flex;
-  flex-direction: column;
+  //flex-direction: column;
 `;
 
 export const TableContainer = styled.div`
   display: flex;
   flex-direction: column;
   width: 100%;
-  height: 70%;
+  height: 80%;
   align-items: center;
   justify-content: center;
-  margin-left: 80px;
-  padding: 10px;
+  margin-left: 70px;
   background: #f8fafd;
 `;

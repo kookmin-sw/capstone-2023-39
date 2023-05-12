@@ -1,13 +1,12 @@
 import styled from "styled-components";
 
 export const Wrap = styled.div`
-  width: 95%;
+  width: 100%;
   height: 100%;
   align-items: center;
   justify-content: center;
   padding: 10px;
   background: #f8fafd;
-  margin-left: 70px;
 `;
 
 export const TableContainer = styled.div`
