@@ -7,7 +7,7 @@ function Detect() {
     <BodyContainer>
       <NaviBar/>
       <DetectContainer>
-        <DetectDashboard/>>
+        <DetectDashboard/>
       </DetectContainer>
     </BodyContainer>
   );
