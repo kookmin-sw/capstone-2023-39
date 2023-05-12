@@ -1,12 +1,12 @@
 import styled from "styled-components";
 
 export const NaviContainer = styled.div`
-  width: 5%;
+  width: 4%;
   height: 100vh;
   position: fixed;
   top: 0;
   left: 0;
-  background-color:#897EDB;
+  background-color:#000;
   display: flex;
   flex-direction: column;
 `;
@@ -15,7 +15,7 @@ export const LogoButton = styled.button`
   height: 70px;
   color: #fff;
   font-size:12px;
-  background-color: #897EDB;
+  background-color: #000;
   border: none;
   border-bottom: 0.5px solid #fff;
 `;
@@ -25,7 +25,7 @@ export const RouteButton = styled.button`
   height: 70px;
   color: #fff;
   font-size:12px;
-  background-color: #897EDB;
+  background-color: #000;
   border: none;
   border-bottom: 0.5px solid #fff;
   cursor: pointer;
