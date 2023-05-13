@@ -64,18 +64,18 @@ export class SearchService {
               field: 'inner_ip',
             },
             aggs: {
-              timestamps: {
+              date: {
                 top_hits: {
                   size: 100, // 100이 최대
                   sort: [
                     {
-                      timestamp: {
+                      date: {
                         order: 'desc',
                       },
                     },
                   ],
                   _source: {
-                    includes: ['timestamp'],
+                    includes: ['date'],
                   },
                 },
               },
@@ -95,14 +95,12 @@ export class SearchService {
         query: {
           range: {
             start_time: {
-              gte: date + " 00:00:00",
-              lte: date + " 23:59:59"
+              gte: date + ' 00:00:00',
+              lte: date + ' 23:59:59',
             },
           },
         },
-        sort: [
-          {start_time: "asc"}
-        ],
+        sort: [{ start_time: 'asc' }],
       },
     });
     const hits = response.hits.hits;
@@ -110,8 +108,8 @@ export class SearchService {
       results.add(item._source as dataResponse);
     });
 
-    return { 
-      results: Array.from(results), 
+    return {
+      results: Array.from(results),
       total: response.hits.total,
     };
   }
