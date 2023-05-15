@@ -87,16 +87,17 @@ export class SearchService {
     return response.aggregations.inner_ips;
   }
 
-  async search_date(date: string) {
+  async search_date(date_start: string,date_end: string) {
     let results = new Set();
     let response = await this.esService.search({
       index: process.env.ELASTICSEARCH_INDEX_DATA,
       body: {
+        size: 100,
         query: {
           range: {
             start_time: {
-              gte: date + ' 00:00:00',
-              lte: date + ' 23:59:59',
+              gte: date_start + ' 00:00:00',
+              lte: date_end + ' 23:59:59',
             },
           },
         },
