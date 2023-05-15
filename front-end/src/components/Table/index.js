@@ -6,13 +6,14 @@ import { useState } from "react";
 import dayjs from "dayjs";
 
 function Table() {
+  const dateFormat = "YYYY-MM-DD";
   const { RangePicker } = DatePicker;
   const [date, setDate] = useState({
-    startDate: dayjs(),
-    endDate: dayjs(),
+    // 오늘 날짜로 생성
+    startDate: dayjs().format(dateFormat),
+    endDate: dayjs().format(dateFormat),
   });
 
-  const dateFormat = "YYYY-MM-DD";
   return (
     <S.Wrap>
       <RangePicker

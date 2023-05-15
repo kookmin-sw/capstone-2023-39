@@ -50,14 +50,13 @@ function HybridTable(props) {
     setOpen(true);
     setIP(ip);
   };
-
+  console.log(startDate, endDate);
   useEffect(() => {
-    //const response = axios.get(`/search/date?date=${startDate}`);
     const response = axios
-      .get(`/search/date?date=2023-05-01`)
+      //.get(`/search/date?date_start=${startDate}&date_end=${endDate}`)
+      .get(`/search/date?date_start=2023-04-29&date_end=2023-05-01`)
       .then(function (response) {
         setTableData(parseTableData(response.data?.results));
-        //console.log(parseTableData(response.data?.results));
       })
       .catch(function (error) {
         console.log(error);
