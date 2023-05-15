@@ -8,7 +8,8 @@ export const TableContainer = styled(Table)`
   box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
   border-radius: 10px;
   .ant-table-thead .ant-table-cell {
-    background-color: #e1dff6;
+    //background-color: #22577e;
+    background-color: #5584ac;
     font-size: 16px;
   }
 `;

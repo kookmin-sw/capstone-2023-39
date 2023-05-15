@@ -20,5 +20,7 @@ export const TableContainer = styled(Table)`
   .ant-table-thead .ant-table-cell {
     font-size: 18px;
     //background: #ffffff;
+    //background-color: #5584ac;
+    //background: linear-gradient(to top, #7895b2, #aebdca);
   }
 `;
