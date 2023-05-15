@@ -16,7 +16,7 @@ export const ModalContent = styled.div`
 `;
 
 export const InfoItem = styled.span`
-  background: linear-gradient(to top, #c4bfed 50%, transparent 50%);
+  background: linear-gradient(to top, #aebdca 50%, transparent 50%);
   font-size: 18px;
   margin-right: 25px;
 `;
