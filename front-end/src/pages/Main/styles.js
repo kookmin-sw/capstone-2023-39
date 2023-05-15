@@ -26,7 +26,7 @@ export const MapNormalButton = styled.button`
   border-radius: 10px;
   position: absolute;
   bottom: 460px;
-  right: 190px;
+  right: 280px;
   z-index: 999;
   cursor: pointer;
   transition: 0.3s all;
@@ -45,7 +45,7 @@ export const MapAbnormalButton = styled.button`
   border-radius: 10px;
   position: absolute;
   bottom: 460px;
-  right: 100px;
+  right: 190px;
   z-index: 999;
   cursor: pointer;
   transition: 0.3s all;
@@ -54,7 +54,7 @@ export const MapAbnormalButton = styled.button`
    }
 `;
 
-export const MapBothButton = styled.button`
+export const MapAllButton = styled.button`
   width: 70px;
   height: 40px;
   background: #fff;
@@ -65,6 +65,25 @@ export const MapBothButton = styled.button`
   position: absolute;
   bottom: 460px;
   right: 10px;
+  z-index: 999;
+  cursor: pointer;
+  transition: 0.3s all;
+   &:hover{
+     transform:translateY(-3px);
+   }
+`;
+
+export const MapCtiButton = styled.button`
+  width: 70px;
+  height: 40px;
+  background: #fff;
+  color: #897EDB;
+  border: 1px solid #897EDB;
+  margin: 0 0 0 20px;
+  border-radius: 10px;
+  position: absolute;
+  bottom: 460px;
+  right: 100px;
   z-index: 999;
   cursor: pointer;
   transition: 0.3s all;
