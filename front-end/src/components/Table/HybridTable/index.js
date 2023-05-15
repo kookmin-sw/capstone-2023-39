@@ -50,18 +50,18 @@ function HybridTable(props) {
     setOpen(true);
     setIP(ip);
   };
-  console.log(startDate, endDate);
+
   useEffect(() => {
     const response = axios
-      //.get(`/search/date?date_start=${startDate}&date_end=${endDate}`)
-      .get(`/search/date?date_start=2023-04-29&date_end=2023-05-01`)
+      .get(`/search/date?date_start=${startDate}&date_end=${endDate}`)
+      //.get(`/search/date?date_start=2023-04-29&date_end=2023-05-01`)
       .then(function (response) {
         setTableData(parseTableData(response.data?.results));
       })
       .catch(function (error) {
         console.log(error);
       });
-  }, [startDate]);
+  }, [startDate, endDate]);
 
   return (
     <div
@@ -80,6 +80,7 @@ function HybridTable(props) {
           cursor: "pointer",
           position: "relative",
           background: "#ffffff",
+          borderRadius: "10px",
         }}
         onRow={(record, rowIndex) => {
           return {
