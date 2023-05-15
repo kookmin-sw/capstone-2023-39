@@ -15,17 +15,16 @@ export class CoinService {
     const result = (await this.searchService.search_pool_accessed_ip(
       pool_ip,
     )) as dataResponse_coin;
-
     const inner_ips = result.buckets.map((buckets) => buckets.key);
     const doc_count = result.buckets.map((buckets) => buckets.doc_count);
-    const timestamps = result.buckets.map((bucket) =>
-      bucket.timestamps.hits.hits.map((hit) => hit._source.timestamp),
+    const dates = result.buckets.map((bucket) =>
+      bucket.date.hits.hits.map((hit) => hit._source.date),
     );
 
     const response: ResponseCoinDto = {
       inner_ips: inner_ips,
       doc_count: doc_count,
-      timestamps: timestamps,
+      dates: dates,
     };
     return response;
   }

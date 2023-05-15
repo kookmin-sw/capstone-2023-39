@@ -1,4 +1,4 @@
-import { Body, Controller, Post, Query } from '@nestjs/common';
+import { Body, Controller, Get, Post, Query } from '@nestjs/common';
 import { ApiOperation, ApiTags } from '@nestjs/swagger';
 import { CoinService } from './coin.service';
 import { RequestPoolDto } from './dto/request/request-pool.dto';
@@ -8,7 +8,7 @@ import { RequestPoolDto } from './dto/request/request-pool.dto';
 export class CoinController {
   constructor(private readonly coinService: CoinService) {}
 
-  @Post('/get_pool_accessed_ip')
+  @Get('/get_pool_accessed_ip')
   @ApiOperation({
     summary: '특정 Pool에 접속한 IP 정보',
   })
