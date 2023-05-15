@@ -20,8 +20,8 @@ export const MapNormalButton = styled.button`
   width: 70px;
   height: 40px;
   background: #fff;
-  color: #897EDB;
-  border: 1px solid #897EDB;
+  color: #19A7CE;
+  border: 2px solid #19A7CE;
   margin: 0 0 0 20px;
   border-radius: 10px;
   position: absolute;
@@ -39,8 +39,8 @@ export const MapAbnormalButton = styled.button`
   width: 70px;
   height: 40px;
   background: #fff;
-  color: #897EDB;
-  border: 1px solid #897EDB;
+  color: #19A7CE;
+  border: 2px solid #19A7CE;
   margin: 0 0 0 20px;
   border-radius: 10px;
   position: absolute;
@@ -58,8 +58,8 @@ export const MapAllButton = styled.button`
   width: 70px;
   height: 40px;
   background: #fff;
-  color: #897EDB;
-  border: 1px solid #897EDB;
+  color: #19A7CE;
+  border: 2px solid #19A7CE;
   margin: 0 0 0 20px;
   border-radius: 10px;
   position: absolute;
@@ -77,8 +77,8 @@ export const MapCtiButton = styled.button`
   width: 70px;
   height: 40px;
   background: #fff;
-  color: #897EDB;
-  border: 1px solid #897EDB;
+  color: #19A7CE;
+  border: 2px solid #19A7CE;
   margin: 0 0 0 20px;
   border-radius: 10px;
   position: absolute;
