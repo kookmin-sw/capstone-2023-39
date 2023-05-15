@@ -5,9 +5,7 @@ import * as S from "./styles";
 const parseNModalData = (data) => {
   let result = new Array([]);
   data.inner_ips?.forEach((element, index) => {
-    data.timestamps[index]?.map((time) =>
-      result.push({ ip: element, time: time })
-    );
+    data.dates[index]?.map((time) => result.push({ ip: element, time: time }));
   });
   return result.slice(1);
 };

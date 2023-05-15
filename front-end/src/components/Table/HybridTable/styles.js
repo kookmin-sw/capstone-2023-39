@@ -14,7 +14,7 @@ export const TableContainer = styled(Table)`
     border-bottom: none !important;
   }
   .ant-table-empty {
-    height: 575px;
+    height: 565px;
     border-radius: 10px;
   }
 `;
