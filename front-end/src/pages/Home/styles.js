@@ -79,6 +79,7 @@ export const TargetContainer = styled.div`
   align-items: center;
   margin-left: 60px;
   margin-top: 10%;
+  margin-bottom: 8%;
 `;
 
 export const CommonTitle = styled.div`
@@ -89,6 +90,7 @@ export const CommonTitle = styled.div`
   color: #fff;
   position: relative;
   font-weight: 500;
+  margin-bottom: 5%;
 `;
 
 export const questionContainer = styled.div`
@@ -96,7 +98,6 @@ export const questionContainer = styled.div`
   flex-direction: row;
   width: 90%;
   height: 60%;
-  margin-top: 8%;
   align-items: center;
 `;
 
@@ -120,6 +121,7 @@ export const bubbleBox = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-end;
+  margin-bottom: 3%;
 `;
 
 export const speechBubble = styled.div`
@@ -133,7 +135,6 @@ export const speechBubble = styled.div`
   font-family: "AppleSDGothicNeoL";
   font-size: 19px;
   line-height: ${(props) => (props.direction === "left" ? "80px" : "30px")};
-  color: ${(props) => (props.direction === "left" ? "#FFF" : "#FFFFFF")};
+  color: #fff;
   padding: ${(props) => (props.direction === "left" ? "0 6%" : "2% 6%")};
-  margin-bottom: ${(props) => (props.direction === "left" ? "0" : "3%")};
 `;
