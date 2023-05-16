@@ -19,7 +19,7 @@ export const MainContainer = styled.div`
 `;
 
 export const titleContainer = styled.div`
-  width: 70%;
+  width: 80%;
   height: fit-content;
   text-align: left;
   justify-content: center;
@@ -34,21 +34,14 @@ export const mainTitle = styled.div`
   font-family: "GangwonEduPowerExtraBoldA";
   line-height: 100px;
   color: #fff;
+  white-space: pre-line;
 `;
 
 export const subTitle = styled.div`
   white-space: pre-line;
-  font-weight: 650;
-  font-size: 70px;
-  //font-family: "sans-serif";
-  line-height: 80px;
-  position: relative;
-  margin-top: -25%;
-  letter-spacing: -0.0111111em;
-  color: #4e535e;
-  mix-blend-mode: normal;
-  opacity: 0.44;
-  display: flex;
-  flex-direction: column;
-  text-align: left;
+  font-size: 30px;
+  font-family: "AppleSDGothicNeoL";
+  line-height: 50px;
+  color: #fff;
+  opacity: 0.8;
 `;
