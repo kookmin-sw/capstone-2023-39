@@ -9,21 +9,21 @@ function NaviBar() {
       <RouteButton>
         <Link to="/" style={{ textDecoration: "none", color: "white" }}>
           <box-icon
-            name="react"
+            name="kickstarter"
             type="logo"
-            animation="tada"
             flip="vertical"
             color="#ffffff"
           ></box-icon>
           <br />
-          39조
+          KUNDI
         </Link>
       </RouteButton>
       <RouteButton>
         <Link to="/main" style={{ textDecoration: "none", color: "white" }}>
-          <box-icon name="search-alt" color="#ffffff"></box-icon>
+          <box-icon name="map-alt" color="#ffffff"></box-icon>
           <br />
-          악성 IP
+          외부 IP <br />
+          탐지
         </Link>
       </RouteButton>
       <RouteButton>
@@ -31,19 +31,21 @@ function NaviBar() {
           to="/statistics"
           style={{ textDecoration: "none", color: "white" }}
         >
+          <box-icon name='search-alt' color='#ffffff' ></box-icon>{" "}
+          <br />
+          탐지 IP <br />
+          정보
+        </Link>
+      </RouteButton>
+      <RouteButton>
+        <Link to="/detect" style={{ textDecoration: "none", color: "white" }}>
           <box-icon
             name="bar-chart-alt-2"
             type="solid"
             color="#ffffff"
           ></box-icon>{" "}
           <br />
-          IP 분석
-        </Link>
-      </RouteButton>
-      <RouteButton>
-        <Link to="/detect" style={{ textDecoration: "none", color: "white" }}>
-          <box-icon name="error" color="#ffffff"></box-icon> <br />
-          보안탐지
+          트래픽
           <br />
           대시보드
         </Link>
