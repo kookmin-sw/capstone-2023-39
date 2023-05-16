@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { NaviContainer, RouteButton, LogoButton } from "./styles";
+import { NaviContainer, RouteButton } from "./styles";
 import "boxicons";
 
 function NaviBar() {
