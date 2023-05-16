@@ -5,11 +5,14 @@ import PoolIpInformation from "../../Modal/PoolIpInformation";
 
 function BitcoinTable() {
   const [open, setOpen] = useState(false);
-  const [poolIp, setPoolIP] = useState("");
+  const [info, setInfo] = useState({
+    ip: "",
+    name: "",
+  });
 
-  const handleClick = (ip) => {
+  const handleClick = (ip, name) => {
     setOpen(true);
-    setPoolIP(ip);
+    setInfo({ ip: ip, name: name });
   };
 
   return (
@@ -23,7 +26,7 @@ function BitcoinTable() {
       <S.TableContainer
         columns={columns}
         //dataSource={testdata}
-        dataSource={[]}
+        dataSource={testdata}
         size={"middle"}
         pagination={{ position: ["bottomCenter"] }}
         style={{
@@ -34,12 +37,12 @@ function BitcoinTable() {
         onRow={(record, rowIndex) => {
           return {
             onClick: () => {
-              handleClick(record.ip);
+              handleClick(record.ip, record.name);
             }, // pool ip 전달
           };
         }}
       />
-      <PoolIpInformation open={open} close={() => setOpen(false)} ip={poolIp} />
+      <PoolIpInformation open={open} close={() => setOpen(false)} info={info} />
     </div>
   );
 }

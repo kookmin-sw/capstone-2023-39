@@ -17,10 +17,15 @@ export const TableContainer = styled(Table)`
   height: 100%;
   border-radius: 10px;
   margin-top: 20px;
+
   .ant-table-thead .ant-table-cell {
     font-size: 18px;
-    //background: #ffffff;
+    background: #e1ebfc;
+    color: #595d63;
     //background-color: #5584ac;
     //background: linear-gradient(to top, #7895b2, #aebdca);
+  }
+  .ant-table-cell {
+    //background: #f3f4fa;
   }
 `;

@@ -5,15 +5,14 @@ import * as S from "./styles";
 const parseNModalData = (data) => {
   let result = new Array([]);
   data.inner_ips?.forEach((element, index) => {
-    data.timestamps[index]?.map((time) =>
-      result.push({ ip: element, time: time })
-    );
+    data.dates[index]?.map((time) => result.push({ ip: element, time: time }));
   });
   return result.slice(1);
 };
 
 function PoolIpInformation(props) {
-  const { open, close, ip } = props;
+  const { open, close, info } = props;
+  const { ip, name } = info;
   const [data, setData] = useState("");
   const column = [
     {
@@ -41,7 +40,7 @@ function PoolIpInformation(props) {
 
   return (
     <S.CustomModal
-      title={"vegas-backup.xmrpool.net"}
+      title={name}
       visible={open}
       onCancel={close}
       closable={true}
