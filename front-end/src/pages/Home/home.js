@@ -6,13 +6,18 @@ import user from "../../imgs/user.png";
 import useScrollFadeIn from "../../hooks/useScrollFadeIn";
 
 const ShowProject = () => {
+  const title = useScrollFadeIn("up", 1, 0);
   const questionItem = useScrollFadeIn("up", 1, 0);
   const answerItemStart = useScrollFadeIn("up", 1, 0);
   const answerItemMid = useScrollFadeIn("up", 1, 0);
   const answerItemEnd = useScrollFadeIn("up", 1, 0);
 
   return (
-    <>
+    <S.ShowContainer>
+      <S.CommonTitle {...title}>
+        <span style={{ color: "#69e4d3", fontSize: "37px" }}>39팀 </span>
+        어떤 서비스를 만들었을까?
+      </S.CommonTitle>
       <S.questionContainer {...questionItem}>
         <S.profileImg src={user} />
         <S.speechBubble direction="left">
@@ -35,7 +40,7 @@ const ShowProject = () => {
           </S.speechBubble>
         </S.bubbleBox>
       </S.answerContainer>
-    </>
+    </S.ShowContainer>
   );
 };
 
@@ -50,9 +55,8 @@ function Home() {
           <S.mainTitle>Search ip for the Kookmin of Everything</S.mainTitle>
           {/*<S.MapImg src={worldMap} />*/}
         </S.titleContainer>
-        <S.ShowContainer>
-          <ShowProject />
-        </S.ShowContainer>
+
+        <ShowProject />
       </S.MainContainer>
     </S.BodyContainer>
   );

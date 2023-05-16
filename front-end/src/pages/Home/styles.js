@@ -67,6 +67,17 @@ export const ShowContainer = styled.div`
   justify-content: center;
   align-items: center;
   margin-left: 60px;
+  margin-top: 30%;
+`;
+
+export const CommonTitle = styled.div`
+  white-space: pre-line;
+  font-size: 33px;
+  font-family: "AppleSDGothicNeoM";
+  line-height: 40px;
+  color: #fff;
+  position: relative;
+  font-weight: 500;
 `;
 
 export const questionContainer = styled.div`
@@ -74,7 +85,7 @@ export const questionContainer = styled.div`
   flex-direction: row;
   width: 90%;
   height: 60%;
-  margin-top: 20%;
+  margin-top: 8%;
   align-items: center;
 `;
 
