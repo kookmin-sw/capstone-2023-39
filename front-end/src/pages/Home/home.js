@@ -16,19 +16,20 @@ const ProjectTarget = () => {
   const CTI_Q = useScrollFadeIn("up", 1, 0);
   const CTI_A1 = useScrollFadeIn("up", 1, 0);
   const CTI_A2 = useScrollFadeIn("up", 1, 0);
+
   return (
     <S.TargetContainer>
       <S.CommonTitle {...title}>
         <span style={{ color: "#69e4d3", fontSize: "37px" }}>우리는 </span>
         이런 서비스를 제공해요
       </S.CommonTitle>
-      <S.questionContainer {...newflow_Q}>
+      <S.BubbleContainer content="question" {...newflow_Q}>
         <S.profileImg src={user_green} />
         <S.speechBubble direction="left">
           {"1. netflow 기반 이상 탐지 🌍"}
         </S.speechBubble>
-      </S.questionContainer>
-      <S.answerContainer>
+      </S.BubbleContainer>
+      <S.BubbleContainer content="answer">
         <S.bubbleBox {...newflow_A}>
           <S.speechBubble direction="right">
             {
@@ -36,15 +37,15 @@ const ProjectTarget = () => {
             }
           </S.speechBubble>
         </S.bubbleBox>
-      </S.answerContainer>
+      </S.BubbleContainer>
 
-      <S.questionContainer {...bitcoin_Q}>
+      <S.BubbleContainer content="question" {...bitcoin_Q}>
         <S.profileImg src={user_green} />
         <S.speechBubble direction="left">
           {"2. 교내 공적 자원을 이용한 💰 사익 취득 💰 감지"}
         </S.speechBubble>
-      </S.questionContainer>
-      <S.answerContainer>
+      </S.BubbleContainer>
+      <S.BubbleContainer content="answer">
         <S.bubbleBox {...bitcoin_A1}>
           <S.speechBubble direction="right">
             {
@@ -59,15 +60,15 @@ const ProjectTarget = () => {
             }
           </S.speechBubble>
         </S.bubbleBox>
-      </S.answerContainer>
+      </S.BubbleContainer>
 
-      <S.questionContainer {...CTI_Q}>
+      <S.BubbleContainer content="question" {...CTI_Q}>
         <S.profileImg src={user_green} />
         <S.speechBubble direction="left">
           {"3. CTI 정보 확장 💫"}
         </S.speechBubble>
-      </S.questionContainer>
-      <S.answerContainer>
+      </S.BubbleContainer>
+      <S.BubbleContainer content="answer">
         <S.bubbleBox {...CTI_A1}>
           <S.speechBubble direction="right">
             {
@@ -82,7 +83,7 @@ const ProjectTarget = () => {
             }
           </S.speechBubble>
         </S.bubbleBox>
-      </S.answerContainer>
+      </S.BubbleContainer>
     </S.TargetContainer>
   );
 };
@@ -98,13 +99,13 @@ const ProjectIntro = () => {
         <span style={{ color: "#69e4d3", fontSize: "37px" }}>39팀 </span>
         어떤 프로젝트를 만들었을까?
       </S.CommonTitle>
-      <S.questionContainer {...questionItem}>
+      <S.BubbleContainer content="question" {...questionItem}>
         <S.profileImg src={user_blue} />
         <S.speechBubble direction="left">
           {"어떤 프로젝트인지 궁금해요 🤔"}
         </S.speechBubble>
-      </S.questionContainer>
-      <S.answerContainer>
+      </S.BubbleContainer>
+      <S.BubbleContainer content="answer">
         <S.bubbleBox {...answerItemStart}>
           <S.speechBubble direction="right">
             {
@@ -119,7 +120,7 @@ const ProjectIntro = () => {
             }
           </S.speechBubble>
         </S.bubbleBox>
-      </S.answerContainer>
+      </S.BubbleContainer>
     </S.InfoContainer>
   );
 };
