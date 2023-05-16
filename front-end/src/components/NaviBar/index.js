@@ -7,18 +7,20 @@ function NaviBar() {
   return (
     <NaviContainer>
       <RouteButton>
-        <box-icon
-          name="react"
-          type="logo"
-          animation="tada"
-          flip="vertical"
-          color="#ffffff"
-        ></box-icon>{" "}
-        <br />
-        39조
+        <Link to="/" style={{ textDecoration: "none", color: "white" }}>
+          <box-icon
+            name="react"
+            type="logo"
+            animation="tada"
+            flip="vertical"
+            color="#ffffff"
+          ></box-icon>
+          <br />
+          39조
+        </Link>
       </RouteButton>
       <RouteButton>
-        <Link to="/" style={{ textDecoration: "none", color: "white" }}>
+        <Link to="/main" style={{ textDecoration: "none", color: "white" }}>
           <box-icon name="search-alt" color="#ffffff"></box-icon>
           <br />
           악성 IP

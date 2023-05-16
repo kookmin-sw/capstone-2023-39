@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Main from "./pages/Main/main";
 import Statistics from "./pages/Statistics/statistics";
 import Detect from "./pages/Detect/detect";
+import Home from "./pages/Home/home";
 function App() {
   useEffect(() => {
     document.body.style.backgroundColor = "#f8fafd";
@@ -19,9 +20,10 @@ function App() {
     >
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Main />} />
+          <Route path="/main" element={<Main />} />
           <Route path="/statistics" element={<Statistics />} />
           <Route path="/detect" element={<Detect />} />
+          <Route path="/" element={<Home />} />
         </Routes>
       </BrowserRouter>
     </div>
