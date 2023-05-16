@@ -2,24 +2,45 @@ import React from "react";
 import NaviBar from "../../components/NaviBar";
 import * as S from "./styles";
 import { GlobalStyle } from "../../fonts/fonts";
-import user from "../../imgs/user.png";
+import user_green from "../../imgs/user_green.png";
+import user_blue from "../../imgs/user_blue.png";
 import useScrollFadeIn from "../../hooks/useScrollFadeIn";
 
-const ShowProject = () => {
+const ProjectTarget = () => {
   const title = useScrollFadeIn("up", 1, 0);
   const questionItem = useScrollFadeIn("up", 1, 0);
   const answerItemStart = useScrollFadeIn("up", 1, 0);
   const answerItemMid = useScrollFadeIn("up", 1, 0);
   const answerItemEnd = useScrollFadeIn("up", 1, 0);
-
   return (
-    <S.ShowContainer>
+    <S.TargetContainer>
       <S.CommonTitle {...title}>
-        <span style={{ color: "#69e4d3", fontSize: "37px" }}>39팀 </span>
-        어떤 서비스를 만들었을까?
+        <span style={{ color: "#69e4d3", fontSize: "37px" }}>우리는 </span>
+        이런 서비스를 제공해요
       </S.CommonTitle>
       <S.questionContainer {...questionItem}>
-        <S.profileImg src={user} />
+        <S.profileImg src={user_green} />
+        <S.speechBubble direction="left">
+          {"netflow기반 이상 탐지에 대해서 소개해줘 🤔"}
+        </S.speechBubble>
+      </S.questionContainer>
+    </S.TargetContainer>
+  );
+};
+const ProjectIntro = () => {
+  const title = useScrollFadeIn("up", 1, 0);
+  const questionItem = useScrollFadeIn("up", 1, 0);
+  const answerItemStart = useScrollFadeIn("up", 1, 0);
+  const answerItemMid = useScrollFadeIn("up", 1, 0);
+
+  return (
+    <S.InfoContainer>
+      <S.CommonTitle {...title}>
+        <span style={{ color: "#69e4d3", fontSize: "37px" }}>39팀 </span>
+        어떤 프로젝트를 만들었을까?
+      </S.CommonTitle>
+      <S.questionContainer {...questionItem}>
+        <S.profileImg src={user_blue} />
         <S.speechBubble direction="left">
           {"어떤 프로젝트인지 궁금해요 🤔"}
         </S.speechBubble>
@@ -40,7 +61,7 @@ const ShowProject = () => {
           </S.speechBubble>
         </S.bubbleBox>
       </S.answerContainer>
-    </S.ShowContainer>
+    </S.InfoContainer>
   );
 };
 
@@ -55,8 +76,8 @@ function Home() {
           <S.mainTitle>Search ip for the Kookmin of Everything</S.mainTitle>
           {/*<S.MapImg src={worldMap} />*/}
         </S.titleContainer>
-
-        <ShowProject />
+        <ProjectIntro />
+        <ProjectTarget />
       </S.MainContainer>
     </S.BodyContainer>
   );

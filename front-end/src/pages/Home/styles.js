@@ -59,7 +59,7 @@ export const MapImg = styled.img`
   margin-left: 40%;
 `;
 
-export const ShowContainer = styled.div`
+export const InfoContainer = styled.div`
   width: 100%;
   height: 100%;
   display: flex;
@@ -68,6 +68,17 @@ export const ShowContainer = styled.div`
   align-items: center;
   margin-left: 60px;
   margin-top: 30%;
+`;
+
+export const TargetContainer = styled.div`
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-left: 60px;
+  margin-top: 10%;
 `;
 
 export const CommonTitle = styled.div`
