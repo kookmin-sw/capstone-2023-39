@@ -20,7 +20,7 @@ function NaviBar() {
       </RouteButton>
       <RouteButton>
         <Link to="/main" style={{ textDecoration: "none", color: "white" }}>
-          <box-icon name="search-alt" color="#ffffff"></box-icon>
+          <box-icon name="map-alt" color="#ffffff"></box-icon>
           <br />
           외부 IP <br />
           탐지
@@ -31,11 +31,7 @@ function NaviBar() {
           to="/statistics"
           style={{ textDecoration: "none", color: "white" }}
         >
-          <box-icon
-            name="bar-chart-alt-2"
-            type="solid"
-            color="#ffffff"
-          ></box-icon>{" "}
+          <box-icon name='search-alt' color='#ffffff' ></box-icon>{" "}
           <br />
           탐지 IP <br />
           정보
@@ -43,7 +39,12 @@ function NaviBar() {
       </RouteButton>
       <RouteButton>
         <Link to="/detect" style={{ textDecoration: "none", color: "white" }}>
-          <box-icon name="error" color="#ffffff"></box-icon> <br />
+          <box-icon
+            name="bar-chart-alt-2"
+            type="solid"
+            color="#ffffff"
+          ></box-icon>{" "}
+          <br />
           트래픽
           <br />
           대시보드
