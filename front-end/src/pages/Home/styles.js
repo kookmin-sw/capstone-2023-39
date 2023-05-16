@@ -53,13 +53,13 @@ export const MapImg = styled.img`
   width: 612px;
   height: 612px;
   align-items: flex-end;
-  opacity: 0.8;
+  opacity: 1;
   position: absolute;
   margin-top: 30%;
   margin-left: 40%;
 `;
 
-export const ShowContainer = styled.div`
+export const InfoContainer = styled.div`
   width: 100%;
   height: 100%;
   display: flex;
@@ -70,6 +70,18 @@ export const ShowContainer = styled.div`
   margin-top: 30%;
 `;
 
+export const TargetContainer = styled.div`
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-left: 60px;
+  margin-top: 12%;
+  margin-bottom: 8%;
+`;
+
 export const CommonTitle = styled.div`
   white-space: pre-line;
   font-size: 33px;
@@ -78,37 +90,33 @@ export const CommonTitle = styled.div`
   color: #fff;
   position: relative;
   font-weight: 500;
+  margin-bottom: 5%;
 `;
 
-export const questionContainer = styled.div`
+export const BubbleContainer = styled.div`
   display: flex;
-  flex-direction: row;
+  flex-direction: ${(props) =>
+    props.content === "question" ? "row" : "column"};
   width: 90%;
-  height: 60%;
-  margin-top: 8%;
-  align-items: center;
-`;
-
-export const answerContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  width: 90%;
-  height: fit-content;
-  align-items: flex-end;
+  height: ${(props) => (props.content === "question" ? "60%" : "fit-content")};
+  align-items: ${(props) =>
+    props.content === "question" ? "center" : "flex-end"};
 `;
 
 export const profileImg = styled.img`
-  width: 100px;
-  height: 100px;
+  width: 110px;
+  height: 110px;
   align-items: flex-start;
   margin-right: 2%;
 `;
+
 export const bubbleBox = styled.div`
   width: 100%;
   height: 100%;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
+  margin-bottom: 3%;
 `;
 
 export const speechBubble = styled.div`
@@ -122,7 +130,6 @@ export const speechBubble = styled.div`
   font-family: "AppleSDGothicNeoL";
   font-size: 19px;
   line-height: ${(props) => (props.direction === "left" ? "80px" : "30px")};
-  color: ${(props) => (props.direction === "left" ? "#FFF" : "#FFFFFF")};
+  color: #fff;
   padding: ${(props) => (props.direction === "left" ? "0 6%" : "2% 6%")};
-  margin-bottom: ${(props) => (props.direction === "left" ? "0" : "3%")};
 `;
