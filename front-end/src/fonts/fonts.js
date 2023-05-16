@@ -1,5 +1,6 @@
 import { createGlobalStyle } from "styled-components";
 import AppleSDGothicNeoL from "./AppleSDGothicNeoL.ttf";
+import AppleSDGothicNeoM from "./AppleSDGothicNeoM.ttf";
 
 export const GlobalStyle = createGlobalStyle`
     @font-face {
@@ -13,6 +14,14 @@ export const GlobalStyle = createGlobalStyle`
         font-family: "AppleSDGothicNeoL";
         src: local("AppleSDGothicNeoL"),
         url(${AppleSDGothicNeoL}) format('woff');
+        font-weight: 300;
+        font-style: normal;
+    }
+
+    @font-face {
+        font-family: "AppleSDGothicNeoM";
+        src: local("AppleSDGothicNeoM"),
+        url(${AppleSDGothicNeoM}) format('woff');
         font-weight: 300;
         font-style: normal;
     }
