@@ -11,7 +11,8 @@ const parseNModalData = (data) => {
 };
 
 function PoolIpInformation(props) {
-  const { open, close, ip } = props;
+  const { open, close, info } = props;
+  const { ip, name } = info;
   const [data, setData] = useState("");
   const column = [
     {
@@ -39,7 +40,7 @@ function PoolIpInformation(props) {
 
   return (
     <S.CustomModal
-      title={"vegas-backup.xmrpool.net"}
+      title={name}
       visible={open}
       onCancel={close}
       closable={true}
