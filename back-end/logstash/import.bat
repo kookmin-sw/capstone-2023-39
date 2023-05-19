@@ -1,5 +1,6 @@
 :: 경로
-set _dir=C:\elk_input
+set _dir=C:\elk_input@echo off
+
 
 :: 데이터팀 import
 copy %_dir%\data\*.csv %_dir%\data\bak\
