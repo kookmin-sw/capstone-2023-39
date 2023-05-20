@@ -28,7 +28,7 @@ export class ShodanService {
     try {
       var shodanData = await this.httpService.get(api_url).toPromise();
       data.httpStatus = shodanData.status;
-      data.ip = shodanData.data.ip;
+      data.ip = ip;
       data.country_code = shodanData.data.country_code;
       data.country_name = shodanData.data.country_name;
       data.region_code = shodanData.data.region_code;
