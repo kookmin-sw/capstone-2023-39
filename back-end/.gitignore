@@ -1,6 +1,10 @@
 # config
 .env
 
+# test
+.sh
+convertCSV.ts
+
 # compiled output
 /dist
 /node_modules
