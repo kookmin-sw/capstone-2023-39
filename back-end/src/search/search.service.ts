@@ -1,6 +1,7 @@
 import { long } from '@elastic/elasticsearch/lib/api/types';
 import { Injectable } from '@nestjs/common';
 import { ElasticsearchService } from '@nestjs/elasticsearch';
+import { response } from 'express';
 import { ShodanService } from 'src/shodan/shodan.service';
 
 interface dataResponse {
@@ -87,7 +88,34 @@ export class SearchService {
     return response.aggregations.inner_ips;
   }
 
-  async search_date(date_start: string,date_end: string) {
+  async search_pool_list() {
+    const response = await this.esService.search({
+      index: process.env.ELASTICSEARCH_COIN_DATA_INDEX,
+      body: {
+        size: 0,
+        aggs: {
+          pool_name_count: {
+            terms: {
+              field: 'pool_name',
+              size: 100,
+              order: { _count: 'desc' },
+            },
+            aggs: {
+              pool_ip: {
+                top_hits: {
+                  size: 1,
+                  _source: ['pool_ip'],
+                },
+              },
+            },
+          },
+        },
+      },
+    });
+    return response.aggregations.pool_name_count;
+  }
+
+  async search_date(date_start: string, date_end: string) {
     let results = new Set();
     let response = await this.esService.search({
       index: process.env.ELASTICSEARCH_INDEX_DATA,

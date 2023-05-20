@@ -15,4 +15,12 @@ export class CoinController {
   get_pool_accessed_ip(@Query('pool_ip') pool_ip: string) {
     return this.coinService.get_pool_accessed_ip(pool_ip);
   }
+
+  @Get('/get_ordered_pool_list')
+  @ApiOperation({
+    summary: '특정 Pool에 접속한 IP 정보',
+  })
+  get_ordered_pool_list() {
+    return this.coinService.get_ordered_pool_list();
+  }
 }
