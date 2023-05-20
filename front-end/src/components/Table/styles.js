@@ -7,7 +7,7 @@ export const Wrap = styled.div`
   justify-content: center;
   padding: 10px;
   background: #f8fafd;
-  //margin-left: 10px;
+  margin-left: 1%;
 `;
 
 export const TableContainer = styled.div`
@@ -16,5 +16,5 @@ export const TableContainer = styled.div`
   align-items: center;
   justify-content: center;
   background: #f8fafd;
-  margin: 20px 0px;
+  margin: 20px 0;
 `;
