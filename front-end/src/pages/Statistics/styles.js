@@ -15,6 +15,6 @@ export const TableContainer = styled.div`
   height: 80%;
   align-items: center;
   justify-content: center;
-  margin-left: 60px;
+  margin-left: 4%;
   background: #f8fafd;
 `;

@@ -38,7 +38,6 @@ const ProjectTarget = () => {
           </S.speechBubble>
         </S.bubbleBox>
       </S.BubbleContainer>
-
       <S.BubbleContainer content="question" {...bitcoin_Q}>
         <S.profileImg src={user_green} />
         <S.speechBubble direction="left">
