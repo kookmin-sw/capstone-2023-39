@@ -34,16 +34,16 @@ function Main() {
       {dashboardValue === 3 && <DashboardAllIp />}
       <MapButtonContainer>
         <MapNormalButton onClick={() => setDashboardValue(0)}>
-          Good Ip
+          정상 Ip
         </MapNormalButton>
         <MapAbnormalButton onClick={() => setDashboardValue(1)}>
-          Bad Ip
+          악성 Ip
         </MapAbnormalButton>
         <MapCtiButton onClick={() => setDashboardValue(2)}>
-          Cti Ip
+          확장 Ip
         </MapCtiButton>
         <MapAllButton onClick={() => setDashboardValue(3)}>
-          All Ip
+          전체 Ip
         </MapAllButton>
       </MapButtonContainer>
     </BodyContainer>
