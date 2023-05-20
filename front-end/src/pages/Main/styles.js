@@ -91,3 +91,29 @@ export const MapCtiButton = styled.button`
      transform:translateY(-3px);
    }
 `;
+
+export const ModalContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  /* opacity:0.1; */
+
+`;
+
+export const ColorModal = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size:14px;
+  width: 70px;
+  height: 90px;
+  padding-top:20px;
+  background: #fff;
+  color: #000;
+  border: 1.5px solid #d3d3d3;
+  border-radius: 10px;
+  position: absolute;
+  top: 100px;
+  right: 10px;
+  z-index: 999;
+`;

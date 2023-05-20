@@ -11,6 +11,8 @@ import {
   MapAbnormalButton,
   MapAllButton,
   MapCtiButton,
+  ModalContainer,
+  ColorModal
 } from "./styles";
 
 function Main() {
@@ -19,6 +21,13 @@ function Main() {
   return (
     <BodyContainer>
       <NaviBar></NaviBar>
+      <ModalContainer>
+        <ColorModal>
+        🟢 정상 <br/><br/>
+        🔴 악성 <br/><br/>
+        🟠 확장 <br/><br/>
+        </ColorModal>
+      </ModalContainer>
       {dashboardValue === 0 && <DashboardGoodIp />}
       {dashboardValue === 1 && <DashboardBadIp />}
       {dashboardValue === 2 && <DashboardCtiIp />}
