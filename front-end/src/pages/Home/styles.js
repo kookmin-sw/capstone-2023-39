@@ -41,7 +41,7 @@ export const mainTitle = styled.div`
 
 export const subTitle = styled.div`
   white-space: pre-line;
-  font-size: 28px;
+  font-size: 30px;
   font-family: "AppleSDGothicNeoL";
   line-height: 30px;
   color: #fff;
@@ -84,7 +84,7 @@ export const TargetContainer = styled.div`
 
 export const CommonTitle = styled.div`
   white-space: pre-line;
-  font-size: 33px;
+  font-size: 35px;
   font-family: "AppleSDGothicNeoM";
   line-height: 40px;
   color: #fff;
@@ -128,7 +128,7 @@ export const speechBubble = styled.div`
   border-radius: 100px;
   white-space: pre-line;
   font-family: "AppleSDGothicNeoL";
-  font-size: 19px;
+  font-size: 20px;
   line-height: ${(props) => (props.direction === "left" ? "80px" : "30px")};
   color: #fff;
   padding: ${(props) => (props.direction === "left" ? "0 6%" : "2% 6%")};

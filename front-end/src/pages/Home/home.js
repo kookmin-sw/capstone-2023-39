@@ -20,7 +20,7 @@ const ProjectTarget = () => {
   return (
     <S.TargetContainer>
       <S.CommonTitle {...title}>
-        <span style={{ color: "#69e4d3", fontSize: "37px" }}>우리는 </span>
+        <span style={{ color: "#69e4d3", fontSize: "39px" }}>우리는 </span>
         이런 서비스를 제공해요
       </S.CommonTitle>
       <S.BubbleContainer content="question" {...newflow_Q}>
@@ -33,7 +33,7 @@ const ProjectTarget = () => {
         <S.bubbleBox {...newflow_A}>
           <S.speechBubble direction="right">
             {
-              "국민대학교 트래픽 데이터를 이용하여 \n 국민대를 대상으로 하는 사이버 공격이나 이상행위를 **flow기반**으로 탐지합니다. \n\n flow기반 데이터와 인공지능 모델을 활용하고 \n이상 flow나 ip를 감지하여 네트워크 보안을 강화합니다"
+              "국민대학교 트래픽 데이터를 이용하여 \n 국민대학교를 대상으로하는 사이버공격이나 이상 행위를 **ip의 행동 기반**으로 탐지합니다.\n\n 행동 기반 데이터와 인공지능 모델을 활용하여, \n 이상 행위를 보이는 ip를 감지하여 네트워크 보안을 강화합니다 🖥"
             }
           </S.speechBubble>
         </S.bubbleBox>
@@ -42,26 +42,25 @@ const ProjectTarget = () => {
       <S.BubbleContainer content="question" {...bitcoin_Q}>
         <S.profileImg src={user_green} />
         <S.speechBubble direction="left">
-          {"2. 교내 공적 자원을 이용한 💰 사익 취득 💰 감지"}
+          {"2. 교내 공적 자원을 이용한 💰 사익 취득 💰 탐지"}
         </S.speechBubble>
       </S.BubbleContainer>
       <S.BubbleContainer content="answer">
         <S.bubbleBox {...bitcoin_A1}>
           <S.speechBubble direction="right">
             {
-              "국민대학교 내 여러 연구실에서 보유한 연구 목적의 고성능 PC와 서버가 \n 악용될 가능성을 배제할 수 없기에, \n **국민대학교 넷플로우 데이터**를 통해 \n공적 자원을 부정 사익에 악용하는 폐단을 막고자 합니다."
+              "국민대학교 내 여러 연구실에서 보유한 연구 목적의 고성능 pc와 서버가 \n 악용될 가능성을 배제할 수 없기에, \n **outbound 네트워크 행동 데이터**를 통해 \n 공적 자원을 부정 사익에 악용하는 폐단을 막고자 합니다."
             }
           </S.speechBubble>
         </S.bubbleBox>
         <S.bubbleBox {...bitcoin_A2}>
           <S.speechBubble direction="right">
             {
-              "불법 채굴 방식이 더 교묘해지고 있는 상황에서, \n 단순히 신고에 의지하기보다는 네트워크를 활용해 이를 탐지하고자 합니다"
+              "💸 불법 채굴 방식이 더 교묘해지고 있는 상황에서, \n 단순히 신고에 의지하기 보다는 네트워크 행동 데이터를 활용해 이를 탐지하고자 합니다."
             }
           </S.speechBubble>
         </S.bubbleBox>
       </S.BubbleContainer>
-
       <S.BubbleContainer content="question" {...CTI_Q}>
         <S.profileImg src={user_green} />
         <S.speechBubble direction="left">
@@ -72,14 +71,14 @@ const ProjectTarget = () => {
         <S.bubbleBox {...CTI_A1}>
           <S.speechBubble direction="right">
             {
-              "✔️ CTI(cyber threat information): 사이버 위협 정보 \n\n CTI 정보는 새로운 위협이 나타났을 때 실시간으로 업데이트 된 정보를 제공하기 때문에 \n 이를 이용하여 이상탐지에 활용합니다"
+              "✔️ CTI(cyber threat information): 사이버 위협 정보 \n\n CTI 정보는 서비스를 제공하는 회사에서 구매하는 정보이기 때문에 \n 현재 국민대학교 네트워크 트래픽에 CTI 정보를 적용하여 악성 행동 패턴을 추출하고, \n 이와 비슷한 행동을 보이는 **unknown ip**를 탐지합니다"
             }
           </S.speechBubble>
         </S.bubbleBox>
         <S.bubbleBox {...CTI_A2}>
           <S.speechBubble direction="right">
             {
-              "CTI를 제공해주는 서비스는 주로 해외 서비스가 많기 때문에,\n 국민대학교를 타겟으로 하는 위협정보를 확장하여 네트워크 보안을 강화합니다 🔐"
+              "결과적으로 최소비용으로 최대한의 아웃풋을 끌어낼 수 있으며, \n 국민대학교를 타겟으로 하는 위협정보를 확장하여 네트워크 보안을 강화합니다 🔐"
             }
           </S.speechBubble>
         </S.bubbleBox>
@@ -96,7 +95,7 @@ const ProjectIntro = () => {
   return (
     <S.InfoContainer>
       <S.CommonTitle {...title}>
-        <span style={{ color: "#69e4d3", fontSize: "37px" }}>39팀 </span>
+        <span style={{ color: "#69e4d3", fontSize: "39px" }}>39팀 </span>
         어떤 프로젝트를 만들었을까?
       </S.CommonTitle>
       <S.BubbleContainer content="question" {...questionItem}>
@@ -109,14 +108,14 @@ const ProjectIntro = () => {
         <S.bubbleBox {...answerItemStart}>
           <S.speechBubble direction="right">
             {
-              "저희 팀은 **국민대학교 내부 IP**를 클라이언트로 설정하여 \n 외부로부터 들어오는 공격을 탐지하는 기술을 개발하였습니다 🚀 \n \n해당 기술은 개발 단계에서 끝나는 것이 아닌, \n실제 **국민대학교** 관계자들이 본 기술을 쉽게 접근하고 사용할 수 있도록 \n서비스화하는 것을 목표로 합니다."
+              "저희 팀은 **국민대학교 내부 정보통신처**를 클라이언트로 설정하였고 \n 국민대학교 외부로부터 들어오는 ip의 행동 패턴을 분석하여 \n 공격을 탐지하는 기술을 개발하였습니다 🚀 \n\n 해당 기술은 개발 단계에서 끝나는 것이 아닌,  실제 국민대학교 정보통신처 관계자분들께서 \n**국민대학교의 네트워크 트래픽과 외부로부터 들어오는 ip들에 대한 이상탐지 결과**를 \n 쉽게 접근하고 활용할 수 있도록 서비스화하는 것을 목표로 합니다."
             }
           </S.speechBubble>
         </S.bubbleBox>
         <S.bubbleBox {...answerItemMid}>
           <S.speechBubble direction="right">
             {
-              "더불어 해당 서비스 외에도 다양한 기능들을 추가하여 \n국민대학교 관계자에게 보안에 대한 관심을 높이고 중요성을 부각시키려고 합니다 😀"
+              "더불어 국민대학교 정보통신처 관계자분들이 교내 보안 관련 데이터들에 대해 쉽게 접근하실 수 있도록 \n 해당 서비스 외에도 다양한 기능들을 추가하였습니다. 😀"
             }
           </S.speechBubble>
         </S.bubbleBox>
@@ -132,9 +131,10 @@ function Home() {
       <S.MainContainer>
         <GlobalStyle />
         <S.titleContainer>
-          <S.subTitle>{`국민대학교를 위한 네트워크 이상탐지 기술 개발 및 서비스화`}</S.subTitle>
-          <S.mainTitle>Search ip for the Kookmin of Everything</S.mainTitle>
-          {/*<S.MapImg src={worldMap} />*/}
+          <S.subTitle>{`국민대학교를 위한 네트워크 보안 관제 서비스`}</S.subTitle>
+          <S.mainTitle>
+            {"Search ip for everyone of the Kookmin University"}
+          </S.mainTitle>
         </S.titleContainer>
         <ProjectIntro />
         <ProjectTarget />
