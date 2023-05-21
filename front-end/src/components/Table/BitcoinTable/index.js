@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import * as S from "./styles";
 import PoolIpInformation from "../../Modal/PoolIpInformation";
 import axios from "axios";
-
+import Title from "../../Title";
 const columns = [
   {
     title: "Pool Name",
@@ -65,6 +65,7 @@ function BitcoinTable() {
         height: "100%",
       }}
     >
+      <Title title={"교내 ip 가 접근했던 Mining Pool 정보"} />
       <S.TableContainer
         columns={columns}
         dataSource={tableData}
