@@ -3,6 +3,7 @@ import * as S from "./styles";
 import IpInformation from "../../Modal/IpInformation";
 import axios from "axios";
 import _ from "lodash";
+import Title from "../../Title";
 
 const columns = [
   {
@@ -70,6 +71,7 @@ function HybridTable(props) {
         height: "100%",
       }}
     >
+      <Title title={"Hybrid Model을 통해 탐지한 악성 IP"} />
       <S.TableContainer
         columns={columns}
         dataSource={tableData}
@@ -79,13 +81,12 @@ function HybridTable(props) {
           cursor: "pointer",
           position: "relative",
           background: "#ffffff",
-          borderRadius: "10px",
         }}
         onRow={(record, rowIndex) => {
           return {
             onClick: () => {
               handleClick(record.target_ip);
-            }, // click row
+            },
           };
         }}
       />
