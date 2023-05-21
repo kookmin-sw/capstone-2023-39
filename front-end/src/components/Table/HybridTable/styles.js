@@ -5,7 +5,8 @@ export const TableContainer = styled(Table)`
   width: 98%;
   height: 100%;
   box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
-  border-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
   .ant-table-thead .ant-table-cell {
     background-color: #5584ac;
     font-size: 16px;

@@ -16,5 +16,5 @@ export const TableContainer = styled.div`
   align-items: center;
   justify-content: center;
   background: #f8fafd;
-  margin: 20px 0;
+  margin: 17px 0;
 `;
