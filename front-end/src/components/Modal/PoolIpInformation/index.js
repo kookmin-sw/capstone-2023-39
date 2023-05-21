@@ -2,6 +2,19 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import * as S from "./styles";
 
+const column = [
+  {
+    title: "Inner Ip",
+    dataIndex: "ip",
+    align: "center",
+  },
+  {
+    title: "Connection Time",
+    dataIndex: "time",
+    align: "center",
+  },
+];
+
 const parseNModalData = (data) => {
   let result = new Array([]);
   data.inner_ips?.forEach((element, index) => {
@@ -14,29 +27,17 @@ function PoolIpInformation(props) {
   const { open, close, info } = props;
   const { ip, name } = info;
   const [data, setData] = useState("");
-  const column = [
-    {
-      title: "Inner Ip",
-      dataIndex: "ip",
-      align: "center",
-    },
-    {
-      title: "Connection Time",
-      dataIndex: "time",
-      align: "center",
-    },
-  ];
 
   useEffect(() => {
     const response = axios
-      .get(`/coin/get_pool_accessed_ip?pool_ip=3.64.163.50`)
+      .get(`/coin/get_pool_accessed_ip?pool_ip=${ip}`)
       .then(function (response) {
         setData(parseNModalData(response.data));
       })
       .catch(function (error) {
         console.log(error);
       });
-  }, []);
+  }, [ip]);
 
   return (
     <S.CustomModal
