@@ -67,7 +67,6 @@ function BitcoinTable() {
     >
       <S.TableContainer
         columns={columns}
-        //dataSource={testdata}
         dataSource={tableData}
         size={"middle"}
         pagination={{ position: ["bottomCenter"] }}
