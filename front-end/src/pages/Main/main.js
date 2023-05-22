@@ -25,7 +25,7 @@ function Main() {
         <ColorModal>
         🟢 정상 <br/><br/>
         🔴 악성 <br/><br/>
-        🟠 확장 <br/><br/>
+        🟠 CTI 정보 확장 <br/><br/>
         </ColorModal>
       </ModalContainer>
       {dashboardValue === 0 && <DashboardGoodIp />}
@@ -34,16 +34,16 @@ function Main() {
       {dashboardValue === 3 && <DashboardAllIp />}
       <MapButtonContainer>
         <MapNormalButton onClick={() => setDashboardValue(0)}>
-          정상 Ip
+          정상 IP
         </MapNormalButton>
         <MapAbnormalButton onClick={() => setDashboardValue(1)}>
-          악성 Ip
+          악성 IP
         </MapAbnormalButton>
         <MapCtiButton onClick={() => setDashboardValue(2)}>
-          확장 Ip
+          CTI 정보 확장 IP
         </MapCtiButton>
         <MapAllButton onClick={() => setDashboardValue(3)}>
-          전체 Ip
+          전체 IP
         </MapAllButton>
       </MapButtonContainer>
     </BodyContainer>
