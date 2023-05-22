@@ -15,7 +15,7 @@ export const TableContainer = styled(Table)`
   width: 100%;
   height: 100%;
   border-radius: 10px;
-  margin-top: 20px;
+  margin-top: 27px;
 
   .ant-table-thead .ant-table-cell {
     font-size: 18px;

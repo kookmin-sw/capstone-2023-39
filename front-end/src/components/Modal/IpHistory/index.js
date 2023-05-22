@@ -1,9 +1,67 @@
 import * as S from "./styles";
 import axios from "axios";
 import React, { useEffect, useState } from "react";
+import _ from "lodash";
+
+const column = [
+  {
+    title: "Start Time",
+    dataIndex: "start_time",
+    align: "center",
+  },
+  {
+    title: "End Time",
+    dataIndex: "end_time",
+    align: "center",
+  },
+  {
+    title: "Card Inner Port",
+    dataIndex: "card_inner_port",
+    align: "center",
+  },
+  {
+    title: "Card Inner IP",
+    dataIndex: "card_inner_ip",
+    align: "center",
+  },
+  {
+    title: "Avg Inner Byts",
+    dataIndex: "avg_inner_byts",
+    align: "center",
+  },
+  {
+    title: "Avg Outer Byts",
+    dataIndex: "avg_outer_byts",
+    align: "center",
+  },
+  {
+    title: "Avg Inner Pkts",
+    dataIndex: "avg_inner_pkts",
+    align: "center",
+  },
+];
 
 const parseTableData = (data) => {
-  let result = new Array([]);
+  const result = _.map(
+    data,
+    ({
+      start_time,
+      end_time,
+      card_inner_port,
+      card_inner_ip,
+      avg_inner_byts,
+      avg_outer_byts,
+      avg_inner_pkts,
+    }) => ({
+      start_time,
+      end_time,
+      card_inner_port,
+      card_inner_ip,
+      avg_inner_byts,
+      avg_outer_byts,
+      avg_inner_pkts,
+    })
+  );
   return result;
 };
 
@@ -32,7 +90,19 @@ function IpHistory(props) {
       footer={null}
       width={950}
       bodyStyle={{ height: 650 }}
-    ></S.CustomModal>
+    >
+      <S.TableContainer
+        columns={column}
+        dataSource={tableData}
+        size={"middle"}
+        pagination={{ position: ["bottomCenter"], pageSize: 7 }}
+        style={{
+          cursor: "pointer",
+          position: "relative",
+          background: "#ffffff",
+        }}
+      />
+    </S.CustomModal>
   );
 }
 
