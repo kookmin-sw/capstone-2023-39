@@ -11,7 +11,7 @@ function IpTrack(props) {
       centered
       footer={null}
       width={950}
-      bodyStyle={{ height: 590 }}
+      bodyStyle={{ height: 600 }}
     ></S.CustomModal>
   );
 }
