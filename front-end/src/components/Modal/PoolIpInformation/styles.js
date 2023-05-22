@@ -3,7 +3,6 @@ import Modal from "antd/es/modal/Modal";
 import { Table } from "antd";
 
 export const CustomModal = styled(Modal)`
-  background-color: #243043;
   .ant-modal-header {
   }
   .ant-modal-title {
@@ -22,10 +21,7 @@ export const TableContainer = styled(Table)`
     font-size: 18px;
     background: #e1ebfc;
     color: #595d63;
-    //background-color: #5584ac;
-    //background: linear-gradient(to top, #7895b2, #aebdca);
   }
   .ant-table-cell {
-    //background: #f3f4fa;
   }
 `;

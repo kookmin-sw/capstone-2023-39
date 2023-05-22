@@ -19,7 +19,6 @@ function IpInformation(props) {
   const [tableData, setTableData] = useState("");
   const [tableColumn, setTableColumn] = useState("");
   const [complete, setComplete] = useState(false);
-
   const [historyOpen, setHistoryOpen] = useState(false);
 
   useEffect(() => {
@@ -64,10 +63,14 @@ function IpInformation(props) {
           <Card loading style={{ height: 400 }} />
         )}
       </S.ModalContent>
-      <S.HistoryButton onClick={() => setIsMore(true)}>
+      <S.HistoryButton onClick={() => setHistoryOpen(true)}>
         View History
       </S.HistoryButton>
-      <IpHistory open={isMore} close={() => setIsMore(false)} ip={ip} />
+      <IpHistory
+        open={historyOpen}
+        close={() => setHistoryOpen(false)}
+        ip={ip}
+      />
     </S.CustomModal>
   );
 }
