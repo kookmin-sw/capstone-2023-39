@@ -89,13 +89,13 @@ function IpHistory(props) {
       centered
       footer={null}
       width={950}
-      bodyStyle={{ height: 650 }}
+      bodyStyle={{ height: 665 }}
     >
       <S.TableContainer
         columns={column}
         dataSource={tableData}
         size={"middle"}
-        pagination={{ position: ["bottomCenter"], pageSize: 7 }}
+        pagination={{ position: ["bottomCenter"], pageSize: 8 }}
         style={{
           cursor: "pointer",
           position: "relative",
