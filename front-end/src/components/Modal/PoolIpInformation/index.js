@@ -15,7 +15,7 @@ const column = [
   },
 ];
 
-const parseNModalData = (data) => {
+const parseModalData = (data) => {
   let result = new Array([]);
   data.inner_ips?.forEach((element, index) => {
     data.dates[index]?.map((time) => result.push({ ip: element, time: time }));
@@ -32,7 +32,7 @@ function PoolIpInformation(props) {
     const response = axios
       .get(`/coin/get_pool_accessed_ip?pool_ip=${ip}`)
       .then(function (response) {
-        setData(parseNModalData(response.data));
+        setData(parseModalData(response.data));
       })
       .catch(function (error) {
         console.log(error);

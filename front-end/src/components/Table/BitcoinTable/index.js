@@ -33,7 +33,8 @@ const parseTableData = (data) => {
   return result.slice(1);
 };
 
-function BitcoinTable() {
+function BitcoinTable(props) {
+  const { startDate, endDate } = props.date;
   const [open, setOpen] = useState(false);
   const [info, setInfo] = useState({
     ip: "",
@@ -48,14 +49,16 @@ function BitcoinTable() {
 
   useEffect(() => {
     const response = axios
-      .get(`/coin/get_ordered_pool_list`)
+      .get(
+        `/coin/get_ordered_pool_list?start_date=${startDate}&end_date=${endDate}`
+      )
       .then(function (response) {
         setTableData(parseTableData(response.data));
       })
       .catch(function (error) {
         console.log(error);
       });
-  }, []);
+  }, [startDate, endDate]);
 
   return (
     <div

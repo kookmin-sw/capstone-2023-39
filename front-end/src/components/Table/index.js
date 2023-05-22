@@ -37,7 +37,7 @@ function Table() {
       <S.TableContainer>
         {/* 선택한 date 값 전달 */}
         <HybridTable date={date} />
-        <BitcoinTable />
+        <BitcoinTable date={date} />
       </S.TableContainer>
     </S.Wrap>
   );

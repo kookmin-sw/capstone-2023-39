@@ -15,12 +15,14 @@ export const TableContainer = styled(Table)`
   width: 100%;
   height: 100%;
   border-radius: 10px;
-  margin-top: 20px;
+  margin-top: 22px;
 
   .ant-table-thead .ant-table-cell {
     font-size: 18px;
-    background: #e1ebfc;
-    color: #595d63;
+    font-weight: 500;
+    background: #2c3e4f;
+    color: #fff;
+    opacity: 0.9;
   }
   .ant-table-cell {
   }
