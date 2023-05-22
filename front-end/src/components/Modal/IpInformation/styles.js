@@ -21,16 +21,22 @@ export const InfoItem = styled.span`
   margin-right: 25px;
 `;
 
-export const TestButton = styled.button`
-  width: 100px;
+export const HistoryButton = styled.button`
+  width: 135px;
+  height: 38px;
   color: #fff;
-  font-size: 12px;
-  background-color: #000;
+  font-size: 16px;
+  font-family: "AppleSDGothicNeoM";
+  font-weight: 500;
+  background-color: #2c3e4f;
+  opacity: 0.9;
   border: none;
+  border-radius: 8px;
   cursor: pointer;
   transition: 0.3s all;
   &:hover {
-    transform: scale(1.1);
     border: none;
+    opacity: 0.7;
   }
+  margin-top: 1%;
 `;

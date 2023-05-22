@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import * as S from "./styles";
 import axios from "axios";
 import { Card, List } from "antd";
-import IpTrack from "../IpTrack";
+import IpHistory from "../IpHistory";
 
 const parseTableData = (data) => {
   let columns = Object.keys(data);
@@ -20,7 +20,7 @@ function IpInformation(props) {
   const [tableColumn, setTableColumn] = useState("");
   const [complete, setComplete] = useState(false);
 
-  const [isMore, setIsMore] = useState(false);
+  const [historyOpen, setHistoryOpen] = useState(false);
 
   useEffect(() => {
     setComplete(false);
@@ -46,7 +46,7 @@ function IpInformation(props) {
       centered
       footer={null}
       width={950}
-      bodyStyle={{ height: 590 }}
+      bodyStyle={{ height: 635 }}
     >
       <S.ModalContent>
         {complete ? (
@@ -64,8 +64,10 @@ function IpInformation(props) {
           <Card loading style={{ height: 400 }} />
         )}
       </S.ModalContent>
-      <S.TestButton onClick={() => setIsMore(true)}>More</S.TestButton>
-      <IpTrack open={isMore} close={() => setIsMore(false)} ip={ip} />
+      <S.HistoryButton onClick={() => setIsMore(true)}>
+        View History
+      </S.HistoryButton>
+      <IpHistory open={isMore} close={() => setIsMore(false)} ip={ip} />
     </S.CustomModal>
   );
 }

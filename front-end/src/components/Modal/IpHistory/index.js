@@ -1,6 +1,6 @@
 import * as S from "./styles";
 
-function IpTrack(props) {
+function IpHistory(props) {
   const { open, close, ip } = props;
   return (
     <S.CustomModal
@@ -16,4 +16,4 @@ function IpTrack(props) {
   );
 }
 
-export default IpTrack;
+export default IpHistory;
