@@ -3,6 +3,7 @@ import { Injectable } from '@nestjs/common';
 import { ElasticsearchService } from '@nestjs/elasticsearch';
 import { response } from 'express';
 import { ShodanService } from 'src/shodan/shodan.service';
+import { CtiService } from 'src/cti/cti.service';
 
 interface dataResponse {
   //출력구조
@@ -20,6 +21,7 @@ export class SearchService {
   constructor(
     private readonly esService: ElasticsearchService,
     private readonly shodanService: ShodanService,
+    private readonly ctiService: CtiService
   ) {}
 
   async search_ip(ip: string) {
@@ -43,6 +45,7 @@ export class SearchService {
       results: Array.from(results),
       total: response.hits.total,
       shodan: await this.shodanService.ip(ip),
+      cti: await this.ctiService.data(ip)
     };
   }
 
