@@ -20,3 +20,17 @@ export const InfoItem = styled.span`
   font-size: 18px;
   margin-right: 25px;
 `;
+
+export const TestButton = styled.button`
+  width: 100px;
+  color: #fff;
+  font-size: 12px;
+  background-color: #000;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s all;
+  &:hover {
+    transform: scale(1.1);
+    border: none;
+  }
+`;
