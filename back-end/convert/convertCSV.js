@@ -39,7 +39,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var axios_1 = require("axios");
 var csv_writer_1 = require("csv-writer");
 var fileURL = 'https://minerstat.com/mining-pool-whitelist.txt';
-var csvPath = "C:/backend/capstone-2023-39/data-processing/detect_miner/coin_blacklist.csv";
+var csvPath = '/Users/mj/a.csv';
 // 파일 다운로드 함수
 function downloadFile(url) {
     return __awaiter(this, void 0, void 0, function () {
@@ -65,8 +65,8 @@ function saveAsCsv(data, outputPath) {
     var csvWriter = (0, csv_writer_1.createObjectCsvWriter)({
         path: outputPath,
         header: [
-            { id: 'domain', title: 'Domain' },
-            { id: 'miner_ip', title: 'Miner IP' },
+            { id: 'domain', title: 'domain' },
+            { id: 'miner_ip', title: 'miner_ip' },
         ],
     });
     var records = data

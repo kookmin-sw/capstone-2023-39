@@ -31,9 +31,11 @@ export class CoinService {
     return response;
   }
 
-  async get_ordered_pool_list() {
-    const result =
-      (await this.searchService.search_pool_list()) as dataResponse_coin;
+  async get_ordered_pool_list(start_date: string, end_date: string) {
+    const result = (await this.searchService.search_pool_list(
+      start_date,
+      end_date,
+    )) as dataResponse_coin;
     const pool_names = result.buckets.map((buckets) => buckets.key);
     const counts = result.buckets.map((buckets) => buckets.doc_count);
     const pool_ips = result.buckets.flatMap((bucket) =>

@@ -88,11 +88,19 @@ export class SearchService {
     return response.aggregations.inner_ips;
   }
 
-  async search_pool_list() {
+  async search_pool_list(start_date: string, end_date: string) {
     const response = await this.esService.search({
       index: process.env.ELASTICSEARCH_COIN_DATA_INDEX,
       body: {
         size: 0,
+        query: {
+          range: {
+            date: {
+              gte: start_date + ' 00:00:00',
+              lte: end_date + ' 23:59:59',
+            },
+          },
+        },
         aggs: {
           pool_name_count: {
             terms: {
