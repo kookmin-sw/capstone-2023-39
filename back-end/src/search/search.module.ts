@@ -4,6 +4,7 @@ import { HttpModule } from '@nestjs/axios';
 import { SearchService } from './search.service';
 import { SearchController } from './search.controller';
 import { ShodanService } from 'src/shodan/shodan.service';
+import { CtiService } from 'src/cti/cti.service';
 
 @Module({
   imports: [
@@ -17,7 +18,7 @@ import { ShodanService } from 'src/shodan/shodan.service';
     HttpModule,
   ],
   controllers: [SearchController],
-  providers: [SearchService, ShodanService],
+  providers: [SearchService, ShodanService, CtiService],
   exports: [SearchService],
 })
 export class SearchModule {}
