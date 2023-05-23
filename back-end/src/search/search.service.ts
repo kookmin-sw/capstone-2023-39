@@ -1,7 +1,6 @@
-import { long } from '@elastic/elasticsearch/lib/api/types';
+import { SearchHit } from '@elastic/elasticsearch/lib/api/types';
 import { Injectable } from '@nestjs/common';
 import { ElasticsearchService } from '@nestjs/elasticsearch';
-import { response } from 'express';
 import { ShodanService } from 'src/shodan/shodan.service';
 import { CtiService } from 'src/cti/cti.service';
 
@@ -14,6 +13,7 @@ interface dataResponse {
   country: string;
   city: string;
   domain: string;
+  cti: Promise<any>;
 }
 
 @Injectable()
@@ -29,11 +29,13 @@ export class SearchService {
     const response = await this.esService.search({
       index: process.env.ELASTICSEARCH_INDEX_DATA,
       body: {
+        size: 100,
         query: {
           match: {
             target_ip: ip,
           },
         },
+        sort: [{ start_time: 'desc' }],
       },
     });
     const hits = response.hits.hits;
@@ -144,14 +146,22 @@ export class SearchService {
       },
     });
     const hits = response.hits.hits;
-    hits.map((item) => {
-      results.add(item._source as dataResponse);
-    });
+    results = await this.add_cti(hits);
 
     return {
       results: Array.from(results),
       total: response.hits.total,
     };
+  }
+
+  async add_cti(hits: SearchHit<unknown>[]){
+      var result = new Set();
+      await Promise.all(hits.map(async (item) => {
+        var query_data = item._source;
+        query_data['cti'] = await this.ctiService.data(query_data['target_ip']);
+        result.add(query_data);
+      }));
+      return result;
   }
 
   async search_label_over(label_over: string) {
