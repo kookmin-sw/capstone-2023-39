@@ -95,7 +95,7 @@ function IpHistory(props) {
         columns={column}
         dataSource={tableData}
         size={"middle"}
-        pagination={{ position: ["bottomCenter"], pageSize: 8 }}
+        pagination={{ position: ["bottomCenter"], pageSize: 7 }}
         style={{
           cursor: "pointer",
           position: "relative",

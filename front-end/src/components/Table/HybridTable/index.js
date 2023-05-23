@@ -18,7 +18,7 @@ const columns = [
   },
   {
     title: "score",
-    dataIndex: "undefined",
+    dataIndex: "score",
     align: "center",
   },
   {
@@ -28,18 +28,17 @@ const columns = [
   },
 ];
 
-const parseTableData = (data) => {
-  const result = _.map(
-    data,
-    ({ target_ip, geoip: { country_name }, start_time }) => ({
-      target_ip,
-      country_name,
-      undefined,
-      start_time,
-    })
-  );
+function parseTableData(data) {
+  const result = data.map((item, index) => {
+    return {
+      target_ip: data[index]["target_ip"],
+      country_name: data[index]?.geoip["country_name"],
+      score: data[index]?.cti["Abused IP score"],
+      start_time: data[index]["start_time"],
+    };
+  });
   return result;
-};
+}
 
 function HybridTable(props) {
   const { startDate, endDate } = props.date;
