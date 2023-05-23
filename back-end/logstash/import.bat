@@ -1,5 +1,5 @@
 :: 경로
-set _dir=C:\elk_input@echo off
+set _dir=C:\elk_input
 
 
 :: 데이터팀 import
