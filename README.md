@@ -53,11 +53,11 @@
 https://kookmin-sw.github.io/capstone-2023-39/
 
 ## 팀원 소개
-**🪐 한윤석 (팀장)**
+**🪐 이윤호(팀장)**
 ```
-Student ID: ****3159
-E-mail: gtavexir@kookmin.ac.kr
-Role: AI Modeling
+Student ID: ****1645
+E-mail: yhya0904@kookmin.ac.kr
+Role: Data Processing & Analysis
 ```
 
 **🌎 이상민**
@@ -81,11 +81,11 @@ E-mail: wogur6767@kookmin.ac.kr
 Role: AI Modeling
 ```
 
-**🌖 이윤호**
+**🌖 한윤석**
 ```
-Student ID: ****1645
-E-mail: yhya0904@kookmin.ac.kr
-Role: Data Processing & Analysis
+Student ID: ****3159
+E-mail: gtavexir@kookmin.ac.kr
+Role: AI Modeling
 ```
 
 **🌗 최유나**
