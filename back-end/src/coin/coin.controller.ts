@@ -11,6 +11,7 @@ export class CoinController {
   @Get('/get_pool_accessed_ip')
   @ApiOperation({
     summary: '특정 Pool에 접속한 IP 정보',
+    description: '입력: ip주소',
   })
   get_pool_accessed_ip(@Query('pool_ip') pool_ip: string) {
     return this.coinService.get_pool_accessed_ip(pool_ip);
@@ -18,7 +19,8 @@ export class CoinController {
 
   @Get('/get_ordered_pool_list')
   @ApiOperation({
-    summary: '특정 Pool에 접속한 IP 정보',
+    summary: '해당 기간의 Pool 접속 횟수 및 정보',
+    description: '입력: 검색 시작일, 종료일',
   })
   get_ordered_pool_list(
     @Query('start_date') start_date: string,
