@@ -29,12 +29,12 @@ const columns = [
 ];
 
 function parseTableData(data) {
-  const result = data.map((item) => {
+  const result = data.map((item, index) => {
     return {
-      target_ip: item["target_ip"],
-      country_name: item?.geoip["country_name"],
-      score: item?.cti["Abused IP score"],
-      start_time: item["start_time"],
+      target_ip: data[index]["target_ip"],
+      country_name: data[index]?.geoip["country_name"],
+      score: data[index]?.cti["Abused IP score"],
+      start_time: data[index]["start_time"],
     };
   });
   return result;
