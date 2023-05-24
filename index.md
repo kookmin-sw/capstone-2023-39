@@ -34,8 +34,8 @@ In addition to the service, various functions are added to increase interest in 
 국민대를 대상으로 하는 사이버 공격이나 이상행위 탐지
 ```
 
-- 국민대학교 트래픽 데이터를 이용하여 국민대를 대상으로 하는 사이버 공격이나 이상행위를 flow기반으로 탐지
-- flow기반 데이터를 인공지능 모델을 활용하고 이상 flow나 ip를 감지하여 네트워크 보안을 강화함
+- 국민대학교 트래픽 데이터를 이용하여 국민대를 대상으로 하는 사이버 공격이나 이상행위를 ip의 행동 기반으로 탐지
+- 행동 기반 데이터와 학습된 인공지능 모델을 활용하여 이상 행위를 보이는 ip를 감지하여 네트워크 보안을 강화함
 
 ### 2. 교내 공적 자원을 이용한 사익 취득감지
 
@@ -43,7 +43,8 @@ In addition to the service, various functions are added to increase interest in 
 넷플로우 데이터를 통해 공적 자원을 부정 사익에 악용하는 폐단 방지
 ```
 
-- 국민대학교 내 여러 연구실에서 보유한 연구 목적의 고성능 PC와 서버가 악용될 가능성을 배제할 수 없기에, 국민대학교 넷플로우 데이터를 통해 공적 자원을 부정 사익에 악용하는 폐단을 막고자 함
+- 국민대학교 내 여러 연구실에서 보유한 연구 목적의 고성능 PC와 서버가 악용될 가능성을 배제할 수 없기에 outbound 네트워크 행동 데이터를 통해 공적 자원을 부정 사익에 악용하는 폐단을 막고자 함
+- 국민대학교 네트워크 레벨에서 교내 공적 자원을 통한 불법 채굴을 감시하고자 함
 - 불법 채굴 방식이 더 교묘해지고 있는 상황에서, 단순히 신고에 의지하기보다는 네트워크를 활용해 이를 탐지하고자 함
 
 ### 3. CTI 정보 확장
@@ -52,21 +53,77 @@ In addition to the service, various functions are added to increase interest in 
 국민대학교를 타겟으로 하는 위협정보를 확장하여 네트워크 보안 강화
 ```
 
-- CTI(cyber threat information): 사이버 위협 정보
+- CTI(Cyber Threat Intelligence): 사이버 위협 정보
+- 현재 국민대학교 네트워크 트래픽에 CTI 정보를 적용하여, 기존에 신고된 악성 IP를 기반으로 Flow 행동 패턴을 추출하고 이와 비슷한 행동을 보이는 **unknown ip**를 탐지
 - CTI 정보는 새로운 위협이 나타났을 때 실시간으로 업데이트 된 정보를 제공하기 때문에 이를 이용하여 이상탐지에 활용함
-- CTI를 제공해주는 서비스는 주로 해외 서비스가 많기 때문에, 국민대학교를 타겟으로 하는 위협정보를 확장하여 네트워크 보안을 강화함
+- CTI를 제공해주는 서비스는 주로 해외 서비스가 많기 때문에, 국민대학교를 타겟으로 하는 위협정보를 확장하여 네트워크 보안을 강화하고자 함 
   <br>
   <a name="tag3"></a>
 
 ## Project Structure
 
-<img width="600" alt="image" src="https://user-images.githubusercontent.com/65989401/229453048-b368770e-4253-4cb2-bb30-83a469aacaee.png">
+<img width="720" alt="image" src="https://github.com/kookmin-sw/capstone-2023-39/assets/65989401/f115de3f-5939-47ba-8fee-48ba7814b0c6">
 <br>
 
-## Main Page
+## Project Overview
+```
+메인 페이지 
+```
+<img width="1300" alt="스크린샷 2023-05-24 오전 11 35 28" src="https://github.com/kookmin-sw/capstone-2023-39/assets/70675133/55ae96b6-674c-488d-926f-9ef394163afd">
 
-<img width="1000" alt="스크린샷 2023-04-03 오후 2 06 22" src="https://user-images.githubusercontent.com/70675133/229416383-e9e8b817-110c-4950-99c8-01cc9e04b7a7.png">
-<img width="1000" alt="스크린샷 2023-04-03 오후 2 06 33" src="https://user-images.githubusercontent.com/70675133/229416390-1c61e33d-b7d1-4cf2-8b71-a8638cdd3e82.png">
+* 프로젝트 소개 및 목표 설명 
+<br>
+
+```
+외부 접근 IP 위치 시각화
+```
+<img width="1300" alt="image" src="https://github.com/kookmin-sw/capstone-2023-39/assets/65989401/9ef2802b-d8ec-42e9-aca1-fdfbc262ef0f">
+
+* kibana maps를 사용하여 외부에서 탐지된 ip들을 지도 위에 시각화 함
+* 악성 ip, 정상 ip ,CTI를 통해 확장한 ip 들을 차별된 Label 값으로 분류한 뒤 악성은 빨강, 정상은 초록, cti는 주황색으로 표현
+* 탐지된 위치를 클릭하면 위도, 경도, label, ip, 지역 이름 등을 모달로 보여줌
+<br>
+
+```
+탐지 IP 정보 및 IP 히스토리
+```
+<img width="1300" alt="image" src="https://github.com/kookmin-sw/capstone-2023-39/assets/65989401/0f89cdea-607c-48e6-85d6-bf1a6b5fd642">
+
+* 지정한 기간동안 국민대에 접근한 ip 중 hybrid 모델을 통해 악성이라고 판단된 ip 들을 시각화 함 
+* 컬럼을 클릭하면 해당 ip에 대한 정보(http 상태, ip, country code, country name 등)를 모달창에서 보여줌
+* 특정 IP의 행적을 확인할 수 있도록 start time, end time, card inner port 등을 테이블로 보여줌 
+<br>
+
+```
+교내 IP가 접근했던 Mining Pool 정보
+```
+<img width="1300" alt="image" src="https://github.com/kookmin-sw/capstone-2023-39/assets/65989401/7e9293e1-fdab-49a3-92a8-0da2a77131ce">
+
+* 테이블에서는 교내 IP 가 접근했던 Mining pool 정보(pool name, pool ip, count) 를 보여줌
+* 각 컬럼을 클릭하면 pool ip 에 접속한 Inner ip와 접속 시간을 모달창에서 보여줌
+* pool ip: 국민대 내부 ip와 연결된 마이닝 풀 서버 ip
+* pool name: 국민대 내부 ip와 연결된 마이닝 풀 서버 도메인
+<br>
+
+```
+날짜별로 탐지된 정상ip의 수, 악성 ip의 수, 악성 IP 빈도수 시각화 
+```
+<img width="1300" alt="스크린샷 2023-05-24 오전 11 36 41" src="https://github.com/kookmin-sw/capstone-2023-39/assets/70675133/08d22911-0eb6-444d-9774-be5f24ddd8c2">
+<br>
+<br>
+
+```
+국가별 악성 IP 빈도수 , 공격 유형 빈도수, 악성 IP와 정상 IP 분포 시각화 
+```
+<img width="1300" alt="스크린샷 2023-05-24 오전 11 37 18" src="https://github.com/kookmin-sw/capstone-2023-39/assets/70675133/82af0d7e-494e-4ef6-9103-df7db0d4116a">
+<br>
+<br>
+
+```
+악성 IP가 가장 많은 국가의 IP 분포도
+```
+<img width="1300" alt="스크린샷 2023-05-24 오전 11 37 39" src="https://github.com/kookmin-sw/capstone-2023-39/assets/70675133/d91cd9c9-d466-40ea-87e8-094d47b3a9c2">
+<br>
 <br>
 
 <a name="tag4"></a>
