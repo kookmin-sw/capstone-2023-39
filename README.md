@@ -49,28 +49,65 @@
 <br>
 <br>
 
-## 프로젝트 전채 개요
-* 메인 페이지 
+## 프로젝트 전체 개요
+```
+메인 페이지 
+```
 <img width="1300" alt="스크린샷 2023-05-24 오전 11 35 28" src="https://github.com/kookmin-sw/capstone-2023-39/assets/70675133/55ae96b6-674c-488d-926f-9ef394163afd">
 
-* 외부 접근 IP 위치 시각화
+* 프로젝트 소개 및 목표 설명 
+<br>
+
+```
+외부 접근 IP 위치 시각화
+```
 <img width="1300" alt="image" src="https://github.com/kookmin-sw/capstone-2023-39/assets/65989401/9ef2802b-d8ec-42e9-aca1-fdfbc262ef0f">
 
-* 탐지 IP 정보 및 IP 히스토리
+* kibana maps를 사용하여 외부에서 탐지된 ip들을 지도 위에 시각화 함
+* 악성 ip, 정상 ip ,CTI를 통해 확장한 ip 들을 차별된 Label 값으로 분류한 뒤 악성은 빨강, 정상은 초록, cti는 주황색으로 표현
+* 탐지된 위치를 클릭하면 위도, 경도, label, ip, 지역 이름 등을 모달로 보여줌
+<br>
+
+```
+탐지 IP 정보 및 IP 히스토리
+```
 <img width="1300" alt="image" src="https://github.com/kookmin-sw/capstone-2023-39/assets/65989401/0f89cdea-607c-48e6-85d6-bf1a6b5fd642">
 
-* 교내 IP가 접근했던 Mining Pool 정보
+* 지정한 기간동안 국민대에 접근한 ip 중 hybrid 모델을 통해 악성이라고 판단된 ip 들을 시각화 함 
+* 컬럼을 클릭하면 해당 ip에 대한 정보(http 상태, ip, country code, country name 등)를 모달창에서 보여줌
+* 특정 IP의 행적을 확인할 수 있도록 start time, end time, card inner port 등을 테이블로 보여줌 
+<br>
+
+```
+교내 IP가 접근했던 Mining Pool 정보
+```
 <img width="1300" alt="image" src="https://github.com/kookmin-sw/capstone-2023-39/assets/65989401/7e9293e1-fdab-49a3-92a8-0da2a77131ce">
 
-* 날짜별로 탐지된 정상ip의 수, 악성 ip의 수, 악성 IP 빈도수 시각화 
+* 테이블에서는 교내 IP 가 접근했던 Mining pool 정보(pool name, pool ip, count) 를 보여줌
+* 각 컬럼을 클릭하면 pool ip 에 접속한 Inner ip와 접속 시간을 모달창에서 보여줌
+* pool ip: 국민대 내부 ip와 연결된 마이닝 풀 서버 ip
+* pool name: 국민대 내부 ip와 연결된 마이닝 풀 서버 도메인
+<br>
+
+```
+날짜별로 탐지된 정상ip의 수, 악성 ip의 수, 악성 IP 빈도수 시각화 
+```
 <img width="1300" alt="스크린샷 2023-05-24 오전 11 36 41" src="https://github.com/kookmin-sw/capstone-2023-39/assets/70675133/08d22911-0eb6-444d-9774-be5f24ddd8c2">
+<br>
+<br>
 
-* 국가별 악성 IP 빈도수 , 공격 유형 빈도수, 악성 IP와 정상 IP 분포 시각화 
+```
+국가별 악성 IP 빈도수 , 공격 유형 빈도수, 악성 IP와 정상 IP 분포 시각화 
+```
 <img width="1300" alt="스크린샷 2023-05-24 오전 11 37 18" src="https://github.com/kookmin-sw/capstone-2023-39/assets/70675133/82af0d7e-494e-4ef6-9103-df7db0d4116a">
+<br>
+<br>
 
-* 악성 IP가 가장 많은 국가의 IP 분포도
+```
+악성 IP가 가장 많은 국가의 IP 분포도
+```
 <img width="1300" alt="스크린샷 2023-05-24 오전 11 37 39" src="https://github.com/kookmin-sw/capstone-2023-39/assets/70675133/d91cd9c9-d466-40ea-87e8-094d47b3a9c2">
-
+<br>
 <br>
 
 ## 깃허브 페이지
