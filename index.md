@@ -6,8 +6,9 @@
   <li><a href="#tag1">Project Introduce</a></li>
   <li><a href="#tag2">Service</a></li>
   <li><a href="#tag3">Project Structure</a></li>
-  <li><a href="#tag4">Team Introduce</a></li>
-  <li><a href="#tag5">Technology Stack</a></li>
+  <li><a href="#tag4">Project Overview</a></li>
+  <li><a href="#tag5">Team Introduce</a></li>
+  <li><a href="#tag6">Technology Stack</a></li>
 </or>
 
 <a name="tag1"></a>
@@ -64,6 +65,8 @@ In addition to the service, various functions are added to increase interest in 
 
 <img width="720" alt="image" src="https://github.com/kookmin-sw/capstone-2023-39/assets/65989401/f115de3f-5939-47ba-8fee-48ba7814b0c6">
 <br>
+
+<a name="tag4"></a>
 
 ## Project Overview
 ```
@@ -126,16 +129,16 @@ In addition to the service, various functions are added to increase interest in 
 <br>
 <br>
 
-<a name="tag4"></a>
+<a name="tag5"></a>
 
 ## Team Introduce
 
-**🪐 한윤석 (팀장)**
+**🪐 이윤호 (팀장)**
 
 ```
-Student ID: ****3159
-E-mail: gtavexir@kookmin.ac.kr
-Role: AI Modeling
+Student ID: ****1645
+E-mail: yhya0904@kookmin.ac.kr
+Role: Data Processing & Analysis
 ```
 
 **🌎 이상민**
@@ -162,12 +165,12 @@ E-mail: wogur6767@kookmin.ac.kr
 Role: AI Modeling
 ```
 
-**🌖 이윤호**
+**🌖 한윤석**
 
 ```
-Student ID: ****1645
-E-mail: yhya0904@kookmin.ac.kr
-Role: Data Processing & Analysis
+Student ID: ****3159
+E-mail: gtavexir@kookmin.ac.kr
+Role: AI Modeling
 ```
 
 **🌗 최유나**
@@ -218,7 +221,7 @@ E-mail: alswn0558@gmail.com
 Role: Backend
 ```
 
-<a name="tag5"></a>
+<a name="tag6"></a>
 
 ## Technology Stack
 
@@ -242,8 +245,8 @@ Role: Backend
 
 ## common
 
-| 역할            | 종류                                                                                                                                                                                                          |
-| --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Idea Memo       | <img alt="RED" src ="https://img.shields.io/badge/Notion-000000.svg?&style=for-the-badge&logo=Notion&logoColor=white"/>                                                                                       |
-| Frontend Design | <img alt="RED" src ="https://img.shields.io/badge/Figma-F24E1E.svg?&style=for-the-badge&logo=Figma&logoColor=white"/>                                                                                         |
-| Version Control | ![Git](https://img.shields.io/badge/git-E6484F.svg?style=for-the-badge&logo=git&logoColor=white) ![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white) |
+|역할|종류|
+|-|-|
+|Idea Memo|<img alt="RED" src ="https://img.shields.io/badge/Notion-000000.svg?&style=for-the-badge&logo=Notion&logoColor=white"/> |
+|Frontend Design|<img alt="RED" src ="https://img.shields.io/badge/Figma-F24E1E.svg?&style=for-the-badge&logo=Figma&logoColor=white"/>|
+|Version Control|![Git](https://img.shields.io/badge/git-E6484F.svg?style=for-the-badge&logo=git&logoColor=white) ![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white) |
