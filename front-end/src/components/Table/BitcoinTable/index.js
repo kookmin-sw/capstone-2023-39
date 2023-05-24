@@ -66,6 +66,7 @@ function BitcoinTable(props) {
         position: "relative",
         width: "100%",
         height: "100%",
+        minHeight: "100%",
       }}
     >
       <Title title={"교내 ip 가 접근했던 Mining Pool 정보"} />
