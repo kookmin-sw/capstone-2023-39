@@ -14,17 +14,13 @@
 
 # Project Introduce
 
-국민대학교 내부 IP를 클라이언트로 설정하여 **외부로부터 들어오는 공격을 탐지하는 기술**을 개발하려한다.
-
-해당 기술은 개발 단계에서 끝나는 것이 아닌, 실제 국민대학교 관계자들이 본 기술을 **쉽게 접근하고 사용할 수 있도록 서비스화**를 목표로 한다.
-
-더불어 해당 서비스 외에도 다양한 기능들을 추가하여 국민대학교 관계자에게 **보안에 대한 관심을 높이고 중요성을 부각**시키려고 한다.
+국민대학교 내부 정보통신처를 클라이언트로 설정하고 국민대학교 외부로부터 들어오는 ip의 행동 패턴을 분석하여 공격을 탐지하는 기술을 개발하였다. 
+해당 기술은 개발 단계에서 끝나는 것이 아닌 실제 국민대학교 정보통신처 관계자들이 국민대학교의 네트워크 트래픽과 외부로부터 들어오는 ip들에 대한 이상탐지 결과를 쉽게 활용하고 접근 할 수 있도록 서비스화하는 것을 목표로 한다. 
+더불어 해당 서비스 외에도 다양한 기능들을 추가하여 국민대학교 관계자에게 보안에 대한 관심을 높이고 중요성을 부각시키려고 한다.
 <br/>
 
-We are trying to develop a technology to detect attacks coming from outside by setting Kookmin University's internal IP as a client.
-
-The technology does not end in the development stage, but aims to service the technology so that actual Kookmin University officials can easily access and use it.
-
+Kookmin University's internal information and communication office was set up as a client and a technology was developed to detect attacks by analyzing the behavior patterns of ip coming from outside Kookmin University.
+The technology aims not to end in the development stage, but to service actual Kookmin University's Information and Communication Department officials to easily utilize and access Kookmin University's network traffic and abnormal detection results for external ip.
 In addition to the service, various functions are added to increase interest in security and highlight the importance of Kookmin University officials.
 
 <br/>
