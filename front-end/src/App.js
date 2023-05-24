@@ -1,24 +1,32 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Admin from "./pages/Admin/admin";
-import Visualization from "./pages/Visualization/visualization";
-import Join from "./pages/Join/join";
-import Login from "./pages/Login/login";
 import Main from "./pages/Main/main";
-import NewflowAnalysis from "./pages/NetflowAnalysis/netflowAnalysis";
-
+import Statistics from "./pages/Statistics/statistics";
+import Detect from "./pages/Detect/detect";
+import Home from "./pages/Home/home";
 function App() {
+  useEffect(() => {
+    document.body.style.backgroundColor = "#f8fafd";
+  }, []);
+
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Main />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/join" element={<Join />} />
-        <Route path="/admin" element={<Admin />} />
-        <Route path="/visualization" element={<Visualization />} />
-        <Route path="/newflowAnalysis" element={<NewflowAnalysis />} />
-      </Routes>
-    </BrowserRouter>
+    <div
+      style={{
+        width: "100%",
+        height: "100%",
+        position: "relative",
+        background: "#f8fafd",
+      }}
+    >
+      <BrowserRouter>
+        <Routes>
+          <Route path="/main" element={<Main />} />
+          <Route path="/statistics" element={<Statistics />} />
+          <Route path="/detect" element={<Detect />} />
+          <Route path="/" element={<Home />} />
+        </Routes>
+      </BrowserRouter>
+    </div>
   );
 }
 
