@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "@elastic/elasticsearch": "^8.7.0",
+    "@nestjs/axios": "^2.0.0",
+    "axios": "^1.4.0",
+    "csv-writer": "^1.6.0"
+  }
+}
