@@ -3,19 +3,19 @@
 네트워크 트래픽 분석을 통한 국민대학교 공격 탐지 플랫폼 
 ```
 
-## 프로젝트 소개
+## 🖥 프로젝트 소개
 **국민대학교 내부 정보통신처**를 클라이언트로 설정하고, 국민대학교 외부로부터 들어오는 ip의 행동 패턴을 분석하여 공격을 탐지하는 기술을 개발하였다. 
 해당 기술은 개발 단계에서 끝나는 것이 아닌, 실제 국민대학교 정보통신처 관계자들이 **국민대학교의 네트워크 트래픽과 외부로부터 들어오는 ip들에 대한 이상탐지 결과**를
 쉽게 활용하고 접근 할 수 있도록 서비스화하는 것을 목표로 한다. 더불어 해당 서비스 외에도 다양한 기능들을 추가하여 국민대학교 관계자에게 보안에 대한 관심을 높이고 중요성을 부각시키려고 한다.
 <br>
 <br>
 
-## 서비스 제공 대상
+## 🧑🏻‍🎓 서비스 제공 대상
 ```
 국민대학교 정보처
 ```
 
-## 목표 서비스
+## 💡 목표 서비스
 ### 1. Netflow기반 이상 탐지
 ```
 국민대를 대상으로 하는 사이버 공격이나 이상행위 탐지
@@ -44,23 +44,20 @@
 * CTI를 제공해주는 서비스는 주로 해외 서비스가 많기 때문에, 국민대학교를 타겟으로 하는 위협정보를 확장하여 네트워크 보안을 강화하고자 함
 <br>
 
-## 프로젝트 구조도 
+## 📊 프로젝트 구조도 
 <img width="720" alt="image" src="https://github.com/kookmin-sw/capstone-2023-39/assets/65989401/f115de3f-5939-47ba-8fee-48ba7814b0c6">
 <br>
 <br>
 
-## 프로젝트 전체 개요
-```
-메인 페이지 
-```
+## 🚀 프로젝트 전체 개요
+
+1. 메인 페이지 
 <img width="1300" alt="스크린샷 2023-05-24 오전 11 35 28" src="https://github.com/kookmin-sw/capstone-2023-39/assets/70675133/55ae96b6-674c-488d-926f-9ef394163afd">
 
 * 프로젝트 소개 및 목표 설명 
 <br>
 
-```
-외부 접근 IP 위치 시각화
-```
+2. 외부 접근 IP 위치 시각화
 <img width="1300" alt="image" src="https://github.com/kookmin-sw/capstone-2023-39/assets/65989401/9ef2802b-d8ec-42e9-aca1-fdfbc262ef0f">
 
 * kibana maps를 사용하여 외부에서 탐지된 ip들을 지도 위에 시각화 함
@@ -68,9 +65,8 @@
 * 탐지된 위치를 클릭하면 위도, 경도, label, ip, 지역 이름 등을 모달로 보여줌
 <br>
 
-```
-탐지 IP 정보 및 IP 히스토리
-```
+
+3. 탐지 IP 정보 및 IP 히스토리
 <img width="1300" alt="image" src="https://github.com/kookmin-sw/capstone-2023-39/assets/65989401/0f89cdea-607c-48e6-85d6-bf1a6b5fd642">
 
 * 지정한 기간동안 국민대에 접근한 ip 중 hybrid 모델을 통해 악성이라고 판단된 ip 들을 시각화 함 
@@ -78,9 +74,7 @@
 * 특정 IP의 행적을 확인할 수 있도록 start time, end time, card inner port 등을 테이블로 보여줌 
 <br>
 
-```
-교내 IP가 접근했던 Mining Pool 정보
-```
+4. 교내 IP가 접근했던 Mining Pool 정보
 <img width="1300" alt="image" src="https://github.com/kookmin-sw/capstone-2023-39/assets/65989401/7e9293e1-fdab-49a3-92a8-0da2a77131ce">
 
 * 테이블에서는 교내 IP 가 접근했던 Mining pool 정보(pool name, pool ip, count) 를 보여줌
@@ -89,31 +83,27 @@
 * pool name: 국민대 내부 ip와 연결된 마이닝 풀 서버 도메인
 <br>
 
-```
-날짜별로 탐지된 정상ip의 수, 악성 ip의 수, 악성 IP 빈도수 시각화 
-```
+5. 날짜별로 탐지된 정상ip의 수, 악성 ip의 수, 악성 IP 빈도수 시각화 
 <img width="1300" alt="스크린샷 2023-05-24 오전 11 36 41" src="https://github.com/kookmin-sw/capstone-2023-39/assets/70675133/08d22911-0eb6-444d-9774-be5f24ddd8c2">
 <br>
 <br>
 
-```
-국가별 악성 IP 빈도수 , 공격 유형 빈도수, 악성 IP와 정상 IP 분포 시각화 
-```
+6. 국가별 악성 IP 빈도수 , 공격 유형 빈도수, 악성 IP와 정상 IP 분포 시각화 
 <img width="1300" alt="스크린샷 2023-05-24 오전 11 37 18" src="https://github.com/kookmin-sw/capstone-2023-39/assets/70675133/82af0d7e-494e-4ef6-9103-df7db0d4116a">
 <br>
 <br>
 
-```
-악성 IP가 가장 많은 국가의 IP 분포도
-```
+7. 악성 IP가 가장 많은 국가의 IP 분포도
 <img width="1300" alt="스크린샷 2023-05-24 오전 11 37 39" src="https://github.com/kookmin-sw/capstone-2023-39/assets/70675133/d91cd9c9-d466-40ea-87e8-094d47b3a9c2">
 <br>
 <br>
 
-## 깃허브 페이지
-https://kookmin-sw.github.io/capstone-2023-39/
 
-## 팀원 소개
+## 🤔 팀원 소개 및 깃허브 페이지 
+
+1. [깃허브 페이지](https://kookmin-sw.github.io/capstone-2023-39/)
+2. 팀원 소개
+
 **🪐 이윤호 (팀장)**
 ```
 Student ID: ****1645
@@ -192,7 +182,7 @@ Role: Backend
 ```
 <br>
 
-## 기술 스택 
+## ⚙️ 기술 스택 
 ### Frontend
 <img alt="RED" src ="https://img.shields.io/badge/REACT-61DAFB.svg?&style=for-the-badge&logo=React&logoColor=white"/>  <img alt="RED" src ="https://img.shields.io/badge/JAVASCRIPT-F7DF1E.svg?&style=for-the-badge&logo=JavaScript&logoColor=white"/>  <img alt="RED" src ="https://img.shields.io/badge/KIBANA-005571.svg?&style=for-the-badge&logo=Kibana&logoColor=white"/>  <img alt="RED" src ="https://img.shields.io/badge/ELASTICSEARCH-005571.svg?&style=for-the-badge&logo=Elasticsearch&logoColor=white"/>
 
@@ -205,7 +195,7 @@ Role: Backend
 <img alt="RED" src ="https://img.shields.io/badge/C++-00599C.svg?&style=for-the-badge&logo=C++&logoColor=white"/>  <img alt="RED" src ="https://img.shields.io/badge/Python-3776AB.svg?&style=for-the-badge&logo=Python&logoColor=white"/>  <img alt="RED" src ="https://img.shields.io/badge/PYTORCH-EE4C2C.svg?&style=for-the-badge&logo=Pytorch&logoColor=white"/>  <img alt="RED" src ="https://img.shields.io/badge/SCIKIT-LEARN-F7931E.svg?&style=for-the-badge&logo=scikit-learn&logoColor=white"/>
 <br>
 
-## common
+### Common
 |역할|종류|
 |-|-|
 |Idea Memo|<img alt="RED" src ="https://img.shields.io/badge/Notion-000000.svg?&style=for-the-badge&logo=Notion&logoColor=white"/> |
