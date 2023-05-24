@@ -70,7 +70,7 @@ const ProjectTarget = () => {
         <S.bubbleBox {...CTI_A1}>
           <S.speechBubble direction="right">
             {
-              "✔️ CTI(cyber threat information): 사이버 위협 정보 \n\n CTI 정보는 서비스를 제공하는 회사에서 구매하는 정보이기 때문에 \n 현재 국민대학교 네트워크 트래픽에 CTI 정보를 적용하여 악성 행동 패턴을 추출하고, \n 이와 비슷한 행동을 보이는 **unknown ip**를 탐지합니다"
+              "✔️ CTI(Cyber Threat Intelligence): 사이버 위협 정보 \n\n CTI 정보는 서비스를 제공하는 회사에서 구매하는 정보이기 때문에 \n 현재 국민대학교 네트워크 트래픽에 CTI 정보를 적용하여 악성 행동 패턴을 추출하고, \n 이와 비슷한 행동을 보이는 **unknown ip**를 탐지합니다"
             }
           </S.speechBubble>
         </S.bubbleBox>
