@@ -47,6 +47,10 @@
 <img width="1353" alt="스크린샷 2023-05-24 오전 11 37 28" src="https://github.com/kookmin-sw/capstone-2023-39/assets/70675133/df065d26-70e9-4f5e-9f79-41a0d65c85fb">
 <img width="1353" alt="스크린샷 2023-05-24 오전 11 37 39" src="https://github.com/kookmin-sw/capstone-2023-39/assets/70675133/d91cd9c9-d466-40ea-87e8-094d47b3a9c2">
 
+## backend 구조도
+<img width="1353" alt="image" src="https://github.com/kookmin-sw/capstone-2023-39/assets/71022455/99a2c7f7-3ed8-4de1-a420-d16a72186c05">
+
+
 네트워크 트래픽을 분석하여 나타낼 통계 정보는 다음과 같다
 * 시간별 플로우 통계화
 * 정상, 공격 플로우 통계화
