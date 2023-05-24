@@ -8,15 +8,14 @@ class Config:
         def __init__(self, outcome_name: str):    
             self.outcome_dir = os.path.join(OUTCOME_DIR, outcome_name)
             #data path
-            self.sl_train_path = os.path.join(self.outcome_dir, "data/new_train_profiled_data.csv")
-            self.sl_test_path = os.path.join(self.outcome_dir, "data/new_test_profiled_data.csv")
-            self.ul_train_path = os.path.join(self.outcome_dir, "data/kookmin_ul_train.csv")
-            self.ul_test_path = os.path.join(self.outcome_dir, "datakookmin_ul_test.csv")
-
+            self.sl_train_path = os.path.join(self.outcome_dir, "")
+            self.sl_test_path = os.path.join(self.outcome_dir, "")
+            self.ul_train_path = os.path.join(self.outcome_dir, "")
+            self.ul_test_path = os.path.join(self.outcome_dir, "")
             
             #model path
-            self.un_model_path = os.path.join(self.outcome_dir, 'model.pth')
-            self.su_model_path = os.path.join(self.outcome_dir, 'model.pth')
+            self.sl_model_path = os.path.join(self.outcome_dir, 'model.pth')
+            self.ul_model_path = os.path.join(self.outcome_dir, 'model.pth')
             self.model_threshold = os.path.join(self.outcome_dir, 'threshold.txt')
             self.pretrained_path = os.path.join(self.outcome_dir, 'pretrained')
             #result_path
@@ -36,7 +35,7 @@ class Config:
         
         # model unsupervised
         self.ul_model_name = 'VAE' # ecod / AE / VAE
-        self.epochs = 1
+        self.epochs = 50
         self.batch_size = 256
         
         self.input_dims = 21

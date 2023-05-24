@@ -2,13 +2,8 @@ from unsupervised.models import *
 from pyod.models.ecod import ECOD
 from tqdm import tqdm
 from torch.utils.data import DataLoader
-from unsupervised.calibrator import Calibrator
-from unsupervised.shifthunter import ShiftHunter
 import torch
 import sys
-import os
-from unsupervised.myutils import get_params
-sys.path.append('../')
 from config import Config
 
 class ULTrainer:

@@ -10,7 +10,7 @@ import torch
 sns.set(rc = {'figure.figsize':(24,10)})
 import matplotlib.pyplot as plt 
 import os
-from joblib import dump, load
+import joblib
 import pandas as pd
 
 def save_model(model, model_name, path):
@@ -20,7 +20,7 @@ def save_model(model, model_name, path):
         torch.save(model.state_dict(), save_path)
     else:
         save_path = os.path.join(path, f'{model_name}.pkl')
-        dump(model, save_path)
+        joblib.dump(model, save_path)
     
 def load_model(model, model_name, path):
     neural_models = ['AE', 'VAE', 'lwresnet', 'cbam']
@@ -32,7 +32,7 @@ def load_model(model, model_name, path):
         model.load_state_dict(model_state_dict)
     else:
         load_path = os.path.join(path, f'{model_name}.pkl')
-        model = load(load_path)
+        model = joblib.load(load_path)
     
     return model
     
@@ -118,7 +118,8 @@ class OHE:
 class Preprocessor:
     drop_columns = [
         "target_ip",
-        "Label",
+        "start_time",
+        "end_time",
     ]
     
     def __init__(self, scaler="minmax", cdf_encoder=False, drop_columns=None, label_columns="Label"):
@@ -173,6 +174,21 @@ class Preprocessor:
         else:
             return X
         
+    def save_scaler(self, path):
+        if self.scaler is None:
+            raise ValueError("Scaler has not been fitted. Call fit() first.")
+        joblib.dump(self.scaler, path)
+
+    def load_scaler(self, path):
+        self.scaler = joblib.load(path)
+        
+    def save_cdf(self, path):
+        if self.cdf_encoder is None:
+            raise ValueError("Scaler has not been fitted. Call fit() first.")
+        joblib.dump(self.cdf_encoder, path)
+
+    def load_cdf(self, path):
+        self.cdf_encoder = joblib.load(path)
 
 class SL_Preprocessor(Preprocessor):
     def __init__(self, scaler="minmax", cdf_encoder=False, drop_columns=None, label_columns="Label"):
@@ -200,6 +216,14 @@ class SL_Preprocessor(Preprocessor):
             return X, Y
         else:
             return X
+    
+    def save_label_enc(self, path):
+        if self.label_encoder is None:
+            raise ValueError("Scaler has not been fitted. Call fit() first.")
+        joblib.dump(self.label_encoder, path)
+
+    def load_label_enc(self, path):
+        self.label_encoder = joblib.load(path)
     
 
 class UL_Preprocessor(Preprocessor):

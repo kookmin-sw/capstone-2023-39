@@ -32,5 +32,4 @@ def IP_voting(df):
     ip_predicts = target_ip.apply(lambda x : pred_IP_dict[x])
     
     ip_predicts = ip_predicts.values
-    ip_predicts = ["정상IP" if i == 0 else "악성IP" for i in ip_predicts]
     return ip_predicts

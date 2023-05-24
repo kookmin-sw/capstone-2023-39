@@ -83,12 +83,7 @@ class VariationalAutoEncoder(nn.Module):
             nn.Linear(16, 32),
             nn.LeakyReLU(),
             nn.Linear(32, input_dims)
-        )
-    
-#     def initialize_weight(self)->None:
-#         for submodule in self.encoder:
-#             torch.nn.init.xavier_uniform_(sub_module.weight)
-#         for submodule in self.decoder:            
+        )    
     
     def encode(self, input_tensor: Tensor) -> List[Tensor]:
         result = self.encoder(input_tensor)
