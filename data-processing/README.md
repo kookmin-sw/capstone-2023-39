@@ -15,7 +15,7 @@
 
 useage: 
 ``` bash
-python ./time_baseprofiled.py
+python ./time_base_profiled.py
 ```
 
 ### count_Profiling
@@ -24,7 +24,7 @@ python ./time_baseprofiled.py
 
 useage: 
 ``` bash
-python ./time_baseprofiled.py
+python ./count_base_profiled.py
 ```
 
 ## 필요 환경
