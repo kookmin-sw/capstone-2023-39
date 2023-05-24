@@ -21,7 +21,7 @@ export const MainContainer = styled.div`
 export const titleContainer = styled.div`
   width: 90%;
   height: 100%;
-  text-align: center;
+  text-align: left;
   justify-content: center;
   align-items: flex-start;
   display: flex;

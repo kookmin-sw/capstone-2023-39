@@ -26,7 +26,7 @@ const ProjectTarget = () => {
       <S.BubbleContainer content="question" {...newflow_Q}>
         <S.profileImg src={user_green} />
         <S.speechBubble direction="left">
-          {"1. netflow 기반 이상 탐지 🌍"}
+          {"1. Netflow 기반 이상 탐지 🌍"}
         </S.speechBubble>
       </S.BubbleContainer>
       <S.BubbleContainer content="answer">
@@ -132,7 +132,7 @@ function Home() {
         <S.titleContainer>
           <S.subTitle>{`국민대학교를 위한 네트워크 보안 관제 서비스`}</S.subTitle>
           <S.mainTitle>
-            {"Search ip for everyone of the Kookmin University"}
+            {"Search every IP address for Kookmin University"}
           </S.mainTitle>
         </S.titleContainer>
         <ProjectIntro />
