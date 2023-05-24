@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import DashboardGoodIp from "../../components/Dashboard/Top/GoodIP";
 import DashboardBadIp from "../../components/Dashboard/Top/BadIP";
 import DashboardAllIp from "../../components/Dashboard/Top/AllIP";
-import DashboardCtiIp from "../../components/Dashboard/Top/CtiIP"
+import DashboardCtiIp from "../../components/Dashboard/Top/CtiIP";
 import NaviBar from "../../components/NaviBar";
 import {
   BodyContainer,
@@ -12,7 +12,7 @@ import {
   MapAllButton,
   MapCtiButton,
   ModalContainer,
-  ColorModal
+  ColorModal,
 } from "./styles";
 
 function Main() {
@@ -23,9 +23,12 @@ function Main() {
       <NaviBar></NaviBar>
       <ModalContainer>
         <ColorModal>
-        🟢 정상 <br/><br/>
-        🔴 악성 <br/><br/>
-        🟠 CTI 정보 확장 <br/><br/>
+          🟢 정상 <br />
+          <br />
+          🔴 악성 <br />
+          <br />
+          🟠 CTI 정보 확장 <br />
+          <br />
         </ColorModal>
       </ModalContainer>
       {dashboardValue === 0 && <DashboardGoodIp />}
